@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 using System.Diagnostics.Contracts;
+using System.Linq;
 
 namespace Units
 {
@@ -41,7 +42,13 @@ namespace Units
             _uc = new UnitConverter();
 
             _flags = MeasurementFlags.None;
-
+            _maxbound = 0;
+            _minbound = 0;
+            _standardValue = 0;
+            _standardUnit = null;
+            _symbol = null;
+            OnValueChanged = null;
+            OnUnitChanged = null;
 
             if (string.IsNullOrWhiteSpace(unitSymbol))
             {
@@ -102,15 +109,19 @@ namespace Units
         {
             //Reference the unit converter that created us.
             _uc = new UnitConverter();
-
             _flags = MeasurementFlags.None;
-
             _unit = unit;
             _conversionResult = Result.NoError;
-
             _value = value;
-
             _conversionResult = ConversionResult;
+
+            _maxbound = 0;
+            _minbound = 0;
+            _standardValue = 0;
+            _standardUnit = null;
+            _symbol = null;
+            OnValueChanged = null;
+            OnUnitChanged = null;
         }
         #endregion
 
@@ -314,7 +325,7 @@ namespace Units
 			Measurement res = default(Measurement);
 			Unit standardUnit = default(Unit);
 			UnitType tp = _unit.UnitType;
-			standardUnit = (from un in tp.Units where un.IsDefault == true).FirstOrDefault;
+            standardUnit = (from un in tp.Units where un.IsDefault == true select un).FirstOrDefault();
 			res = _uc.ConvertUnits(value, _unit.Name, standardUnit.Name);
 
 			_value = value;
@@ -394,7 +405,6 @@ namespace Units
             if (!_uc.IsCompatible(unit, this._unit.DefaultSymbol))
             {
                 return Result.UnitMismatch;
-                //New ConversionResult(0, Result.UnitMismatch)
             }
 
             Measurement newRes = _uc.ConvertUnits(x, unit, this.Unit.Name);
@@ -405,7 +415,6 @@ namespace Units
                 if (x > this._maxbound)
                 {
                     return Result.ValueTooHigh;
-                    //New ConversionResult(0, Result.ValueTooHigh)
                 }
             }
 
@@ -414,12 +423,10 @@ namespace Units
                 if (x < this._minbound)
                 {
                     return Result.ValueTooLow;
-                    //New ConversionResult(0, Result.ValueTooLow)
                 }
             }
 
             return Result.NoError;
-            //New ConversionResult(x, unit)
         }
 
         #endregion
@@ -441,16 +448,13 @@ namespace Units
             if (!_uc.IsCompatible(unitSymbol, this._unit.DefaultSymbol))
             {
                 return Result.UnitMismatch;
-                //New ConversionResult(Result.UnitMismatch)
             }
 
             Measurement res = _uc.ConvertUnits(maxbound, unitSymbol, _unit.Name);
-            //_uc.ConvertToStandard(maxbound, unitSymbol)
 
             this._maxbound = res.Value;
 
             return Result.NoError;
-            //New ConversionResult(Result.NoError)
         }
 
         /// <summary>
@@ -469,16 +473,13 @@ namespace Units
             if (!_uc.IsCompatible(unitSymbol, this._unit.DefaultSymbol))
             {
                 return Result.UnitMismatch;
-                //New ConversionResult(Result.UnitMismatch)
             }
 
             Measurement res = _uc.ConvertUnits(minbound, unitSymbol, _unit.Name);
-            //_uc.ConvertToStandard(minbound, unitSymbol)
 
             this._minbound = res.Value;
 
             return Result.NoError;
-            //New ConversionResult(Result.NoError)
         }
         #endregion
 
@@ -499,7 +500,6 @@ namespace Units
         {
             double x = 0;
             double y = 0;
-            double z = 0;
 
             x = d1.Value;
 
@@ -514,7 +514,7 @@ namespace Units
                 y = res2.Value;
             }
 
-            object result = new Measurement(x + y, d1.Unit);
+            Measurement result = new Measurement(x + y, d1.Unit);
             return result;
         }
 
@@ -525,9 +525,8 @@ namespace Units
         {
             double x = 0;
             double y = 0;
-            double z = 0;
 
-            x = d1.Value();
+            x = d1.Value;
 
             if (d2.Unit.ID == d1.Unit.ID)
             {
@@ -540,7 +539,7 @@ namespace Units
                 y = res2.Value;
             }
 
-            object result = new Measurement(x - y, d1.Unit);
+            Measurement result = new Measurement(x - y, d1.Unit);
             return result;
         }
 
@@ -551,9 +550,8 @@ namespace Units
         {
             double x = 0;
             double y = 0;
-            double z = 0;
 
-            x = d1.Value();
+            x = d1.Value;
 
             if (d2.Unit.ID == d1.Unit.ID)
             {
@@ -566,7 +564,7 @@ namespace Units
                 y = res2.Value;
             }
 
-            object result = new Measurement(x * y, d1.Unit);
+            Measurement result = new Measurement(x * y, d1.Unit);
             return result;
         }
 
@@ -577,9 +575,8 @@ namespace Units
         {
             double x = 0;
             double y = 0;
-            double z = 0;
 
-            x = d1.Value();
+            x = d1.Value;
 
             if (d2.Unit.ID == d1.Unit.ID)
             {
@@ -592,7 +589,7 @@ namespace Units
                 y = res2.Value;
             }
 
-            object result = new Measurement(x / y, d1.Unit);
+            Measurement result = new Measurement(x / y, d1.Unit);
             return result;
         }
 
@@ -633,22 +630,22 @@ namespace Units
 			Measurement MeRes = default(Measurement);
 			string str = string.Empty;
 			if (this.ConversionResult != Result.NoError) {
-				str = this.Value.ToString + "|" + this.ConversionResult.ToString;
+				str = this.Value.ToString() + "|" + this.ConversionResult.ToString();
 			} else {
 				Unit standardUnit = default(Unit);
 				UnitType tp = this.Unit.UnitType;
-				standardUnit = (from un in tp.Unitswhere un.IsDefault == true).FirstOrDefault;
+				standardUnit = (from un in tp.Units where un.IsDefault == true select un).FirstOrDefault();
 
 				MeRes = this.Converter.ConvertUnits(this._value, this.Unit.DefaultSymbol, standardUnit.DefaultSymbol);
-				str = MeRes.Value.ToString + "|" + MeRes.Symbol;
+				str = MeRes.Value.ToString() + "|" + MeRes.Symbol;
 			}
 
-			return str.GetHashCode;
+			return str.GetHashCode();
 		}
 
         public override bool Equals(object obj)
         {
-            if (obj == null || !object.ReferenceEquals(obj.GetType, typeof(Measurement)))
+            if (obj == null || !object.ReferenceEquals(obj.GetType(), typeof(Measurement)))
             {
                 return false;
             }
@@ -726,11 +723,11 @@ namespace Units
 
 			Unit standardUnit = default(Unit);
 			UnitType tp = this.Unit.UnitType;
-			standardUnit = (from un in tp.Unitswhere un.IsDefault == true).FirstOrDefault;
+			standardUnit = (from un in tp.Units where un.IsDefault == true select un).FirstOrDefault();
 
 			Unit OtherStandardUnit = default(Unit);
 			tp = this.Unit.UnitType;
-			OtherStandardUnit = (from un in tp.Unitswhere un.IsDefault == true).FirstOrDefault;
+			OtherStandardUnit = (from un in tp.Units where un.IsDefault == true select un).FirstOrDefault();
 
 			Measurement MeRes = this.Converter.ConvertUnits(this._value, this.Unit.DefaultSymbol, standardUnit.DefaultSymbol);
 			Measurement OtherRes = other.Converter.ConvertUnits(other._value, other.Unit.DefaultSymbol, OtherStandardUnit.DefaultSymbol);

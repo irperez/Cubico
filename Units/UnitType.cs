@@ -9,7 +9,7 @@ namespace Units
 	[DataContract(IsReference = true)]
 	[KnownType(typeof(Unit))]
 	[Serializable()]
-	public partial class UnitType : INotifyPropertyChanged, IEquatable<UnitType>
+	public partial class UnitType : IEquatable<UnitType>
 	{
         #region "Constructors"
 		public UnitType() : base()
@@ -27,7 +27,6 @@ namespace Units
 			set {
 				if (!Equals(_iD, value)) {
 					_iD = value;
-					OnPropertyChanged("ID");
 				}
 			}
 		}
@@ -39,7 +38,6 @@ namespace Units
 			set {
 				if (!Equals(_name, value)) {
 					_name = value;
-					OnPropertyChanged("Name");
 				}
 			}
 		}
@@ -51,7 +49,6 @@ namespace Units
 			set {
 				if (!Equals(_description, value)) {
 					_description = value;
-					OnPropertyChanged("Description");
 				}
 			}
 		}
@@ -72,7 +69,6 @@ namespace Units
 			set {
 				if (!object.ReferenceEquals(_units, value)) {
 					_units = value;
-					OnNavigationPropertyChanged("Units");
 				}
 			}
 		}
@@ -82,8 +78,6 @@ namespace Units
 		#endregion
 
 		#region "ChangeTracking"
-
-		internal event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged;
 		
 		private bool _isDeserializing;
 		protected bool IsDeserializing {

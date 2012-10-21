@@ -9,7 +9,7 @@ namespace Units
 	[DataContract(IsReference = true)]
 	[KnownType(typeof(Unit))]
 	[Serializable()]
-	public partial class Symbol : INotifyPropertyChanged
+	public partial class Symbol 
 	{
 
 		#region "Primitive Properties"
@@ -49,11 +49,7 @@ namespace Units
 
 		#region "ChangeTracking"
 
-
-		internal event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged;
-		
-
-		private bool _isDeserializing;
+        private bool _isDeserializing;
 		protected bool IsDeserializing {
 			get { return _isDeserializing; }
 			private set { _isDeserializing = value; }

@@ -7,7 +7,7 @@ namespace Units
 {
 	[DataContract(IsReference = true)]
 	[Serializable()]
-	public partial class Modifier : INotifyPropertyChanged
+	public partial class Modifier 
 	{
         #region "Contructors"
 		public Modifier() : base()
@@ -40,8 +40,6 @@ namespace Units
         
 		#region "ChangeTracking"
 
-		internal event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged;
-		
 		private bool _isDeserializing;
 		protected bool IsDeserializing {
 			get { return _isDeserializing; }

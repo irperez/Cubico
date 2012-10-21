@@ -51,6 +51,7 @@
     <Compile Include="Symbol.cs" />
     <Compile Include="Unit.cs" />
     <Compile Include="UnitConverter.cs" />
+    <Compile Include="UnitProvider.cs" />
     <Compile Include="UnitType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

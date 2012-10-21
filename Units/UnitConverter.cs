@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Units
 {
@@ -57,7 +58,7 @@ namespace Units
 
             if (this._UnitDictionary.ContainsKey(unitName))
             {
-                return this._UnitDictionary(unitName);
+                return this._UnitDictionary[unitName];
             }
             else
             {
@@ -77,16 +78,16 @@ namespace Units
 			}
 
 			//First check to see if they used the actual name of a unit then look at the symbol table.
-			object unitFound = (from val in this._UnitDictionary.Valueswhere val.Name.ToUpper == unitSymbol.Trim.ToUpper).FirstOrDefault;
+			Unit unitFound = (from val in this._UnitDictionary.Values where val.Name.ToUpper() == unitSymbol.Trim().ToUpper() select val).FirstOrDefault();
 
 			if (unitFound != null) {
 				return unitFound;
 			}
 
-			object symFound = (from val in this._IndividualSymbolDictionary.Valueswhere val.Value == unitSymbol.Trim).FirstOrDefault;
+			Symbol symFound = (from val in this._IndividualSymbolDictionary.Values where val.Value == unitSymbol.Trim() select val).FirstOrDefault();
 
 			if (symFound != null) {
-				return symFound.unit;
+				return symFound.Unit;
 			}
 
 			throw new ArgumentException("The unit/symbol '" + unitSymbol + "' was not found in the UnitConverter.  Add this unit to the database for compatability.");
@@ -145,8 +146,8 @@ namespace Units
         /// <returns>Unit result value.</returns>
         private Result AddUnitToGroup(string unitName, string unitTypeName)
         {
-            Unit unit = this._UnitDictionary(unitName);
-            UnitType @group = this._UnitTypeDictionary(unitTypeName);
+            Unit unit = this._UnitDictionary[unitName];
+            UnitType group = this._UnitTypeDictionary[unitTypeName];
 
             //Make sure the unit exists.
             if (unit == null)
@@ -155,13 +156,13 @@ namespace Units
             }
 
             //Make sure the group exists.
-            if (@group == null)
+            if (group == null)
             {
                 return Result.GroupNotFound;
             }
 
             //Add the unit.
-            @group.Units.Add(unit);
+            group.Units.Add(unit);
 
             return Result.NoError;
         }
@@ -179,12 +180,12 @@ namespace Units
 			Contract.EndContractBlock();
 
 			//Does the unit even exist?
-			if (this._UnitDictionary(unitName) == null) {
+			if (this._UnitDictionary.ContainsKey(unitName) == false) {
 				return null;
 			} else {
 				//Iterate through every group
 				UnitProvider unitPro = new UnitProvider();
-				foreach ( ut in unitPro.UnitTypes) {
+				foreach (KeyValuePair<string, UnitType> ut in unitPro.UnitTypes) {
 					if (ut.Value.Units.Contains(new Unit { Name = unitName })) {
 						return ut.Value;
 					}
@@ -261,37 +262,38 @@ namespace Units
 			}
 
 			try {
-				object moders = from m in targetUnit.Modifierswhere m.UnitSourceID == currentUnit.ID & m.UnitTargetID == targetUnit.IDorderby m.Order;
+				IOrderedEnumerable<Modifier> moders = from m in targetUnit.Modifiers 
+                                                    where m.UnitSourceID == currentUnit.ID && m.UnitTargetID == targetUnit.ID 
+                                                    orderby m.Order
+                                                    select m;
 
-
-				foreach ( moder in moders) {
+				foreach (var moder in moders) 
+                {
 					int m_intPrecision = 15;
 
-					if (!Information.IsDBNull(moder.Precision) & (moder.Precision != null)) {
+					if (moder.Precision != null) {
 						m_intPrecision = Convert.ToInt32(moder.Precision);
 					}
 
 					switch (moder.ModifierType) {
 						case ModifierType.PreAdd:
-							x = x - moder.Value;
+							x = x - (double)moder.Value;
 							break;
 						case ModifierType.Multiply:
 							if (moder.Value > 0) {
-								//x = System.Math.Round(System.Math.Round(x, 15) * System.Math.Round(CDbl(moder.Value), 15), m_intPrecision) 'Units.Math.Pow(moder.Value, -1) 'x = x * moder.Value
-								x = System.Math.Round(x * moder.Value, m_intPrecision);
+								x = System.Math.Round(x * (double)moder.Value, m_intPrecision);
 							}
 							break;
 						case ModifierType.Divide:
 							if (moder.Value > 0) {
-								//x = System.Math.Round(System.Math.Round(x, 15) / System.Math.Round(CDbl(moder.Value), 15), m_intPrecision)
-								x = System.Math.Round(x / moder.Value, m_intPrecision);
+								x = System.Math.Round(x / (double)moder.Value, m_intPrecision);
 							}
 							break;
 						case ModifierType.Add:
-							x = System.Math.Round(x + moder.Value, m_intPrecision);
+							x = System.Math.Round(x + (double)moder.Value, m_intPrecision);
 							break;
 						case ModifierType.Subtract:
-							x = System.Math.Round(x - moder.Value, m_intPrecision);
+							x = System.Math.Round(x - (double)moder.Value, m_intPrecision);
 							break;
 					}
 				}
@@ -380,12 +382,12 @@ namespace Units
             {
                 if (Char.IsLetter(input, i) || char.IsPunctuation(input, i) || char.IsSymbol(input, i))
                 {
-                    if (FileSystem.input(i) != Convert.ToChar(".") && FileSystem.input(i) != Convert.ToChar("-"))
+                    if (input[i] != Convert.ToChar(".") && input[i] != Convert.ToChar("-"))
                     {
                         break; // TODO: might not be correct. Was : Exit While
                     }
                 }
-                System.Math.Max(System.Threading.Interlocked.Increment(i), i - 1);
+                System.Math.Max(System.Threading.Interlocked.Increment(ref i), i - 1);
             }
 
             s1 = input.Substring(0, i);
@@ -412,7 +414,7 @@ namespace Units
             {
                 this.GetUnitBySymbol(s2);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new Measurement(0, Result.BadUnit);
             }

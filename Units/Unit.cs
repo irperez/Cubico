@@ -12,7 +12,7 @@ namespace Units
     [KnownType(typeof(Symbol))]
     [KnownType(typeof(Modifier))]
     [Serializable()]
-    public partial class Unit : INotifyPropertyChanged,IEquatable<Unit>
+    public partial class Unit : IEquatable<Unit>
     {
         #region "Constructors"
 		public Unit() : base()
@@ -30,8 +30,8 @@ namespace Units
 
 		public bool IsDefault {
 			get {
-				foreach ( Modifier in this.Modifiers) {
-					if (Modifier.UnitSourceID == Modifier.UnitTargetID & Modifier.UnitSourceID == this.ID) {
+				foreach (Modifier mod in this.Modifiers) {
+					if (mod.UnitSourceID == mod.UnitTargetID && mod.UnitSourceID == this.ID) {
 						return true;
 					}
 				}
@@ -69,6 +69,8 @@ namespace Units
         [DataMember()]
         public UnitType UnitType { get; set; }
 
+        private List<Symbol> _symbols;
+
         [DataMember()]
         public List<Symbol> Symbols
         {
@@ -84,19 +86,12 @@ namespace Units
             {
                 if (!object.ReferenceEquals(_symbols, value))
                 {
-                    if (_symbols != null)
-                    {
-                        _symbols.CollectionChanged -= FixupSymbols;
-                    }
                     _symbols = value;
-                    if (_symbols != null)
-                    {
-                        _symbols.CollectionChanged += FixupSymbols;
-                    }
-                    OnNavigationPropertyChanged("Symbols");
                 }
             }
         }
+
+        private List<Modifier> _sources;
 
         [DataMember()]
         public List<Modifier> Sources
@@ -106,7 +101,6 @@ namespace Units
                 if (_sources == null && IsSerializing == false)
                 {
                     _sources = new List<Modifier>();
-                    _sources.CollectionChanged += FixupSources;
                 }
                 return _sources;
             }
@@ -114,21 +108,12 @@ namespace Units
             {
                 if (!object.ReferenceEquals(_sources, value))
                 {
-                    if (_sources != null)
-                    {
-                        _sources.CollectionChanged -= FixupSources;
-                    }
                     _sources = value;
-                    if (_sources != null)
-                    {
-                        _sources.CollectionChanged += FixupSources;
-                    }
-                    OnNavigationPropertyChanged("Sources");
                 }
             }
         }
 
-        private List<Modifier> _sources;
+        private List<Modifier> _modifiers;
 
         [DataMember()]
         public List<Modifier> Modifiers
@@ -145,20 +130,7 @@ namespace Units
             {
                 if (!object.ReferenceEquals(_modifiers, value))
                 {
-                    if (ChangeTracker.ChangeTrackingEnabled)
-                    {
-                        throw new InvalidOperationException("Cannot set the FixupChangeTrackingCollection when ChangeTracking is enabled");
-                    }
-                    if (_modifiers != null)
-                    {
-                        _modifiers.CollectionChanged -= FixupModifiers;
-                    }
                     _modifiers = value;
-                    if (_modifiers != null)
-                    {
-                        _modifiers.CollectionChanged += FixupModifiers;
-                    }
-                    OnNavigationPropertyChanged("Modifiers");
                 }
             }
         }
