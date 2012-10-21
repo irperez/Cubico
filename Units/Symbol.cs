@@ -14,7 +14,6 @@ namespace Units
 
 		#region "Primitive Properties"
 
-		private int _iD;
 		[DataMember()]
 		public int ID {get;set;}
 

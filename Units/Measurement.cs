@@ -24,7 +24,7 @@ namespace Units
 
         private double _minbound;
         private double _standardValue;
-        private Unit _standardUnit;
+        //private Unit _standardUnit;
         private double _value;
         private Unit _unit;
 
@@ -45,7 +45,7 @@ namespace Units
             _maxbound = 0;
             _minbound = 0;
             _standardValue = 0;
-            _standardUnit = null;
+            //_standardUnit = null;
             _symbol = null;
             OnValueChanged = null;
             OnUnitChanged = null;
@@ -118,7 +118,7 @@ namespace Units
             _maxbound = 0;
             _minbound = 0;
             _standardValue = 0;
-            _standardUnit = null;
+            //_standardUnit = null;
             _symbol = null;
             OnValueChanged = null;
             OnUnitChanged = null;

@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Units
 {
@@ -35,14 +36,14 @@ namespace Units
 		{
 			Dictionary<string, UnitType> unitTypes = new Dictionary<string, UnitType>();
 
-            using (UnitEntities context = new UnitEntities(GenerateEntityConnection(DefaultConnectionName))) {
-                object query = from ut in context.UnitTypes.Include("Units.Modifiers").Include("Units.Sources").Include("Units.Symbols") orderby ut.Name select ut;
+            //using (UnitEntities context = new UnitEntities(GenerateEntityConnection(DefaultConnectionName))) {
+                //object query = from ut in context.UnitTypes.Include("Units.Modifiers").Include("Units.Sources").Include("Units.Symbols") orderby ut.Name select ut;
 
-                foreach (var itm in query) {
-                    unitTypes.Add(itm.Name, itm);
-                }
+                //foreach (var itm in query) {
+                //    unitTypes.Add(itm.Name, itm);
+                //}
 
-            }
+            //}
 
 			return unitTypes;
 		}
@@ -68,7 +69,7 @@ namespace Units
 		{
 			Dictionary<string, Unit> unitDict = new Dictionary<string, Unit>();
 			UnitProvider unitPro = new UnitProvider();
-			object query = from s in unitPro.UnitTypes;
+			var query = from s in unitPro.UnitTypes select s;
 
 
 			foreach (var itm in query) {
@@ -121,7 +122,7 @@ namespace Units
 			Dictionary<string, Unit> unitDict = new Dictionary<string, Unit>();
 			UnitProvider unitPro = new UnitProvider();
 
-			object query = from s in unitPro.UnitTypes;
+			var query = from s in unitPro.UnitTypes select s;
 
 
 			foreach (var itm in query) {
@@ -164,7 +165,7 @@ namespace Units
 			Dictionary<string, Symbol> unitDict = new Dictionary<string, Symbol>();
 			UnitProvider unitPro = new UnitProvider();
 
-			object query = from s in unitPro.UnitTypes;
+			var query = from s in unitPro.UnitTypes select s;
 
 
 			foreach (var itm in query) {

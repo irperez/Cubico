@@ -17,13 +17,6 @@ namespace Units
         private Dictionary<string, Unit> _UnitDictionary;
 
         private Dictionary<string, UnitType> _UnitTypeDictionary;
-        private string _CurUnitFileName;
-
-        private double _CurUnitsFileVersion;
-        /// <summary>
-        /// Called when an error occurs in the unit converter.
-        /// </summary>
-        public event EventHandler OnError;
 
         /// <summary>
         /// Constructor, sets up the unit converter.
@@ -37,10 +30,6 @@ namespace Units
             _UnitDictionary = unitPro.Units;
             _UnitTypeDictionary = unitPro.UnitTypes;
 
-            //Create an Xml document to hold the units file in.
-            _CurUnitsFileVersion = 0;
-
-            _CurUnitFileName = "";
         }
 
         #region "Unit related methods"
