@@ -6,6 +6,10 @@ using System.Runtime.Serialization;
 
 namespace Units
 {
+    /// <summary>
+    /// Represents a unit of measure's symbol, or alternate methods to identify a unit of measure.
+    /// </summary>
+    /// <example>Inch = ", inches, in, in. etc.</example>
 	[DataContract(IsReference = true)]
 	[KnownType(typeof(Unit))]
 	[Serializable()]
@@ -24,7 +28,7 @@ namespace Units
 		public bool IsDefault {get;set;}
 			
 		[DataMember()]
-		public int UnitID {get;set;}			
+		public int UnitId {get;set;}			
 		#endregion
 
 		#region "Navigation Properties"
@@ -85,12 +89,6 @@ namespace Units
 		{
 			IsSerializing = false;
 		}
-
-		protected virtual void ClearNavigationProperties()
-		{
-			Unit = null;
-		}
-
 		#endregion
 
 		#region "Association Fixup"
@@ -110,7 +108,7 @@ namespace Units
 					Unit.Symbols.Add(this);
 				}
 
-				UnitID = Unit.ID;
+				UnitId = Unit.ID;
 			}
 
 		}

@@ -8,6 +8,9 @@ using System.Xml;
 
 namespace Units
 {
+    /// <summary>
+    /// Facilitates the loading and caching of the unit of measure data.
+    /// </summary>
     public class UnitProvider
     {
 
@@ -92,13 +95,6 @@ namespace Units
             _dataFile.Load(stream);
 
             this.ProcessUnitConverterData();
-        }
-
-        //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
-        private void GetAllUnitTypes()
-        {
-           
-
         }
 
         private void ProcessUnitConverterData()
@@ -208,7 +204,7 @@ namespace Units
                                 sym.Value = attrib.Value;
                                 break;
                             case "UnitID":
-                                sym.UnitID = Convert.ToInt32(attrib.Value);
+                                sym.UnitId = Convert.ToInt32(attrib.Value);
                                 break;
                             case "IsDefault":
                                 int value = Convert.ToInt32(attrib.Value);
@@ -222,15 +218,15 @@ namespace Units
 
                     }
 
-                    if (_symbolLookUp.ContainsKey(sym.UnitID))
+                    if (_symbolLookUp.ContainsKey(sym.UnitId))
                     {
-                        var data = _symbolLookUp[sym.UnitID];
+                        var data = _symbolLookUp[sym.UnitId];
                         data.Add(sym);
                     }
                     else
                     {
                         var data = new List<Symbol> {sym};
-                        _symbolLookUp.Add(sym.UnitID, data);
+                        _symbolLookUp.Add(sym.UnitId, data);
                     }
                 }
             }
@@ -315,6 +311,15 @@ namespace Units
         }
         #endregion
 
+        #region "UnitTypes"
+        //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
+        private void GetAllUnitTypes()
+        {
+
+            
+        }
+        #endregion
+
         #region "Units"
         //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
         private Dictionary<string, Unit> GetAllUnits()
@@ -362,15 +367,11 @@ namespace Units
         private Dictionary<string, Unit> GetAllSymbols()
         {
             var unitDict = new Dictionary<string, Unit>();
-            var unitPro = new UnitProvider();
-
-            var query = from s in unitPro.UnitTypes select s;
-
+            var query = from s in this.UnitTypes select s;
 
             foreach (var itm in query)
             {
                 UnitType ut = itm.Value;
-
 
                 foreach (var un in ut.Units)
                 {
@@ -408,7 +409,6 @@ namespace Units
 
             return unitDict;
         }
-
 
         //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
         private Dictionary<string, Symbol> GetAllIndividualSymbols()
