@@ -1,4 +1,4 @@
 README
 
 Version 0.1
-This will be a .Net based Unit Conversion API Utility.
+A .Net based Unit Conversion API that is web service friendly and comprehensive, yet easy to program against.
