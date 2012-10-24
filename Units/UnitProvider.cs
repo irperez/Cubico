@@ -28,9 +28,6 @@ namespace Units
             get{return _dataFile;}
             set{ _dataFile = value;}
         }
-        #endregion
-
-        #region "UnitTypes"
 
         //Singleton
         private static Dictionary<string, UnitType> _unitTypes;
@@ -46,10 +43,44 @@ namespace Units
             }
         }
 
+        private Dictionary<string, Unit> _units;
+        public Dictionary<string, Unit> Units
+        {
+            get
+            {
+                if (_units == null)
+                {
+                    _units = GetAllUnits();
+                }
+                return _units;
+            }
+        }
+
+        private static Dictionary<int, List<Modifier>> _individualModifiers;
+        private static Dictionary<string, Unit> _symbols;
+
+        private static Dictionary<string, Symbol> _individualSymbols;
+        private static Dictionary<int, List<Symbol>> _symbolLookUp;
+        public Dictionary<string, Unit> Symbols
+        {
+            get
+            {
+                if (_symbols == null)
+                {
+                    _symbols = GetAllSymbols();
+                }
+                return _symbols;
+            }
+        }
+        #endregion
+
+        #region "Methods"
+        #region "File Load Methods"
+
         private void LoadDataFile()
         {
-            string fileName = "Units.UnitData.xml";
-            Assembly assembly = Assembly.GetExecutingAssembly();
+            const string fileName = "Units.UnitData.xml";
+            var assembly = Assembly.GetExecutingAssembly();
             var stream = assembly.GetManifestResourceStream(fileName);
 
             if (stream == null)
@@ -60,30 +91,23 @@ namespace Units
             _dataFile = new XmlDocument();
             _dataFile.Load(stream);
 
-            this.GetAllUnitTypes();
+            this.ProcessUnitConverterData();
         }
 
         //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
         private void GetAllUnitTypes()
         {
-            _unitTypes = new Dictionary<string, UnitType>();
+           
 
-            ProcessUnitConverterData();
         }
 
         private void ProcessUnitConverterData()
         {
             foreach (XmlNode node in this.DataFile.ChildNodes)
             {
-                switch (node.Name)
+                if (node.Name == "UnitConverterData")
                 {
-                    case "UnitConverterData":
-                        ProcessDataTypes(node);
-                        break;
-                    case "test 2":
-                        int j = 0;
-                        j++;
-                        break;
+                        ProcessDataTypes(node);   
                 }
             }
         }
@@ -97,17 +121,170 @@ namespace Units
                     case "UnitTypes":
                         ProcessUnitTypes(node);
                         break;
+                    case "Units":
+                        ProcessUnits(node);
+                        break;
+                    case "Symbols":
+                        ProcessUnitSymbols(node);
+                        break;
+                    case "UnitModifiers":
+                        ProcessUnitModifiers(node);
+                        break;
                 }
             }
-        } 
+        }
+
+        private void ProcessUnitModifiers(XmlNode parentNode)
+        {
+            _individualModifiers = new Dictionary<int, List<Modifier>>();
+
+            foreach (XmlNode node in parentNode.ChildNodes)
+            {
+                if (node.Name == "UnitModifier")
+                {
+                    var mod = new Modifier();
+
+                    foreach (XmlAttribute attrib in node.Attributes)
+                    {
+                        switch (attrib.Name)
+                        {
+                            case "ID":
+                                mod.ID = Convert.ToInt32(attrib.Value);
+                                break;
+                            case "Value":
+                                mod.Value = Convert.ToDecimal(attrib.Value);
+                                break;
+                            case "Order":
+                                mod.Order = Convert.ToInt32(attrib.Value);
+                                break;
+                            case "ModifierID":
+                                mod.ModifierType = (ModifierType)Convert.ToInt32(attrib.Value);
+                                break;
+                            case "UnitSourceID":
+                                mod.UnitSourceID = Convert.ToInt32(attrib.Value);
+                                break;
+                            case "UnitTargetID":
+                                mod.UnitTargetID = Convert.ToInt32(attrib.Value);
+                                break;
+                            case "Precision":
+                                mod.Precision = Convert.ToInt32(attrib.Value);
+                                break;
+                        }
+
+                    }
+
+                    if (_individualModifiers.ContainsKey(mod.UnitSourceID))
+                    {
+                        var data = _individualModifiers[mod.UnitSourceID];
+                        data.Add(mod);
+                    }
+                    else
+                    {
+                        var data = new List<Modifier> {mod};
+                        _individualModifiers.Add(mod.UnitSourceID, data);
+                    }
+
+                }
+            }
+        }
+
+        private  void ProcessUnitSymbols(XmlNode parentNode)
+        {
+            _symbolLookUp = new Dictionary<int, List<Symbol>>();
+            foreach (XmlNode node in parentNode.ChildNodes)
+            {
+                if (node.Name == "UnitSymbol")
+                {
+                    var sym = new Units.Symbol();
+
+                    foreach (XmlAttribute attrib in node.Attributes)
+                    {
+                        switch (attrib.Name)
+                        {
+                            case "ID":
+                                sym.ID = Convert.ToInt32(attrib.Value);
+                                break;
+                            case "Symbol":
+                                sym.Value = attrib.Value;
+                                break;
+                            case "UnitID":
+                                sym.UnitID = Convert.ToInt32(attrib.Value);
+                                break;
+                            case "IsDefault":
+                                int value = Convert.ToInt32(attrib.Value);
+                                if (value == 1)
+                                    sym.IsDefault = true;
+                                else
+                                    sym.IsDefault = false;
+                             
+                                break;
+                        }
+
+                    }
+
+                    if (_symbolLookUp.ContainsKey(sym.UnitID))
+                    {
+                        var data = _symbolLookUp[sym.UnitID];
+                        data.Add(sym);
+                    }
+                    else
+                    {
+                        var data = new List<Symbol> {sym};
+                        _symbolLookUp.Add(sym.UnitID, data);
+                    }
+                }
+            }
+        }
+
+        private void ProcessUnits(XmlNode parentNode)
+        {
+            _units = new Dictionary<string, Unit>();
+            foreach (XmlNode node in parentNode.ChildNodes)
+            {
+               
+                if (node.Name == "Unit")
+                {
+                    var unit = new Unit();
+
+                    foreach (XmlAttribute attrib in node.Attributes)
+                    {
+                        switch (attrib.Name)
+                        {
+                            case "ID":
+                                unit.ID = Convert.ToInt32(attrib.Value);
+                                break;
+                            case "Name":
+                                unit.Name = attrib.Value;
+                                break;
+                            case "UnitTypeID":
+                                unit.UnitTypeID = Convert.ToInt32(attrib.Value);
+                                break;
+                        }
+
+                    }
+
+                    if (_symbolLookUp.ContainsKey(unit.ID))
+                    {
+                        unit.Symbols = _symbolLookUp[unit.ID];
+                    }
+                    if (_individualModifiers.ContainsKey(unit.ID))
+                    {
+                        unit.Modifiers = _individualModifiers[unit.ID];
+                    }
+                    _units.Add(unit.Name, unit);
+
+                }
+            }
+        }
 
         private void ProcessUnitTypes(XmlNode parentNode)
         {
+            _unitTypes = new Dictionary<string, UnitType>();
             foreach (XmlNode node in parentNode.ChildNodes)
             {
                 if(node.Name == "UnitType")
                 {
-                    UnitType ut = new UnitType();
+                    var ut = new UnitType();
                     
                     foreach (XmlAttribute attrib in node.Attributes)
                     {
@@ -126,6 +303,11 @@ namespace Units
                         
                     }
 
+                    //Make this a for loop for speed reasons or use a multikey dictionary.
+                    var unitData = (from unit in _units.Values
+                                    where unit.UnitTypeID == ut.ID
+                                    select unit).ToList();
+                    ut.Units = unitData;
                     _unitTypes.Add(ut.Name, ut);
 
                 }
@@ -134,25 +316,11 @@ namespace Units
         #endregion
 
         #region "Units"
-
-        private Dictionary<string, Unit> _units;
-        public Dictionary<string, Unit> Units
-        {
-            get
-            {
-                if (_units == null)
-                {
-                    _units = GetAllUnits();
-                }
-                return _units;
-            }
-        }
-
         //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
         private Dictionary<string, Unit> GetAllUnits()
         {
-            Dictionary<string, Unit> unitDict = new Dictionary<string, Unit>();
-            UnitProvider unitPro = new UnitProvider();
+            var unitDict = new Dictionary<string, Unit>();
+            var unitPro = new UnitProvider();
             var query = from s in unitPro.UnitTypes select s;
 
 
@@ -176,20 +344,7 @@ namespace Units
         #endregion
 
         #region "Symbols"
-        private static Dictionary<string, Unit> _symbols;
-
-        private static Dictionary<string, Symbol> _individualSymbols;
-        public Dictionary<string, Unit> Symbols
-        {
-            get
-            {
-                if (_symbols == null)
-                {
-                    _symbols = GetAllSymbols();
-                }
-                return _symbols;
-            }
-        }
+        
 
         public Dictionary<string, Symbol> IndividualSymbols
         {
@@ -206,8 +361,8 @@ namespace Units
         //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
         private Dictionary<string, Unit> GetAllSymbols()
         {
-            Dictionary<string, Unit> unitDict = new Dictionary<string, Unit>();
-            UnitProvider unitPro = new UnitProvider();
+            var unitDict = new Dictionary<string, Unit>();
+            var unitPro = new UnitProvider();
 
             var query = from s in unitPro.UnitTypes select s;
 
@@ -258,8 +413,8 @@ namespace Units
         //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
         private Dictionary<string, Symbol> GetAllIndividualSymbols()
         {
-            Dictionary<string, Symbol> unitDict = new Dictionary<string, Symbol>();
-            UnitProvider unitPro = new UnitProvider();
+            var unitDict = new Dictionary<string, Symbol>();
+            var unitPro = new UnitProvider();
 
             var query = from s in unitPro.UnitTypes select s;
 
@@ -289,6 +444,7 @@ namespace Units
         }
 
         #endregion
-
+        #endregion
     }
+
 }

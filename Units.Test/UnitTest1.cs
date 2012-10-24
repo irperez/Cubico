@@ -11,6 +11,7 @@ namespace Units.Test
         public void TestMethod1()
         {
             UnitProvider up = new UnitProvider();
+            int i = 0;
         }
     }
 }
