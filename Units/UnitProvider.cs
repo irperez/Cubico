@@ -198,7 +198,7 @@ namespace Units
                         switch (attrib.Name)
                         {
                             case "ID":
-                                sym.ID = Convert.ToInt32(attrib.Value);
+                                sym.Id = Convert.ToInt32(attrib.Value);
                                 break;
                             case "Symbol":
                                 sym.Value = attrib.Value;

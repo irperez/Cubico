@@ -19,7 +19,7 @@ namespace Units
 		#region "Primitive Properties"
 
 		[DataMember()]
-		public int ID {get;set;}
+		public int Id {get;set;}
 
 		[DataMember()]
 		public string Value {get;set;}

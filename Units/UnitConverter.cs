@@ -10,7 +10,7 @@ namespace Units
     {
 
         //TODO: Fix this; was Previously NaN
-        public const double FAILSAFE_VALUE = 0;
+        private const double _failsafeValue = 0;
 
         private Dictionary<string, Unit> _SymbolDictionary;
         private Dictionary<string, Symbol> _IndividualSymbolDictionary;
@@ -24,7 +24,7 @@ namespace Units
         public UnitConverter()
         {
             //Set up the tables we need
-            UnitProvider unitPro = new UnitProvider();
+            var unitPro = new UnitProvider();
             _SymbolDictionary = unitPro.Symbols;
             _IndividualSymbolDictionary = unitPro.IndividualSymbols;
             _UnitDictionary = unitPro.Units;
@@ -118,8 +118,7 @@ namespace Units
         private Result CreateNewGroup(string groupName)
         {
             //Create the new group
-            UnitType newType = new UnitType();
-            newType.Name = groupName;
+            var newType = new UnitType {Name = groupName};
 
             //Add it to the group table
             this._UnitTypeDictionary.Add(groupName, newType);
@@ -173,8 +172,8 @@ namespace Units
 				return null;
 			} else {
 				//Iterate through every group
-				UnitProvider unitPro = new UnitProvider();
-				foreach (KeyValuePair<string, UnitType> ut in unitPro.UnitTypes) {
+				var unitPro = new UnitProvider();
+				foreach (var ut in unitPro.UnitTypes) {
 					if (ut.Value.Units.Contains(new Unit { Name = unitName })) {
 						return ut.Value;
 					}
@@ -199,7 +198,7 @@ namespace Units
 
             //Default to the fail safe value.
             double output = 0;
-            output = FAILSAFE_VALUE;
+            output = _failsafeValue;
 
             if (string.IsNullOrEmpty(currentUnitName) || string.IsNullOrEmpty(targetUnitName))
             {
@@ -228,6 +227,7 @@ namespace Units
         /// Performs a unit conversion from the standard value into the specified unit.
         /// </summary>
         /// <param name="value">The value to convert.</param>
+        /// <param name="currentUnitName"> </param>
         /// <param name="targetUnitName">The name of the unit that the value is to be converted to.</param>
         /// <returns>Unit result value.</returns>
         public Measurement ConvertCurrentToTarget(double value, string currentUnitName, string targetUnitName)
@@ -236,7 +236,7 @@ namespace Units
 
 			//Default to the fail safe value.
 			double output = 0;
-			output = FAILSAFE_VALUE;
+			output = _failsafeValue;
 
 			if (string.IsNullOrEmpty(targetUnitName)) {
 				return new Measurement(0, Result.BadUnit);

@@ -87,25 +87,25 @@ namespace Units
             _value = value;
         }
 
-        internal Measurement(double value, string unitSymbol, Result ConversionResult)
+        internal Measurement(double value, string unitSymbol, Result conversionResult)
             : this(unitSymbol)
         {
 
             _value = value;
 
-            _conversionResult = ConversionResult;
+            _conversionResult = conversionResult;
         }
 
-        internal Measurement(double value, Result ConversionResult)
+        internal Measurement(double value, Result conversionResult)
             : this(null)
         {
 
             _value = value;
 
-            _conversionResult = ConversionResult;
+            _conversionResult = conversionResult;
         }
 
-        internal Measurement(double value, Unit unit, Result ConversionResult = Result.NoError)
+        internal Measurement(double value, Unit unit, Result conversionResult = Result.NoError)
         {
             //Reference the unit converter that created us.
             _uc = new UnitConverter();
@@ -113,7 +113,7 @@ namespace Units
             _unit = unit;
             _conversionResult = Result.NoError;
             _value = value;
-            _conversionResult = ConversionResult;
+            _conversionResult = conversionResult;
 
             _maxbound = 0;
             _minbound = 0;
@@ -514,7 +514,7 @@ namespace Units
                 y = res2.Value;
             }
 
-            Measurement result = new Measurement(x + y, d1.Unit);
+            var result = new Measurement(x + y, d1.Unit);
             return result;
         }
 
@@ -539,7 +539,7 @@ namespace Units
                 y = res2.Value;
             }
 
-            Measurement result = new Measurement(x - y, d1.Unit);
+            var result = new Measurement(x - y, d1.Unit);
             return result;
         }
 
@@ -564,7 +564,7 @@ namespace Units
                 y = res2.Value;
             }
 
-            Measurement result = new Measurement(x * y, d1.Unit);
+            var result = new Measurement(x * y, d1.Unit);
             return result;
         }
 
@@ -725,18 +725,18 @@ namespace Units
 			UnitType tp = this.Unit.UnitType;
 			standardUnit = (from un in tp.Units where un.IsDefault == true select un).FirstOrDefault();
 
-			Unit OtherStandardUnit = default(Unit);
+			Unit otherStandardUnit = default(Unit);
 			tp = this.Unit.UnitType;
-			OtherStandardUnit = (from un in tp.Units where un.IsDefault == true select un).FirstOrDefault();
+			otherStandardUnit = (from un in tp.Units where un.IsDefault == true select un).FirstOrDefault();
 
-			Measurement MeRes = this.Converter.ConvertUnits(this._value, this.Unit.DefaultSymbol, standardUnit.DefaultSymbol);
-			Measurement OtherRes = other.Converter.ConvertUnits(other._value, other.Unit.DefaultSymbol, OtherStandardUnit.DefaultSymbol);
+			Measurement meRes = this.Converter.ConvertUnits(this._value, this.Unit.DefaultSymbol, standardUnit.DefaultSymbol);
+			Measurement otherRes = other.Converter.ConvertUnits(other._value, other.Unit.DefaultSymbol, otherStandardUnit.DefaultSymbol);
 
-			if (MeRes.Symbol != OtherRes.Symbol) {
+			if (meRes.Symbol != otherRes.Symbol) {
 				throw new ArgumentException("The parameter must be of the same unit type as this object. " + this.Unit.DefaultSymbol, "other");
 			}
 
-			return MeRes.Value.CompareTo(OtherRes.Value);
+			return meRes.Value.CompareTo(otherRes.Value);
 		}
         #endregion
     }
