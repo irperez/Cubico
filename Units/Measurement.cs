@@ -5,7 +5,9 @@ using System.Linq;
 
 namespace Units
 {
-
+    /// <summary>
+    /// A structure that defines a measurement with a numeric value and a unit of measure.
+    /// </summary>
     [Serializable()]
     [DataContract()]
     [KnownType(typeof(Unit))]

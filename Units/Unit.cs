@@ -211,7 +211,7 @@ namespace Units
 
         public override bool Equals(object obj)
         {
-            if (obj == null)
+            if ((object)obj == null)
             {
                 return false;
             }
@@ -227,7 +227,7 @@ namespace Units
 
         public bool Equals(Unit other)
         {
-            if (other == null)
+            if (object.ReferenceEquals(other, null))
             {
                 return false;
             }
@@ -247,27 +247,16 @@ namespace Units
 
         public static bool operator !=(Unit left, Unit right)
         {
-            if (left == null && right == null)
-            {
-                return true;
-            }
-            else if (left == null || right == null)
-            {
-                return true;
-            }
-            else
-            {
-                return !left.Equals(right);
-            }
+            return !(left == right);
         }
 
         public static bool operator ==(Unit left, Unit right)
         {
-            if (left == null && right == null)
+            if (object.ReferenceEquals(left, right))
             {
-                return false;
+                return true;
             }
-            else if (left == null || right == null)
+            else if ((object)left == null || (object)right == null)
             {
                 return false;
             }

@@ -15,6 +15,22 @@ namespace Units
 	[Serializable()]
 	public partial class Symbol 
 	{
+        #region "Constructors"
+        public Symbol()
+        {
+        }
+
+        public Symbol(Unit unit)
+        {
+            if (unit == null)
+            {
+                throw new ArgumentNullException("unit");
+            }
+            //Contract.EndContractBlock()
+
+            this.Unit = unit;
+        }
+        #endregion
 
 		#region "Primitive Properties"
 
@@ -114,6 +130,71 @@ namespace Units
 		}
 
 		#endregion
+
+        #region "IEquatable"
+        public override int GetHashCode()
+        {
+            return this.Value.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if ((object)obj == null)
+            {
+                return false;
+            }
+            else if (!object.ReferenceEquals(obj.GetType(), this.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                return this.Equals((Symbol)obj);
+            }
+        }
+
+        public bool Equals(Symbol other)
+        {
+            if ((object)other == null)
+            {
+                return false;
+            }
+            else
+            {
+                if (this.Value != other.Value)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+
+        public static bool operator !=(Symbol left, Symbol right)
+        {
+            return !(left == right);
+        }
+
+        public static bool operator ==(Symbol left, Symbol right)
+        {
+            if (object.ReferenceEquals(left, right))
+            {
+                return true;
+            }
+            else if ((object)left == null || (object)right == null)
+            {
+                return false;
+            }
+            else
+            {
+                return left.Equals(right);
+            }
+        }
+
+        #endregion
 
         public override string ToString()
         {
