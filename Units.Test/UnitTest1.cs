@@ -7,19 +7,19 @@ namespace Units.Test
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
-        public void TestMethod1()
-        {
-            UnitProvider up = new UnitProvider();
-            //int i = 0;
+        //[TestMethod]
+        //public void TestMethod1()
+        //{
+        //    UnitProvider up = new UnitProvider();
+        //    //int i = 0;
 
-            var fiveft = new Measurement(5, "ft");
-            var twoinch = new Measurement(2, "inch");
+        //    var fiveft = new Measurement(5, "ft");
+        //    var twoinch = new Measurement(2, "inch");
 
-            fiveft.GetValueAs("inch");
+        //    fiveft.GetValueAs("inch");
 
-            var result = fiveft + twoinch;
-        }
+        //    var result = fiveft + twoinch;
+        //}
     }
 
 

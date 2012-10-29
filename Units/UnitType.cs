@@ -141,7 +141,7 @@ namespace Units
 
 		public bool Equals(UnitType other)
 		{
-			if (other == null) {
+			if ((object)other == null) {
 				return false;
 			}
 
@@ -154,20 +154,14 @@ namespace Units
 
 		public static bool operator !=(UnitType left, UnitType right)
 		{
-			if (left == null && right == null) {
-				return true;
-			} else if (left == null || right == null) {
-				return true;
-			} else {
-				return !left.Equals(right);
-			}
+            return !(left == right);
 		}
 
 		public static bool operator ==(UnitType left, UnitType right)
 		{
-			if (left == null && right == null) {
-				return false;
-			} else if (left == null || right == null) {
+			if (object.ReferenceEquals(left, right)) {
+				return true;
+			} else if ((object)left == null || (object)right == null) {
 				return false;
 			} else {
 				return left.Equals(right);
