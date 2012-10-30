@@ -2874,5 +2874,94 @@ namespace Units.Test
         #endregion
 
         #endregion
+
+        #region "UnitConverter.UnitConverter()"
+        ///<summary>
+        ///A test for UnitConverter Constructor
+        ///</summary>
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Unit)]
+        public void UnitConverterConstructorTest()
+        {
+            UnitConverter target = new UnitConverter();
+            Assert.IsNotNull(target);
+        }
+        #endregion
+
+        #region "Empty and Null Tests"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Unit)]
+        public void UnitConverter_ConvertUnitsNullTest()
+        {
+            UnitConverter target = new UnitConverter();
+            Measurement expected = new Measurement(0, Result.BadUnit);
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(0, null, null);
+            Assert.AreNotEqual(expected, actual);
+            Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Unit)]
+        public void UnitConverter_ConvertUnitsNullTest2()
+        {
+            UnitConverter target = new UnitConverter();
+            Measurement expected = new Measurement(0, Result.BadUnit);
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(0, "ft", null);
+            Assert.AreNotEqual(expected, actual);
+            Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Unit)]
+        public void UnitConverter_ConvertUnitsNullTest3()
+        {
+            UnitConverter target = new UnitConverter();
+            Measurement expected = new Measurement(0, Result.BadUnit);
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(0, null, "m");
+            Assert.AreNotEqual(expected, actual);
+            Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Unit)]
+        public void UnitConverter_ConvertUnitsEmptyTest()
+        {
+            UnitConverter target = new UnitConverter();
+            Measurement expected = new Measurement(0, Result.BadUnit);
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(0, string.Empty, string.Empty);
+            Assert.AreNotEqual(expected, actual);
+            Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Unit)]
+        public void UnitConverter_ConvertUnitsEmptyTest2()
+        {
+            UnitConverter target = new UnitConverter();
+            Measurement expected = new Measurement(0, Result.BadUnit);
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(0, "ft", string.Empty);
+            Assert.AreNotEqual(expected, actual);
+            Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Unit)]
+        public void UnitConverter_ConvertUnitsEmptyTest3()
+        {
+            UnitConverter target = new UnitConverter();
+            Measurement expected = new Measurement(0, Result.BadUnit);
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(0, string.Empty, "m");
+            Assert.AreNotEqual(expected, actual);
+            Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
+        }
+
+        #endregion
     }
 }
