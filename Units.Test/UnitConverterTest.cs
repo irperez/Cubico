@@ -163,33 +163,33 @@ public class UnitConverterTest
         Assert.AreEqual<Measurement>(expected, actual);
     }
 
-    //[TestMethod()]
-    //[TestCategory(UnitTestCategory.Unit)]
-    //public void UnitConverter_ParseUnitStringNotFoundTest()
-    //{
-    //    UnitConverter target = new UnitConverter();
-    //    string input = "10 ZZZZ";
-    //    Measurement expected = new Measurement(0, Result.BadUnit);
-    //    Measurement actual = default(Measurement);
-    //    actual = target.ParseUnitString(input);
+    [TestMethod()]
+    [TestCategory(UnitTestCategory.Unit)]
+    public void UnitConverter_ParseUnitStringNotFoundTest()
+    {
+        UnitConverter target = new UnitConverter();
+        string input = "10 ZZZZ";
+        Measurement expected = new Measurement(0, Result.BadUnit);
+        Measurement actual = default(Measurement);
+        actual = target.ParseUnitString(input);
 
-    //    Assert.AreNotEqual<Measurement>(expected, actual);
-    //    Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
-    //}
+        Assert.AreNotEqual<Measurement>(expected, actual);
+        Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
+    }
 
-    //[TestMethod()]
-    //[TestCategory(UnitTestCategory.Unit)]
-    //public void UnitConverter_ParseUnitStringNoSymbolTest()
-    //{
-    //    UnitConverter target = new UnitConverter();
-    //    string input = "10";
-    //    Measurement expected = new Measurement(0, Result.BadUnit);
-    //    Measurement actual = default(Measurement);
-    //    actual = target.ParseUnitString(input);
+    [TestMethod()]
+    [TestCategory(UnitTestCategory.Unit)]
+    public void UnitConverter_ParseUnitStringNoSymbolTest()
+    {
+        UnitConverter target = new UnitConverter();
+        string input = "10";
+        Measurement expected = new Measurement(0, Result.BadUnit);
+        Measurement actual = default(Measurement);
+        actual = target.ParseUnitString(input);
 
-    //    Assert.AreNotEqual<Measurement>(expected, actual);
-    //    Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
-    //}
+        Assert.AreNotEqual<Measurement>(expected, actual);
+        Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
+    }
 
     [TestMethod()]
     [TestCategory(UnitTestCategory.Unit)]
@@ -203,29 +203,29 @@ public class UnitConverterTest
         Assert.AreEqual<Measurement>(expected, actual);
     }
 
-    //[TestMethod()]
-    //[TestCategory(UnitTestCategory.Unit)]
-    //public void UnitConverter_ParseUnitStringNullTest()
-    //{
-    //    UnitConverter target = new UnitConverter();
-    //    Measurement expected = new Measurement(0, Result.BadValue);
-    //    Measurement actual = default(Measurement);
-    //    actual = target.ParseUnitString(null);
-    //    Assert.AreNotEqual<Measurement>(expected, actual);
-    //    Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
-    //}
+    [TestMethod()]
+    [TestCategory(UnitTestCategory.Unit)]
+    public void UnitConverter_ParseUnitStringNullTest()
+    {
+        UnitConverter target = new UnitConverter();
+        Measurement expected = new Measurement(0, Result.BadValue);
+        Measurement actual = default(Measurement);
+        actual = target.ParseUnitString(null);
+        Assert.AreNotEqual<Measurement>(expected, actual);
+        Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
+    }
 
-    //[TestMethod()]
-    //[TestCategory(UnitTestCategory.Unit)]
-    //public void UnitConverter_ParseUnitStringEmptyTest()
-    //{
-    //    UnitConverter target = new UnitConverter();
-    //    Measurement expected = new Measurement(0, Result.BadValue);
-    //    Measurement actual = default(Measurement);
-    //    actual = target.ParseUnitString(string.Empty);
-    //    Assert.AreNotEqual<Measurement>(expected, actual);
-    //    Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
-    //}
+    [TestMethod()]
+    [TestCategory(UnitTestCategory.Unit)]
+    public void UnitConverter_ParseUnitStringEmptyTest()
+    {
+        UnitConverter target = new UnitConverter();
+        Measurement expected = new Measurement(0, Result.BadValue);
+        Measurement actual = default(Measurement);
+        actual = target.ParseUnitString(string.Empty);
+        Assert.AreNotEqual<Measurement>(expected, actual);
+        Assert.AreEqual(expected.ConversionResult, actual.ConversionResult);
+    }
     #endregion
 
     #region "UnitConverter.IsCompatible"
@@ -333,45 +333,7 @@ public class UnitConverterTest
     }
     #endregion
 
-    #region "UnitConverter.GetUnitType"
-    ///<summary>
-    ///A test for GetUnitType
-    ///</summary>
-    //<TestMethod(), _
-    // DeploymentItem("ITA.IQ.Common.dll")> _ 
-    //Public Sub GetUnitTypeTest()
-    //    Dim target As UnitConverter_Accessor = New UnitConverter_Accessor
-    //    Dim unitName As String = "Celsius"
-    //    Dim expected As UnitType = UnitProvider.UnitTypes("Temperature")
-    //    Dim actual As UnitType
-    //    actual = target.GetUnitType(unitName)
-    //    Assert.AreEqual(expected, actual)
-    //End Sub
-
-    //<TestMethod(), _
-    // DeploymentItem("ITA.IQ.Common.dll")> _ 
-    // <ExpectedException(GetType(ArgumentException))> _ 
-    //Public Sub GetUnitTypeNullTest()
-    //    Dim target As UnitConverter_Accessor = New UnitConverter_Accessor
-    //    Dim actual As UnitType
-    //    actual = target.GetUnitType(Nothing)
-
-    //    Assert.Fail()
-    //End Sub
-
-    //<TestMethod(), _
-    // DeploymentItem("ITA.IQ.Common.dll")> _ 
-    // <ExpectedException(GetType(ArgumentException))> _ 
-    //Public Sub GetUnitTypeEmptyTest()
-    //    Dim target As UnitConverter_Accessor = New UnitConverter_Accessor
-    //    Dim actual As UnitType
-    //    actual = target.GetUnitType(String.Empty)
-
-    //    Assert.Fail()
-    //End Sub
-    #endregion
-
-    #region "UnitProvider.GetUnitBySymbol"
+   #region "UnitProvider.GetUnitBySymbol"
     ///<summary>
     ///A test for GetUnitBySymbol
     ///</summary>

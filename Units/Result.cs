@@ -1,6 +1,6 @@
 ﻿namespace Units
 {
-    public enum Result
+    public enum Result : int
     {
         /// <summary>
         /// No error occured.
