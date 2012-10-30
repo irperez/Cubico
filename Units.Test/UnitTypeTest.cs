@@ -316,38 +316,6 @@ public class UnitTypeTest
     //    Assert.AreEqual(expected.Description, actual.Description);
     //    Assert.AreEqual(expected.Units.Count, actual.Units.Count);
     //}
-    #endregion
-
-    //Private Function InitEfObjects() As EFUnitType
-    //Dim efUnitTypeObj As New EFUnitType
-    //efUnitTypeObj.ID = 10
-    //efUnitTypeObj.Name = "Test Type"
-    //efUnitTypeObj.Description = "Test Desc"
-
-    //Dim efUnitObj As New EFUnit
-    //efUnitObj.ID = 2
-    //efUnitObj.Name = "Test Unit"
-    //efUnitObj.UnitType = efUnitTypeObj
-
-    //Dim efUnitModifierObj As New EFUnitModifier
-    //efUnitModifierObj.ID = 2
-    //efUnitModifierObj.ModifierID = 2
-    //efUnitModifierObj.Order = 1
-    //efUnitModifierObj.Value = 0.5
-
-    //Dim efUnitSymbolObj As New EFUnitSymbol
-    //efUnitSymbolObj.ID = 3
-    //efUnitSymbolObj.IsDefault = True
-    //efUnitSymbolObj.Symbol = "Tst"
-
-    //efUnitModifierObj.Unit = efUnitObj
-    //efUnitSymbolObj.Unit = efUnitObj
-
-    //efUnitTypeObj.Unit.Add(efUnitObj)
-    //efUnitObj.UnitModifiers.Add(efUnitModifierObj)
-    //efUnitObj.UnitSymbol.Add(efUnitSymbolObj)
-
-    //Return efUnitTypeObj
-    //End Function
+    #endregion    
 }
 

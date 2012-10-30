@@ -5,7 +5,7 @@ using Units;
 namespace Units.Test
 {
     [TestClass()]
-    class UnitConverterTest4
+    public class UnitConverterTest4
     {
         private TestContext testContextInstance;
 

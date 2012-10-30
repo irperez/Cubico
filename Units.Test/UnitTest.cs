@@ -70,37 +70,37 @@ public class UnitTest
     #endregion
 
     #region "Unit.Unit(UnitType)"
-    //[TestMethod()]
-    //[ExpectedException(typeof(ArgumentNullException))]
-    //public void UnitNewEfUnitUnitTypeNullTest()
-    //{
-    //    Unit testObj = new Unit(null);
+    [TestMethod()]
+    [ExpectedException(typeof(ArgumentNullException))]
+    public void UnitNewEfUnitUnitTypeNullTest()
+    {
+        Unit testObj = new Unit(null);
 
-    //    Assert.Fail("Constructor should cause a ContractException.  Nulls are not allowed");
-    //}
+        Assert.Fail("Constructor should cause a ContractException.  Nulls are not allowed");
+    }
 
-    //[TestMethod()]
-    //public void UnitNewEfUnitUnitTypeTest()
-    //{
-    //    UnitType testunittype = new UnitType
-    //    {
-    //        ID = 99,
-    //        Name = "Name"
-    //    };
-    //    Unit testObj = new Unit(testunittype);
+    [TestMethod()]
+    public void UnitNewEfUnitUnitTypeTest()
+    {
+        UnitType testunittype = new UnitType
+        {
+            ID = 99,
+            Name = "Name"
+        };
+        Unit testObj = new Unit(testunittype);
 
-    //    Assert.IsNotNull(testObj);
-    //    Assert.IsNotNull(testObj.UnitType);
-    //    Assert.IsTrue(testObj.UnitTypeID == 99);
-    //    Assert.AreEqual<string>(testunittype.Name, testObj.UnitType.Name);
+        Assert.IsNotNull(testObj);
+        Assert.IsNotNull(testObj.UnitType);
+        Assert.IsTrue(testObj.UnitTypeID == 99);
+        Assert.AreEqual<string>(testunittype.Name, testObj.UnitType.Name);
 
-    //    Assert.IsNotNull(testObj.Symbols);
-    //    Assert.IsTrue(testObj.Symbols.Count == 0);
+        Assert.IsNotNull(testObj.Symbols);
+        Assert.IsTrue(testObj.Symbols.Count == 0);
 
-    //    Assert.IsNotNull(testObj.Modifiers);
-    //    Assert.IsTrue(testObj.Modifiers.Count == 0);
-    //    // Assert.IsTrue(testUnit.UnitModifiers(0).Value = testObj.Modifiers(0).Value)
-    //}
+        Assert.IsNotNull(testObj.Modifiers);
+        Assert.IsTrue(testObj.Modifiers.Count == 0);
+        // Assert.IsTrue(testUnit.UnitModifiers(0).Value = testObj.Modifiers(0).Value)
+    }
     #endregion
 
     #region "Unit.ParentType"

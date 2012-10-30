@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ConversionResultTest.cs" />
+    <Compile Include="MeasurementTests.cs" />
     <Compile Include="ModifierTest.cs" />
     <Compile Include="SymbolTest.cs" />
     <Compile Include="UnitConverterTest.cs" />
