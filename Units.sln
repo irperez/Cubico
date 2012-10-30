@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Units", "Units\Units.csproj", "{5C21F8E4-02C4-4614-97C7-1899F4E6E634}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubico", "Units\Cubico.csproj", "{5C21F8E4-02C4-4614-97C7-1899F4E6E634}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Units.Test", "Units.Test\Units.Test.csproj", "{720BF499-D91E-4A86-82C0-D072C8EE00E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubico.Test", "Units.Test\Cubico.Test.csproj", "{720BF499-D91E-4A86-82C0-D072C8EE00E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

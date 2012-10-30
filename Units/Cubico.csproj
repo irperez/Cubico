@@ -7,8 +7,8 @@
     <ProjectGuid>{5C21F8E4-02C4-4614-97C7-1899F4E6E634}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Units</RootNamespace>
-    <AssemblyName>Units</AssemblyName>
+    <RootNamespace>Cubico</RootNamespace>
+    <AssemblyName>Cubico</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

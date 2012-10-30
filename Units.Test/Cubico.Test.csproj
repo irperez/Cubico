@@ -65,9 +65,9 @@
     <Compile Include="UnitTypeTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Units\Units.csproj">
+    <ProjectReference Include="..\Units\Cubico.csproj">
       <Project>{5c21f8e4-02c4-4614-97c7-1899f4e6e634}</Project>
-      <Name>Units</Name>
+      <Name>Cubico</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
