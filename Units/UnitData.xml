@@ -396,7 +396,7 @@
     <UnitModifier ID="563" Value="6350293180.000000000000000" Order="1" ModifierID="5" UnitSourceID="14" UnitTargetID="20" />
     <UnitModifier ID="564" Value="6350293180.000000000000000" Order="1" ModifierID="3" UnitSourceID="20" UnitTargetID="14" />
     <UnitModifier ID="565" Value="45359237000.000000000000000" Order="1" ModifierID="5" UnitSourceID="14" UnitTargetID="22" />
-    <UnitModifier ID="566" Value="45359237000.000000000000000" Order="1" ModifierID="3" UnitSourceID="22" UnitTargetID="14" />
+    <UnitModifier ID="566" Value="45359237000.000000000000000" Order="1" ModifierID="3" UnitSourceID="22" UnitTargetID="14" Precision="6" />
     <UnitModifier ID="567" Value="453592370.000000000000000" Order="1" ModifierID="5" UnitSourceID="14" UnitTargetID="23" />
     <UnitModifier ID="568" Value="453592370.000000000000000" Order="1" ModifierID="3" UnitSourceID="23" UnitTargetID="14" />
     <UnitModifier ID="569" Value="28349523.125000000000000" Order="1" ModifierID="5" UnitSourceID="14" UnitTargetID="24" />

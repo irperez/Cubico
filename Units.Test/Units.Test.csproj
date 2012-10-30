@@ -53,10 +53,13 @@
     <Compile Include="ConversionResultTest.cs" />
     <Compile Include="ModifierTest.cs" />
     <Compile Include="SymbolTest.cs" />
+    <Compile Include="UnitConverterTest.cs" />
+    <Compile Include="UnitConverterTest2.cs" />
     <Compile Include="UnitProviderTest.cs" />
     <Compile Include="UnitTest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestCategory.cs" />
     <Compile Include="UnitTypeTest.cs" />
   </ItemGroup>
   <ItemGroup>

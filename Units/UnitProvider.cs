@@ -169,15 +169,15 @@ namespace Units
 
                     }
 
-                    if (_individualModifiers.ContainsKey(mod.UnitSourceID))
+                    if (_individualModifiers.ContainsKey(mod.UnitTargetID))
                     {
-                        var data = _individualModifiers[mod.UnitSourceID];
+                        var data = _individualModifiers[mod.UnitTargetID];
                         data.Add(mod);
                     }
                     else
                     {
                         var data = new List<Modifier> {mod};
-                        _individualModifiers.Add(mod.UnitSourceID, data);
+                        _individualModifiers.Add(mod.UnitTargetID, data);
                     }
 
                 }
@@ -262,10 +262,20 @@ namespace Units
                     if (_symbolLookUp.ContainsKey(unit.ID))
                     {
                         unit.Symbols = _symbolLookUp[unit.ID];
+
+                        foreach (Symbol sym in unit.Symbols)
+                        {
+                            sym.Unit = unit;
+                        }
                     }
                     if (_individualModifiers.ContainsKey(unit.ID))
                     {
                         unit.Modifiers = _individualModifiers[unit.ID];
+
+                        foreach (Modifier mod in unit.Modifiers)
+                        {
+                            mod.ParentUnit = unit;
+                        }
                     }
                     _units.Add(unit.Name, unit);
 
@@ -304,6 +314,12 @@ namespace Units
                                     where unit.UnitTypeID == ut.ID
                                     select unit).ToList();
                     ut.Units = unitData;
+
+                    foreach (Unit unitItem in ut.Units)
+                    {
+                        unitItem.UnitType = ut;
+                    }
+
                     _unitTypes.Add(ut.Name, ut);
 
                 }

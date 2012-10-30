@@ -251,7 +251,7 @@ namespace Units
 			}
 
 			try {
-				IOrderedEnumerable<Modifier> moders = from m in targetUnit.Modifiers 
+				var moders = from m in targetUnit.Modifiers 
                                                     where m.UnitSourceID == currentUnit.ID && m.UnitTargetID == targetUnit.ID 
                                                     orderby m.Order
                                                     select m;

@@ -668,12 +668,12 @@ namespace Units
                 return false;
             }
 
-            if (this.Unit == null && other.Unit == null)
+            if (object.ReferenceEquals(this.Unit, null) && object.ReferenceEquals(other.Unit, null))
             {
                 return true;
             }
 
-            if (this.Unit == null ^ other.Unit == null)
+            if (object.ReferenceEquals(this.Unit, null) ^ object.ReferenceEquals(other.Unit, null))
             {
                 return false;
             }
