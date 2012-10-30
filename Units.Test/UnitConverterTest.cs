@@ -7,7 +7,7 @@ using Units;
 ///to contain all UnitConverterTest Unit Tests
 ///</summary>
 [TestClass()]
-public partial class UnitConverterTest
+public class UnitConverterTest
 {
 
 

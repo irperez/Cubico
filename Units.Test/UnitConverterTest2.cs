@@ -4,8 +4,48 @@ using Units;
 
 namespace Units.Test
 {
-    public partial class UnitConverterTest
+    [TestClass()]
+    public class UnitConverterTest2
     {
+        private TestContext testContextInstance;
+
+        private UnitProvider unitPro = new UnitProvider();
+        ///<summary>
+        ///Gets or sets the test context which provides
+        ///information about and functionality for the current test run.
+        ///</summary>
+        public TestContext TestContext
+        {
+            get { return testContextInstance; }
+            set { testContextInstance = value; }
+        }
+
+        #region "Additional test attributes"
+        //
+        //You can use the following additional attributes as you write your tests:
+        //
+        //Use ClassInitialize to run code before running the first test in the class
+        //<ClassInitialize()> _  _
+        //Public Shared Sub MyClassInitialize(ByVal testContext As TestContext)
+        //End Sub
+        //
+        //Use ClassCleanup to run code after all tests in a class have run
+        //<ClassCleanup()> _  _
+        //Public Shared Sub MyClassCleanup()
+        //End Sub
+        //
+        //Use TestInitialize to run code before running each test
+        //<TestInitialize()> _  _
+        //Public Sub MyTestInitialize()
+        //End Sub
+        //
+        //Use TestCleanup to run code after each test has run
+        //<TestCleanup()> _  _
+        //Public Sub MyTestCleanup()
+        //End Sub
+        //
+
+        #endregion
         #region "UnitConverter.ConvertUnits"
 
         #region "Force Tests"
@@ -3987,6 +4027,6169 @@ namespace Units.Test
             string currentUnitName = "lb ft/s";
             string targetUnitName = "lb ft/min";
             Measurement expected = new Measurement(Convert.ToDouble(59.99999994), "lb ft/min");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+        #endregion
+
+        #region "Speed Tests"
+        #region "Source as Meters/Second"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerSec_to_KmPerHr_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m/s";
+            string targetUnitName = "km/h";
+            Measurement expected = new Measurement(Convert.ToDouble(360), "km/h");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerSec_to_KmPerHr_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m/s";
+            string targetUnitName = "km/h";
+            Measurement expected = new Measurement(Convert.ToDouble(3.5999999964), "km/h");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerSec_to_MilesPerHr_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m/s";
+            string targetUnitName = "mph";
+            Measurement expected = new Measurement(Convert.ToDouble(223.69362920544), "mph");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerSec_to_MilesPerHr_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m/s";
+            string targetUnitName = "mph";
+            Measurement expected = new Measurement(Convert.ToDouble(2.23693628981747), "mph");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerSec_to_MetersPerMin_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m/s";
+            string targetUnitName = "m/min";
+            Measurement expected = new Measurement(Convert.ToDouble(6000), "m/min");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerSec_to_MetersPerMin_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m/s";
+            string targetUnitName = "m/min";
+            Measurement expected = new Measurement(Convert.ToDouble(59.99999994), "m/min");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerSec_to_FtPerSec_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m/s";
+            string targetUnitName = "ft/s";
+            Measurement expected = new Measurement(Convert.ToDouble(328.083989501312), "ft/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerSec_to_FtPerSec_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m/s";
+            string targetUnitName = "ft/s";
+            Measurement expected = new Measurement(Convert.ToDouble(3.28083989173228), "ft/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Kilometers/Hour"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_KmPerHr_to_MetersPerSec_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km/h";
+            string targetUnitName = "m/s";
+            Measurement expected = new Measurement(Convert.ToDouble(27.7777777777778), "m/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_KmPerHr_to_MetersPerSec_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km/h";
+            string targetUnitName = "m/s";
+            Measurement expected = new Measurement(Convert.ToDouble(0.2777777775), "m/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_KmPerHr_to_MilesPerHr_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km/h";
+            string targetUnitName = "mph";
+            Measurement expected = new Measurement(Convert.ToDouble(62.1371192237334), "mph");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_KmPerHr_to_MilesPerHr_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km/h";
+            string targetUnitName = "mph";
+            Measurement expected = new Measurement(Convert.ToDouble(0.621371191615963), "mph");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_KmPerHr_to_MetersPerMin_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km/h";
+            string targetUnitName = "m/min";
+            Measurement expected = new Measurement(Convert.ToDouble(1666.66666666667), "m/min");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_KmPerHr_to_MetersPerMin_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km/h";
+            string targetUnitName = "m/min";
+            Measurement expected = new Measurement(Convert.ToDouble(16.66666665), "m/min");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_KmPerHr_to_FtPerSec_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km/h";
+            string targetUnitName = "ft/s";
+            Measurement expected = new Measurement(Convert.ToDouble(91.1344415281423), "ft/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_KmPerHr_to_FtPerSec_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km/h";
+            string targetUnitName = "ft/s";
+            Measurement expected = new Measurement(Convert.ToDouble(0.911344414370079), "ft/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Miles/Hour"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MilesPerHr_to_MetersPerSec_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mph";
+            string targetUnitName = "m/s";
+            Measurement expected = new Measurement(Convert.ToDouble(44.704), "m/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MilesPerHr_to_MetersPerSec_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mph";
+            string targetUnitName = "m/s";
+            Measurement expected = new Measurement(Convert.ToDouble(0.44703999955296), "m/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MilesPerHr_to_KmPerHr_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mph";
+            string targetUnitName = "km/h";
+            Measurement expected = new Measurement(Convert.ToDouble(160.9344), "km/h");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MilesPerHr_to_KmPerHr_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mph";
+            string targetUnitName = "km/h";
+            Measurement expected = new Measurement(Convert.ToDouble(1.60934399839066), "km/h");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MilesPerHr_to_MetersPerMin_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mph";
+            string targetUnitName = "m/min";
+            Measurement expected = new Measurement(Convert.ToDouble(2682.24), "m/min");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MilesPerHr_to_MetersPerMin_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mph";
+            string targetUnitName = "m/min";
+            Measurement expected = new Measurement(Convert.ToDouble(26.8223999731776), "m/min");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MilesPerHr_to_FtPerSec_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mph";
+            string targetUnitName = "ft/s";
+            Measurement expected = new Measurement(Convert.ToDouble(146.666666666667), "ft/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MilesPerHr_to_FtPerSec_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mph";
+            string targetUnitName = "ft/s";
+            Measurement expected = new Measurement(Convert.ToDouble(1.4666666652), "ft/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Meters/Minute"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerMin_to_MetersPerSec_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m/min";
+            string targetUnitName = "m/s";
+            Measurement expected = new Measurement(Convert.ToDouble(1.66666666666667), "m/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerMin_to_MetersPerSec_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m/min";
+            string targetUnitName = "m/s";
+            Measurement expected = new Measurement(Convert.ToDouble(0.01666666665), "m/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerMin_to_KmPerHr_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m/min";
+            string targetUnitName = "km/h";
+            Measurement expected = new Measurement(Convert.ToDouble(6), "km/h");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerMin_to_KmPerHr_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m/min";
+            string targetUnitName = "km/h";
+            Measurement expected = new Measurement(Convert.ToDouble(0.05999999994), "km/h");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerMin_to_MilesPerHr_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m/min";
+            string targetUnitName = "mph";
+            Measurement expected = new Measurement(Convert.ToDouble(3.728227153424), "mph");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerMin_to_MilesPerHr_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m/min";
+            string targetUnitName = "mph";
+            Measurement expected = new Measurement(Convert.ToDouble(0.037282271496958), "mph");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerMin_to_FtPerSec_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m/min";
+            string targetUnitName = "ft/s";
+            Measurement expected = new Measurement(Convert.ToDouble(5.46806649168854), "ft/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_MetersPerMin_to_FtPerSec_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m/min";
+            string targetUnitName = "ft/s";
+            Measurement expected = new Measurement(Convert.ToDouble(0.054680664862205), "ft/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Feet/Second"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_FtPerSec_to_MetersPerSec_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft/s";
+            string targetUnitName = "m/s";
+            Measurement expected = new Measurement(Convert.ToDouble(30.48), "m/s");
+            //should be 30.48, .net conversion bug
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_FtPerSec_to_MetersPerSec_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft/s";
+            string targetUnitName = "m/s";
+            Measurement expected = new Measurement(Convert.ToDouble(0.3047999996952), "m/s");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_FtPerSec_to_KmPerHr_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft/s";
+            string targetUnitName = "km/h";
+            Measurement expected = new Measurement(Convert.ToDouble(109.728), "km/h");
+            //should be 109.728, .net conversion bug
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_FtPerSec_to_KmPerHr_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft/s";
+            string targetUnitName = "km/h";
+            Measurement expected = new Measurement(Convert.ToDouble(1.09727999890272), "km/h");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_FtPerSec_to_MilesPerHr_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft/s";
+            string targetUnitName = "mph";
+            Measurement expected = new Measurement(Convert.ToDouble(68.1818181818182), "mph");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_FtPerSec_to_MilesPerHr_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft/s";
+            string targetUnitName = "mph";
+            Measurement expected = new Measurement(Convert.ToDouble(0.681818181136364), "mph");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_FtPerSec_to_MetersPerMin_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft/s";
+            string targetUnitName = "m/min";
+            Measurement expected = new Measurement(Convert.ToDouble(1828.8), "m/min");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_FtPerSec_to_MetersPerMin_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft/s";
+            string targetUnitName = "m/min";
+            Measurement expected = new Measurement(Convert.ToDouble(18.287999981712), "m/min");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+        #endregion
+
+        #region "Length Tests"
+        #region "Source as Metres"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(109.361329833771), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(1.0936132972441), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(328.083989501312), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+            Assert.AreEqual(Result.NoError, actual.ConversionResult);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(3.28083989173228), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(4.97096953789867), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(0.049709695329277), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_mile_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.062137119223733), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_mile_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000621371191616), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.1), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000999999999), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0001), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(9.99999999E-07), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-07), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-09), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.497096953789867), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.004970969532928), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(3937007.87401575), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(39370.0787007874), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(100000000), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(999999.999), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(3937.00787401575), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(39.3700787007874), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(10000), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(99.9999999), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "m";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(100000), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_m_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "m";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(999.999999), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Yards"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(91.44), "m");
+            //expected altered to meet .net conversion bug (91.44 m)
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(0.9143999990856), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(300), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(2.999999997), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(4.54545454545455), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(0.045454545409091), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_mile_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.056818181818182), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_mile_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000568181817614), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.09144), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000914399999086), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(9.144E-05), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(9.14399999E-07), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(9.144E-08), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(9.144E-10), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.454545454545454), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.004545454540909), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(3600000), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(35999.999964), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(91440000), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(914399.9990856), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(3600), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(35.999999964), "in");
+            //expected altered to meet .net conversion bug (35.999999964)
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(9144), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(91.43999990856), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "yd";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(91440), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_yd_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "yd";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(914.3999990856), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Feet"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(30.48), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(0.3047999996952), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_m_negative_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(-0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(-0.3047999996952), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(33.3333333333333), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(0.333333333), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(1.51515151515151), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(0.015151515136364), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_mile_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.018939393939394), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_mile_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000189393939205), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.03048), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000304799999695), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(3.048E-05), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(3.048E-07), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(3.048E-08), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(3.048E-10), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.151515151515152), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.001515151513636), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(1200000), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(11999.999988), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(30480000), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(304799.9996952), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(1200), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(11.999999988), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(3048), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(30.47999996952), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "ft";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(30480), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_ft_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "ft";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(304.7999996952), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Chain"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(2011.68), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(20.1167999798832), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(2200), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(21.999999978), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(6600), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(65.999999934), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_mile_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(1.25), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_mile_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0124999999875), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(2.01168), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.020116799979883), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.00201168), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.011679998E-05), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.01168E-06), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.01168E-08), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(10), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0999999999), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(79200000), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(791999.999208), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(2011680000), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(20116799.979883), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(79200), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(791.999999208), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(201168), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(2011.67999798832), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "chain";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(2011680), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_chain_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "chain";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(20116.7999798832), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Miles"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(160934.4), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(1609.34399839066), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(176000), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(1759.99999824), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(528000), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(5279.99999472), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(8000), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(79.99999992), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(160.9344), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(1.60934399839066), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.1609344), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.001609343998391), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0001609344), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(1.609343998E-06), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(800), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(7.999999992), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(6336000000L), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(63359999.93664), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(160934400000L), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(1609343998.391), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(6336000), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(63359.99993664), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(16093440), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(160934.399839066), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mi";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(160934400), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_miles_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mi";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(1609343.998391), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Kilometres"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(100000), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(999.999999), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(109361.329833771), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(1093.61329724409), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(328083.989501312), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(3280.83989173228), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(4970.96953789867), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(49.709695329277), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_miles_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(62.1371192237334), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_miles_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.621371191615963), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.1), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000999999999), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0001), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(9.99999999E-07), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(497.096953789867), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(4.9709695329277), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(3937007874.01575), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(39370078.7007874), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(100000000000L), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(999999999), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(3937007.87401575), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(39370.0787007874), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(10000000), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(99999.9999), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "km";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(100000000), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_km_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "km";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(999999.999), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Megametres"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(100000000), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(999999.999), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(109361329.833771), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(1093613.29724409), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(328083989.501312), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(3280839.89173228), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(4970969.53789867), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(49709.695329277), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_miles_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(62137.1192237334), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_miles_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(621.371191615963), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(100000), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(999.999999), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.1), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000999999999), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(497096.953789867), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(4970.9695329277), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(3937007874015.75), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(39370078700.7874), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(100000000000000L), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(999999999000L), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(3937007874.01575), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(39370078.7007874), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(10000000000L), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(99999999.9), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Mm";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(100000000000L), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Megametres_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Mm";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(999999999), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Gigametres"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(100000000000L), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(999999999), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(109361329833.771), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(1093613297.24409), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(328083989501.312), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(3280839891.73228), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(4970969537.89867), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(49709695.329277), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_miles_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(62137119.2237334), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_miles_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(621371.191615963), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(100000000), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gms_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(999999.999), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(100000), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(999.999999), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(497096953.789867), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(4970969.5329277), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(3937007874015748L), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(39370078700787.4), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(100000000000000000L), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(999999999000000L), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(3937007874015.75), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(39370078700.7874), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(10000000000000L), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(99999999900L), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "Gm";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(100000000000000L), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_Gm_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "Gm";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(999999999000L), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Furlongs"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(20116.8), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(201.167999798832), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(22000), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(219.99999978), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(66000), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(659.99999934), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_mile_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(12.5), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_mile_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.124999999875), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(20.1168), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.201167999798832), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0201168), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000201167999799), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.01168E-05), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.01168E-07), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(1000), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(9.99999999), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(792000000), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(7919999.99208), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(20116800000L), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(201167999.799), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(792000), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(7919.99999208), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(2011680), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(20116.7999798832), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "furlong";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(20116800), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_furlong_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "furlong";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(201167.999799), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Thou"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(0.00254), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(2.5399999975E-05), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(0.002777777777778), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(2.777777775E-05), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(0.008333333333333), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(8.333333325E-05), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_mile_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(1.578282828E-06), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_mile_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(1.5782828E-08), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54E-06), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54E-08), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54E-09), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54E-11), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54E-12), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.5E-14), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000126262626263), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(1.262626261E-06), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(0.1), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000999999999), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(2540), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(25.3999999746), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(1.2626262626E-05), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(1.26262626E-07), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.254), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.00253999999746), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "thou";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_thou_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "thou";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0253999999746), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Microns"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0001), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(9.99999999E-07), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000109361329834), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(1.093613297E-06), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000328083989501), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+            Assert.AreEqual(Result.NoError, actual.ConversionResult);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(3.280839892E-06), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(4.970969538E-06), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(4.9709695E-08), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_mile_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(6.2137119E-08), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_mile_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(6.21371E-10), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-07), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-09), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-10), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-12), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-13), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-15), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(4.97096954E-07), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(4.97097E-09), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(3.93700787401575), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(0.039370078700787), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(0.003937007874016), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(3.9370078701E-05), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.01), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(9.99999999E-05), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "µm";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.1), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_µm_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "µm";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000999999999), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Inches"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0253999999746), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(2.77777777777778), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(0.02777777775), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(8.33333333333333), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(0.08333333325), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_mile_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.001578282828283), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_mile_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(1.5782828267E-05), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.00254), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(2.5399999975E-05), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54E-06), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54E-08), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54E-09), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.54E-11), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(0.126262626262626), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(0.001262626261364), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(100000), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(999.999999), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(2540000), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(25399.9999746), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.012626262626263), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000126262626136), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(254), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(2.53999999746), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "in";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(2540), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_in_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "in";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(25.3999999746), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Centimetres"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(1), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(0.00999999999), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(1.09361329833771), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(0.010936132972441), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(3.28083989501312), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+            Assert.AreEqual(Result.NoError, actual.ConversionResult);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(0.032808398917323), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(0.049709695378987), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000497096953293), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_mile_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000621371192237), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_mile_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(6.213711916E-06), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.001), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(9.99999999E-06), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-06), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-08), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-09), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-11), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.004970969537899), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(4.9709695329E-05), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(39370.0787401575), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(393.700787007874), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(1000000), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(9999.99999), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(39.3700787401575), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(0.393700787007874), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_millimetres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "cm";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(1000), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_cm_to_millimetres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "cm";
+            string targetUnitName = "mm";
+            Measurement expected = new Measurement(Convert.ToDouble(9.99999999), "mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        #endregion
+
+        #region "Source as Millimetres"
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_m_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(0.1), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_m_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "m";
+            Measurement expected = new Measurement(Convert.ToDouble(0.000999999999), "m");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_yd_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(0.109361329833771), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_yd_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "yd";
+            Measurement expected = new Measurement(Convert.ToDouble(0.001093613297244), "yd");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_ft_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(0.328083989501312), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+            Assert.AreEqual(Result.NoError, actual.ConversionResult);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_ft_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "ft";
+            Measurement expected = new Measurement(Convert.ToDouble(0.003280839891732), "ft");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_chain_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(0.004970969537899), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_chain_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "chain";
+            Measurement expected = new Measurement(Convert.ToDouble(4.9709695329E-05), "chain");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_mile_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(6.2137119224E-05), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_mile_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "mi";
+            Measurement expected = new Measurement(Convert.ToDouble(6.21371192E-07), "mi");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_km_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0001), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_km_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "km";
+            Measurement expected = new Measurement(Convert.ToDouble(9.99999999E-07), "km");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_Megametres_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-07), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_Megametres_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "Mm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-09), "Mm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_Gm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-10), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_Gm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "Gm";
+            Measurement expected = new Measurement(Convert.ToDouble(1E-12), "Gm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_furlong_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(0.00049709695379), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_furlong_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "furlong";
+            Measurement expected = new Measurement(Convert.ToDouble(4.970969533E-06), "furlong");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_thou_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(3937.00787401575), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_thou_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "thou";
+            Measurement expected = new Measurement(Convert.ToDouble(39.3700787007874), "thou");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_µm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(100000), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_µm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "µm";
+            Measurement expected = new Measurement(Convert.ToDouble(999.999999), "µm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_in_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(3.93700787401575), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_in_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "in";
+            Measurement expected = new Measurement(Convert.ToDouble(0.039370078700787), "in");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_cm_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(100);
+            string currentUnitName = "mm";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(10), "cm");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [TestMethod()]
+        [TestCategory(UnitTestCategory.Integration)]
+        [TestCategory(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_millimetres_to_cm_Test2()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(0.999999999);
+            string currentUnitName = "mm";
+            string targetUnitName = "cm";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0999999999), "cm");
             Measurement actual = default(Measurement);
             actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
             Assert.AreEqual(expected.Value, actual.Value);
