@@ -82,7 +82,7 @@ namespace Units
 
         private void LoadDataFile()
         {
-            const string fileName = "Units.UnitData.xml";
+            const string fileName = "Cubico.UnitData.xml";
             var assembly = Assembly.GetExecutingAssembly();
             var stream = assembly.GetManifestResourceStream(fileName);
 
