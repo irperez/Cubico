@@ -241,8 +241,8 @@
     <UnitModifier ID="403" Value="304800.000000000000000" Order="1" ModifierID="5" UnitSourceID="57" UnitTargetID="49" />
     <UnitModifier ID="404" Value="12.000000000000000" Order="1" ModifierID="3" UnitSourceID="49" UnitTargetID="58" />
     <UnitModifier ID="405" Value="12.000000000000000" Order="1" ModifierID="5" UnitSourceID="58" UnitTargetID="49" />
-    <UnitModifier ID="406" Value="30.480000000000000" Order="1" ModifierID="3" UnitSourceID="49" UnitTargetID="59" />
-    <UnitModifier ID="407" Value="30.480000000000000" Order="1" ModifierID="5" UnitSourceID="59" UnitTargetID="49" />
+    <UnitModifier ID="406" Value="30.480000000000000" Order="1" ModifierID="3" UnitSourceID="49" UnitTargetID="59"  />
+    <UnitModifier ID="407" Value="30.480000000000000" Order="1" ModifierID="5" UnitSourceID="59" UnitTargetID="49" Precision="15" />
     <UnitModifier ID="408" Value="304.800000000000000" Order="1" ModifierID="3" UnitSourceID="49" UnitTargetID="60" />
     <UnitModifier ID="409" Value="304.800000000000000" Order="1" ModifierID="5" UnitSourceID="60" UnitTargetID="49" />
     <UnitModifier ID="410" Value="0.012500000000000" Order="1" ModifierID="3" UnitSourceID="50" UnitTargetID="51" />
@@ -1272,7 +1272,7 @@
     <UnitSymbol ID="134" Symbol="Ré" IsDefault="0" UnitID="10" />
     <UnitSymbol ID="135" Symbol="mi" IsDefault="1" UnitID="51" />
     <UnitSymbol ID="136" Symbol="yrd" IsDefault="0" UnitID="48" />
-    <UnitSymbol ID="137" Symbol="meter" IsDefault="0" UnitID="47" />
+    <UnitSymbol ID="137" Symbol="meter" IsDefault="1" UnitID="47" />
     <UnitSymbol ID="138" Symbol="thou" IsDefault="1" UnitID="56" />
     <UnitSymbol ID="139" Symbol="mil" IsDefault="0" UnitID="56" />
     <UnitSymbol ID="141" Symbol="micrometre" IsDefault="0" UnitID="57" />

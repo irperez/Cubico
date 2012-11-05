@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Runtime.Serialization;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace Units
 {
@@ -190,9 +191,9 @@ namespace Units
         #region "Properties"
 		public string DefaultSymbol {
 			get {
-				Symbol symbol = null;
-				//symbol = (From s In Me.Symbols
-				//          Where s.IsDefault = True).FirstOrDefault
+                Symbol symbol = (from s in this.Symbols
+                                 where s.IsDefault = true
+                                 select s).FirstOrDefault();
 
 				if (symbol == null) {
 					return string.Empty;

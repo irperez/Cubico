@@ -9478,7 +9478,7 @@ namespace Units.Test
             double value = Convert.ToDouble(100);
             string currentUnitName = "cm";
             string targetUnitName = "ft";
-            Measurement expected = new Measurement(Convert.ToDouble(3.28083989501312), "ft");
+            Measurement expected = new Measurement(Convert.ToDouble(3.280839895013123), "ft");
             Measurement actual = default(Measurement);
             actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
             Assert.AreEqual(expected.Value, actual.Value);

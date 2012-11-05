@@ -1280,7 +1280,7 @@ public class MeasurementTests
         IComparable<Measurement> target = new Measurement(5, "ft");
         Measurement other = new Measurement(41, "in");
         int expected = 1;
-        int actual = 0;
+        int actual;
         actual = target.CompareTo(other);
         Assert.AreEqual(expected, actual);
     }
