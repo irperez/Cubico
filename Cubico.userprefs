@@ -1,0 +1,28 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cubico.Tests\ConversionResultTest.cs">
+    <Files>
+      <File FileName="Cubico.Tests\ConversionResultTest.cs" Line="281" Column="3" />
+      <File FileName="Cubico.Tests\MeasurementTests.cs" Line="1507" Column="3" />
+      <File FileName="Cubico.Tests\ModifierTest.cs" Line="168" Column="3" />
+      <File FileName="Cubico.Tests\SymbolTest.cs" Line="11" Column="3" />
+      <File FileName="Cubico.Tests\UnitConverterTest.cs" Line="9053" Column="4" />
+      <File FileName="Cubico.Tests\UnitConverterTest2.cs" Line="3" Column="14" />
+      <File FileName="Cubico.Tests\UnitConverterTest3.cs" Line="2" Column="23" />
+      <File FileName="Cubico.Tests\UnitConverterTest4.cs" Line="5" Column="23" />
+      <File FileName="Cubico.Tests\UnitProviderTest.cs" Line="4" Column="13" />
+      <File FileName="Cubico.Tests\UnitTest.cs" Line="4" Column="23" />
+      <File FileName="Cubico.Tests\UnitTest1.cs" Line="2" Column="23" />
+      <File FileName="Cubico.Tests\UnitTypeTest.cs" Line="3" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
