@@ -4,51 +4,21 @@ using Cubico;
 
 namespace Cubico.Tests
 {
-	///This is a test class for MeasurementTest and is intended to contain all MeasurementTest Unit Tests
 	[TestFixture]
 	public class MeasurementTests
 	{
-		private TestContext testContextInstance;
-		private UnitProvider unitPro = new UnitProvider ();
-		///<summary>
-		///Gets or sets the test context which provides
-		///information about and functionality for the current test run.
-		///</summary>
+		TestContext testContextInstance;
+		UnitProvider unitPro = new UnitProvider ();
+
+		// Gets or sets the test context which provides information about and functionality for the current test run.
 		public TestContext TestContext {
 			get { return testContextInstance; }
 			set { testContextInstance = value; }
 		}
-		#region "Additional test attributes"
-		//
-		//You can use the following additional attributes as you write your tests:
-		//
-		//Use ClassInitialize to run code before running the first test in the class
-		//<ClassInitialize()>  _
-		//Public Shared Sub MyClassInitialize(ByVal testContext As TestContext)
-		//End Sub
-		//
-		//Use ClassCleanup to run code after all tests in a class have run
-		//<ClassCleanup()>  _
-		//Public Shared Sub MyClassCleanup()
-		//End Sub
-		//
-		//Use TestInitialize to run code before running each test
-		//<TestInitialize()>  _
-		//Public Sub MyTestInitialize()
-		//End Sub
-		//
-		//Use TestCleanup to run code after each test has run
-		//<TestCleanup()>  _
-		//Public Sub MyTestCleanup()
-		//End Sub
-		//
-		#endregion
 
 		#region "Measurement.Value"
-		///<summary>
-		///A test for Value
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementValueTest ()
 		{
 			double expected = 10;
@@ -56,15 +26,13 @@ namespace Cubico.Tests
 			double actual = 0;
 			actual = target.Value;
 
-			Assert.AreEqual<double> (expected, actual);
+			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Unit"
-		///<summary>
-		///A test for Unit
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementUnitTest ()
 		{
 			Unit expected = unitPro.Units ["Feet"];
@@ -72,15 +40,13 @@ namespace Cubico.Tests
 			Unit actual = default(Unit);
 			actual = target.Unit;
 
-			Assert.AreEqual<string> (expected.Name, actual.Name);
+			Assert.AreEqual (expected.Name, actual.Name);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Symbol"
-		///<summary>
-		///A test for Symbol
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementSymbolTest ()
 		{
 			string expected = "ft";
@@ -88,10 +54,10 @@ namespace Cubico.Tests
 			string actual = null;
 			actual = target.Symbol;
 
-			Assert.AreEqual<string> (expected, actual);
+			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementSymbolNullTest ()
 		{
 			string expected = null;
@@ -100,13 +66,11 @@ namespace Cubico.Tests
 			actual = target.Symbol;
 
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.IsValid"
-		///<summary>
-		///A test for IsValid
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementIsValidTest ()
 		{
 			bool expected = true;
@@ -114,10 +78,10 @@ namespace Cubico.Tests
 			bool actual = false;
 			actual = target.IsValid;
 
-			Assert.AreEqual<bool> (expected, actual);
+			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementIsValidNullTest ()
 		{
 			bool expected = false;
@@ -125,9 +89,10 @@ namespace Cubico.Tests
 			bool actual = false;
 			actual = target.IsValid;
 
-			Assert.AreEqual<bool> (expected, actual);
+			Assert.AreEqual (expected, actual);
 		}
-		//[TestMethod()]
+
+		//[Test]
 		//public void MeasurementIsValidNullTest2()
 		//{
 		//    bool expected = false;
@@ -135,12 +100,12 @@ namespace Cubico.Tests
 		//    bool actual = false;
 		//    actual = target.IsValid;
 
-		//    Assert.AreEqual<bool>(expected, actual);
+		//    Assert.AreEqual(expected, actual);
 		//    Assert.IsTrue(target == null);
 		//    Assert.IsFalse(target != null);
 		//}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementIsValidBadUnitTest ()
 		{
 			bool expected = false;
@@ -148,15 +113,13 @@ namespace Cubico.Tests
 			bool actual = false;
 			actual = target.IsValid;
 
-			Assert.AreEqual<bool> (expected, actual);
+			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.FullValue"
-		///<summary>
-		///A test for FullValue
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementFullValueTest ()
 		{
 			string expected = "10ft";
@@ -164,24 +127,13 @@ namespace Cubico.Tests
 			string actual = null;
 			actual = target.FullValue;
 
-			Assert.AreEqual<string> (expected, actual);
+			Assert.AreEqual (expected, actual);
 		}
-		//<TestMethod()> _
-		//Public Sub MeasurementFullValueNullTest()
-		//    Dim expected As String = "10"
-		//    Dim target As Measurement = New Measurement(10, DirectCast(Nothing, String))
-		//    Dim actual As String
-		//    actual = target.FullValue
 
-		//    Assert.AreEqual(Of String)(expected, actual)
-		//End Sub
 		#endregion
-
 		#region "Measurement.Flags"
-		///<summary>
-		///A test for Flags
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementFlagsTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -191,13 +143,11 @@ namespace Cubico.Tests
 			actual = target.Flags;
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Converter"
-		///<summary>
-		///A test for Converter
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementConverterTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -206,13 +156,11 @@ namespace Cubico.Tests
 
 			Assert.IsNotNull (actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.ConversionResult"
-		///<summary>
-		///A test for ConversionResult
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementConversionResultTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -224,7 +172,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementConversionResultNullTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -235,13 +183,11 @@ namespace Cubico.Tests
 
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.ValidateEntry(Value,Symbol)"
-		///<summary>
-		///A test for ValidateEntry
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementValidateEntryValueSymbolTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -253,7 +199,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementValidateEntryValueSymbolIncompatibleTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -265,7 +211,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementValidateEntryValueSymbolMaxTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -279,7 +225,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementValidateEntryValueSymbolMinTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -292,13 +238,11 @@ namespace Cubico.Tests
 			actual = target.ValidateEntry (value, symbol);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.ValidateEntry(entry)"
-		///<summary>
-		///A test for ValidateEntry
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementValidateEntrySymbolTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -309,7 +253,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementValidateEntrySymbolIncompatibleTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -320,7 +264,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementValidateEntrySymbolMaxTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -333,7 +277,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementValidateEntrySymbolMinTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -345,13 +289,11 @@ namespace Cubico.Tests
 			actual = target.ValidateEntry (entry);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.ToString"
-		///<summary>
-		///A test for ToString
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementToStringTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -360,13 +302,11 @@ namespace Cubico.Tests
 			actual = target.ToString ();
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.SetValue(measurementString)"
-		///<summary>
-		///A test for SetValue
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementSetValueStringTest ()
 		{
 			Measurement target = new Measurement ("ft");
@@ -375,10 +315,10 @@ namespace Cubico.Tests
 			Result actual = default(Result);
 			actual = target.SetValue (measurement);
 			Assert.AreEqual (expected, actual);
-			Assert.AreEqual<double> (10, target.Value);
+			Assert.AreEqual (10, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementSetValueStringTest2 ()
 		{
 			Measurement target = new Measurement ("ft");
@@ -387,10 +327,10 @@ namespace Cubico.Tests
 			Result actual = default(Result);
 			actual = target.SetValue (measurement);
 			Assert.AreEqual (expected, actual);
-			Assert.AreEqual<double> (12, target.Value);
+			Assert.AreEqual (12, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementSetValueStringTest3 ()
 		{
 			Measurement target = new Measurement ("ft");
@@ -400,10 +340,10 @@ namespace Cubico.Tests
 			Result actual = default(Result);
 			actual = target.SetValue (measurement);
 			Assert.AreEqual (expected, actual);
-			Assert.AreEqual<double> (1, target.Value);
+			Assert.AreEqual (1, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementSetValueStringInvalidTest ()
 		{
 			Measurement target = new Measurement ("ft");
@@ -414,7 +354,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetValueStringNullTest ()
 		{
@@ -424,7 +364,7 @@ namespace Cubico.Tests
 			Assert.Fail ();
 		}
 
-		[TestMethod()]
+		[Test]
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetValueStringEmptyTest ()
 		{
@@ -433,13 +373,11 @@ namespace Cubico.Tests
 			actual = target.SetValue (string.Empty);
 			Assert.Fail ();
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.SetValue(value)"
-		///<summary>
-		///A test for SetValue
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementSetValueTest ()
 		{
 			Measurement target = new Measurement ("ft");
@@ -449,13 +387,11 @@ namespace Cubico.Tests
 			actual = target.SetValue (value);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.SetUnit(symbol)"
-		///<summary>
-		///A test for SetUnit
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementSetUnitTest ()
 		{
 			Measurement target = new Measurement ("ft");
@@ -467,7 +403,7 @@ namespace Cubico.Tests
 			Assert.AreEqual ("Second", target.Unit.Name);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementSetUnitTest2 ()
 		{
 			Measurement target = new Measurement ("ft");
@@ -479,7 +415,7 @@ namespace Cubico.Tests
 			Assert.AreEqual ("Feet", target.Unit.Name);
 		}
 
-		[TestMethod()]
+		[Test]
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetUnitNullTest ()
 		{
@@ -490,7 +426,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetUnitEmptyTest ()
 		{
@@ -500,13 +436,11 @@ namespace Cubico.Tests
 			actual = target.SetUnit (string.Empty);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.SetMinBound"
-		///<summary>
-		///A test for SetMinBound
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementSetMinBoundTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -518,7 +452,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementSetMinBoundTest2 ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -530,7 +464,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetMinBoundNullTest ()
 		{
@@ -540,7 +474,7 @@ namespace Cubico.Tests
 			Assert.Fail ();
 		}
 
-		[TestMethod()]
+		[Test]
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetMinBoundEmptyTest ()
 		{
@@ -549,13 +483,11 @@ namespace Cubico.Tests
 			actual = target.SetMinBound (1, string.Empty);
 			Assert.Fail ();
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.SetMaxBound"
-		///<summary>
-		///A test for SetMinBound
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementSetMaxBoundTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -567,7 +499,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementSetMaxBoundTest2 ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -579,7 +511,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetMaxBoundNullTest ()
 		{
@@ -589,7 +521,7 @@ namespace Cubico.Tests
 			Assert.Fail ();
 		}
 
-		[TestMethod()]
+		[Test]
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetMaxBoundEmptyTest ()
 		{
@@ -598,13 +530,11 @@ namespace Cubico.Tests
 			actual = target.SetMinBound (1, string.Empty);
 			Assert.Fail ();
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Operator -"
-		///<summary>
-		///A test for op_Subtraction
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void Measurementop_SubtractionTest ()
 		{
 			Measurement d1 = new Measurement (5, "ft");
@@ -615,7 +545,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_SubtractionDiffUnitTest ()
 		{
 			Measurement d1 = new Measurement (5, "ft");
@@ -625,13 +555,11 @@ namespace Cubico.Tests
 			actual = (d1 - d2);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Operator *"
-		///<summary>
-		///A test for op_Multiply
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void Measurementop_MultiplyTest ()
 		{
 			Measurement d1 = new Measurement (5, "ft");
@@ -642,7 +570,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_MultiplyDiffUnitTest ()
 		{
 			Measurement d1 = new Measurement (5, "ft");
@@ -652,13 +580,11 @@ namespace Cubico.Tests
 			actual = (d1 * d2);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Operator <="
-		///<summary>
-		///A test for op_LessThanOrEqual
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void Measurementop_LessThanOrEqualTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -669,7 +595,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_LessThanOrEqualTest2 ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -680,7 +606,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_LessThanOrEqualFalseTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -691,7 +617,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_LessThanOrEqualDiffUnitTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -702,7 +628,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_LessThanOrEqualDiffUnitTest2 ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -713,7 +639,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_LessThanOrEqualFalseDiffUnitTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -723,13 +649,11 @@ namespace Cubico.Tests
 			actual = (left <= right);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Operator <"
-		///<summary>
-		///A test for op_LessThan
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void Measurementop_LessThanTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -740,7 +664,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_LessThanFalseTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -751,7 +675,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_LessThanDiffUnitTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -762,7 +686,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_LessThanFalseDiffUnitTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -772,13 +696,11 @@ namespace Cubico.Tests
 			actual = (left < right);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Operator <>"
-		///<summary>
-		///A test for op_Inequality
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void Measurementop_InequalityTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -789,7 +711,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_InequalityFalseTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -800,7 +722,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_InequalityDiffUnitTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -811,7 +733,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_InequalityDiffUnitFalseTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -821,13 +743,11 @@ namespace Cubico.Tests
 			actual = (left != right);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Operator >="
-		///<summary>
-		///A test for op_GreaterThanOrEqual
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void Measurementop_GreaterThanOrEqualTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -838,7 +758,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_GreaterThanOrEqualTest2 ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -849,7 +769,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_GreaterThanOrEqualFalseTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -860,7 +780,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_GreaterThanOrEqualDiffUnitTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -871,7 +791,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_GreaterThanOrEqualDiffUnitTest2 ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -882,7 +802,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_GreaterThanOrEqualDiffUnitFalseTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -892,13 +812,11 @@ namespace Cubico.Tests
 			actual = (left >= right);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Operator >"
-		///<summary>
-		///A test for op_GreaterThan
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void Measurementop_GreaterThanTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -909,7 +827,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_GreaterThanFalseTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -920,7 +838,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_GreaterThanDiffUnitTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -931,7 +849,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_GreaterThanDiffUnitFalseTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -941,13 +859,11 @@ namespace Cubico.Tests
 			actual = (left > right);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Operator ="
-		///<summary>
-		///A test for op_Equality
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void Measurementop_EqualityTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -958,7 +874,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_EqualityDiffUnitTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -969,7 +885,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_EqualityFalseTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -980,7 +896,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_EqualityDiffUnitFalseTest ()
 		{
 			Measurement left = new Measurement (5, "ft");
@@ -990,13 +906,11 @@ namespace Cubico.Tests
 			actual = (left == right);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Operator /"
-		///<summary>
-		///A test for op_Division
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void Measurementop_DivisionTest ()
 		{
 			Measurement d1 = new Measurement (25, "ft");
@@ -1007,7 +921,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_DivisionDiffUnitTest ()
 		{
 			Measurement d1 = new Measurement (25, "ft");
@@ -1017,13 +931,11 @@ namespace Cubico.Tests
 			actual = (d1 / d2);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Operator +"
-		///<summary>
-		///A test for op_Addition
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void Measurementop_AdditionTest ()
 		{
 			Measurement d1 = new Measurement (5, "ft");
@@ -1034,7 +946,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void Measurementop_AdditionDiffUnitTest ()
 		{
 			Measurement d1 = new Measurement (5, "ft");
@@ -1044,25 +956,23 @@ namespace Cubico.Tests
 			actual = (d1 + d2);
 			Assert.AreEqual (expected, actual);
 		}
+
 		#endregion
-
 		#region "Measurement.GetValueAs(unitSymbol)"
-		///<summary>
-		///A test for GetValueAs
-		///</summary>
-		//[TestMethod()]
-		//public void MeasurementGetValueAsTest()
-		//{
-		//    Measurement target = new Measurement(5, "ft");
-		//    string unitSymbol = "in";
-		//    Measurement expected = new Measurement(Convert.ToDecimal("60.0000"), "in");
-		//    Measurement actual = default(Measurement);
-		//    actual = target.GetValueAs(unitSymbol);
-		//    Assert.AreEqual(expected.Value, actual.Value);
-		//    Assert.AreEqual(expected.ToString, actual.ToString);
-		//}
 
-		[TestMethod()]
+		[Test]
+		public void MeasurementGetValueAsTest()
+		{
+		    Measurement target = new Measurement(5, "ft");
+		    string unitSymbol = "in";
+		    Measurement expected = new Measurement(Convert.ToDecimal("60.0000"), "in");
+		    Measurement actual = default(Measurement);
+		    actual = target.GetValueAs(unitSymbol);
+		    Assert.AreEqual(expected.Value, actual.Value);
+		    Assert.AreEqual(expected.ToString, actual.ToString);
+		}
+
+		[Test]
 		public void MeasurementGetValueAsInvalidUnitSymbolTest ()
 		{
 			Measurement target = new Measurement (5, "ft");
@@ -1074,13 +984,11 @@ namespace Cubico.Tests
 			Assert.IsTrue (actual.Value == 0);
 			Assert.IsTrue (actual.Value == 0);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.GetStringValueAs(unitSymbol)"
-		///<summary>
-		///A test for GetStringValueAs
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementGetStringValueAsTest ()
 		{
 			Measurement target = new Measurement (5, "ft");
@@ -1091,7 +999,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementGetStringValueAsInvalidUnitSymbolTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -1101,13 +1009,11 @@ namespace Cubico.Tests
 			actual = target.GetStringValueAs (unitSymbol);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.GetHashCode"
-		///<summary>
-		///A test for GetHashCode
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementGetHashCodeTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
@@ -1127,13 +1033,11 @@ namespace Cubico.Tests
 			actual = target.GetHashCode ();
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Equals(Of Measurement)"
-		///<summary>
-		///A test for Equals
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementEqualsOfTest ()
 		{
 			IEquatable<Measurement> target = new Measurement (5, "ft");
@@ -1144,7 +1048,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementEqualsOfTest2 ()
 		{
 			IEquatable<Measurement> target = new Measurement (5, "ft");
@@ -1155,7 +1059,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementEqualsOfFalseTest ()
 		{
 			IEquatable<Measurement> target = new Measurement (5, "ft");
@@ -1166,7 +1070,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementEqualsOfInvalidUnitTest ()
 		{
 			IEquatable<Measurement> target = new Measurement (5, "ft");
@@ -1176,13 +1080,11 @@ namespace Cubico.Tests
 			actual = target.Equals (other);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Equals(obj)"
-		///<summary>
-		///A test for Equals
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementEqualsTest ()
 		{
 			Measurement target = new Measurement (5, "ft");
@@ -1193,7 +1095,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementEqualsTest2 ()
 		{
 			Measurement target = new Measurement (5, "ft");
@@ -1204,7 +1106,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementEqualsFalseTest ()
 		{
 			Measurement target = new Measurement (5, "ft");
@@ -1215,7 +1117,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementEqualsInvalidTest ()
 		{
 			Measurement target = new Measurement (5, "ft");
@@ -1226,7 +1128,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementEqualsInvalidTypeTest ()
 		{
 			Measurement target = new Measurement (5, "ft");
@@ -1236,13 +1138,11 @@ namespace Cubico.Tests
 			actual = target.Equals (obj);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.CompareTo"
-		///<summary>
-		///A test for CompareTo
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementCompareToTest ()
 		{
 			IComparable<Measurement> target = new Measurement (5, "ft");
@@ -1253,7 +1153,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementCompareToGreaterTest ()
 		{
 			IComparable<Measurement> target = new Measurement (5, "ft");
@@ -1264,7 +1164,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementCompareToGreaterDifferentUnitTest ()
 		{
 			IComparable<Measurement> target = new Measurement (5, "ft");
@@ -1275,7 +1175,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementCompareToLessTest ()
 		{
 			IComparable<Measurement> target = new Measurement (5, "ft");
@@ -1286,7 +1186,7 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementCompareToGreaterLessUnitTest ()
 		{
 			IComparable<Measurement> target = new Measurement (5, "ft");
@@ -1296,13 +1196,11 @@ namespace Cubico.Tests
 			actual = target.CompareTo (other);
 			Assert.AreEqual (expected, actual);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Measurement(Value, UnitSymbol)"
-		///<summary>
-		///A test for Measurement Constructor
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementConstructorValueUnitSymbolTest ()
 		{
 			double value = 10;
@@ -1312,11 +1210,11 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.NoError);
-			Assert.AreEqual<string> ("Feet", target.Unit.Name);
-			Assert.AreEqual<double> (10, target.Value);
+			Assert.AreEqual ("Feet", target.Unit.Name);
+			Assert.AreEqual (10, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementConstructorValueUnitSymbolNullNullTest ()
 		{
 			Measurement target = new Measurement (0, (string)null);
@@ -1324,11 +1222,11 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.BadUnit);
-			Assert.AreEqual<Unit> (null, target.Unit);
-			Assert.AreEqual<double> (0, target.Value);
+			Assert.AreEqual (null, target.Unit);
+			Assert.AreEqual (0, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementConstructorValueUnitSymbolValueNullTest ()
 		{
 			Measurement target = new Measurement (0, "ft");
@@ -1336,11 +1234,11 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.NoError);
-			Assert.AreEqual<string> ("Feet", target.Unit.Name);
-			Assert.AreEqual<double> (0, target.Value);
+			Assert.AreEqual ("Feet", target.Unit.Name);
+			Assert.AreEqual (0, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementConstructorValueUnitSymbolUnitSymbolNullTest ()
 		{
 			Measurement target = new Measurement (10, (string)null);
@@ -1348,11 +1246,11 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.BadUnit);
-			Assert.AreEqual<Unit> (null, target.Unit);
-			Assert.AreEqual<double> (10, target.Value);
+			Assert.AreEqual (null, target.Unit);
+			Assert.AreEqual (10, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementConstructorValueUnitSymbolEmptyTest ()
 		{
 			Measurement target = new Measurement (10, string.Empty);
@@ -1360,16 +1258,14 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.BadUnit);
-			Assert.AreEqual<Unit> (null, target.Unit);
-			Assert.AreEqual<double> (10, target.Value);
+			Assert.AreEqual (null, target.Unit);
+			Assert.AreEqual (10, target.Value);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Measurement(unitSymbol)"
-		///<summary>
-		///A test for Measurement Constructor
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementConstructorUnitSymbolTest ()
 		{
 			string unitSymbol = "ft";
@@ -1378,11 +1274,11 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.NoError);
-			Assert.AreEqual<string> ("Feet", target.Unit.Name);
-			Assert.AreEqual<double> (0, target.Value);
+			Assert.AreEqual ("Feet", target.Unit.Name);
+			Assert.AreEqual (0, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementConstructorUnitSymbolNullTest ()
 		{
 			Measurement target = new Measurement (null);
@@ -1390,11 +1286,11 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.BadUnit);
-			Assert.AreEqual<Unit> (null, target.Unit);
-			Assert.AreEqual<double> (0, target.Value);
+			Assert.AreEqual (null, target.Unit);
+			Assert.AreEqual (0, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementConstructorUnitSymbolEmptyTest ()
 		{
 			Measurement target = new Measurement (null);
@@ -1402,16 +1298,14 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.BadUnit);
-			Assert.AreEqual<Unit> (null, target.Unit);
-			Assert.AreEqual<double> (0, target.Value);
+			Assert.AreEqual (null, target.Unit);
+			Assert.AreEqual (0, target.Value);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Measurement(Value, UnitSymbol, ConversionResult)"
-		///<summary>
-		///A test for Measurement Constructor
-		///</summary>
-		[TestMethod()]
+
+		[Test]
 		public void MeasurementConstructorValueUnitSymbolResultTest ()
 		{
 			double value = 10;
@@ -1422,11 +1316,11 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.NoError);
-			Assert.AreEqual<string> ("Feet", target.Unit.Name);
-			Assert.AreEqual<double> (10, target.Value);
+			Assert.AreEqual ("Feet", target.Unit.Name);
+			Assert.AreEqual (10, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementConstructorValueUnitSymbolResultTest2 ()
 		{
 			double value = 10;
@@ -1437,16 +1331,15 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.GenericError);
-			Assert.AreEqual<string> ("Feet", target.Unit.Name);
-			Assert.AreEqual<double> (10, target.Value);
+			Assert.AreEqual ("Feet", target.Unit.Name);
+			Assert.AreEqual (10, target.Value);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Measurement(Value,Unit,ConversionResult)"
-		///<summary>
-		///A test for Measurement Constructor
-		///</summary>
-		[TestMethod()]
+
+		// A test for Measurement Constructor
+		[Test]
 		public void MeasurementConstructorValueUnitConversionResultTest ()
 		{
 			double value = 10;
@@ -1457,11 +1350,11 @@ namespace Cubico.Tests
 			Assert.IsNotNull (target);
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.NoError);
-			Assert.AreEqual<string> ("Feet", target.Unit.Name);
-			Assert.AreEqual<double> (10, target.Value);
+			Assert.AreEqual ("Feet", target.Unit.Name);
+			Assert.AreEqual (10, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementConstructorValueUnitConversionResultNullTest ()
 		{
 			Measurement target = new Measurement (0, (Unit)null, Result.NoError);
@@ -1470,15 +1363,14 @@ namespace Cubico.Tests
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.NoError);
 			Assert.IsNull (target.Unit);
-			Assert.AreEqual<double> (0, target.Value);
+			Assert.AreEqual (0, target.Value);
 		}
-		#endregion
 
+		#endregion
 		#region "Measurement.Measurement(Value,Result)"
-		///<summary>
-		///A test for Measurement Constructor
-		///</summary>
-		[TestMethod()]
+
+		// A test for Measurement Constructor
+		[Test]
 		public void MeasurementConstructorValueResultTest ()
 		{
 			double value = 10;
@@ -1489,10 +1381,10 @@ namespace Cubico.Tests
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.NoError);
 			Assert.IsNull (target.Unit);
-			Assert.AreEqual<double> (10, target.Value);
+			Assert.AreEqual (10, target.Value);
 		}
 
-		[TestMethod()]
+		[Test]
 		public void MeasurementConstructorValueResultNullTest ()
 		{
 			Measurement target = new Measurement (0, Result.NoError);
@@ -1501,8 +1393,9 @@ namespace Cubico.Tests
 			Assert.IsTrue (target.Flags == MeasurementFlags.None);
 			Assert.IsTrue (target.ConversionResult == Result.NoError);
 			Assert.IsNull (target.Unit);
-			Assert.AreEqual<double> (0, target.Value);
+			Assert.AreEqual (0, target.Value);
 		}
+
 		#endregion
 	}
 }

@@ -1,54 +1,22 @@
 ﻿using System;
-using System.Diagnostics.Contracts;
 using Cubico;
 using NUnit.Framework;
 
-///<summary>
-///This is a test class for UnitTest and is intended
-///to contain all UnitTest Unit Tests
-///</summary>
-[TestClass()]
+[TestFixture]
 public class UnitTypeTest
 {
+	TestContext testContextInstance;
+	UnitProvider unitPro = new UnitProvider ();
 
-	private TestContext testContextInstance;
-	private UnitProvider unitPro = new UnitProvider ();
-    ///<summary>
-    ///Gets or sets the test context which provides
-    ///information about and functionality for the current test run.
-    ///</summary>
+    // Gets or sets the test context which provides information about and functionality for the current test run.
 	public TestContext TestContext {
 		get { return testContextInstance; }
 		set { testContextInstance = value; }
 	}
-    #region "Additional test attributes"
-    //
-    //You can use the following additional attributes as you write your tests:
-    //
-    //Use ClassInitialize to run code before running the first test in the class
-    //<ClassInitialize()>  _
-    //Public Shared Sub MyClassInitialize(ByVal testContext As TestContext)
-    //End Sub
-    //
-    //Use ClassCleanup to run code after all tests in a class have run
-    //<ClassCleanup()>  _
-    //Public Shared Sub MyClassCleanup()
-    //End Sub
-    //
-    //Use TestInitialize to run code before running each test
-    //<TestInitialize()>  _
-    //Public Sub MyTestInitialize()
-    //End Sub
-    //
-    //Use TestCleanup to run code after each test has run
-    //<TestCleanup()>  _
-    //Public Sub MyTestCleanup()
-    //End Sub
-    //
-    #endregion
 
     #region "UnitType.UnitType()"
-	[TestMethod()]
+
+	[Test]
     public void UnitTypeNewTest ()
 	{
 		UnitType testObj = new UnitType ();
@@ -59,74 +27,37 @@ public class UnitTypeTest
 		Assert.IsTrue (testObj.Units.Count == 0);
 		Assert.IsTrue (string.IsNullOrEmpty(testObj.Name));
 	}
-    #endregion
 
+    #endregion
     #region "UnitType.ID"
-	[TestMethod()]
+
+	[Test]
     public void UnitTypeIDTest ()
 	{
 		UnitType testObj = new UnitType ();
 
 		testObj.ID = 99;
 
-		Assert.AreEqual<int> (99, testObj.ID);
+		Assert.AreEqual (99, testObj.ID);
 	}
-    //[TestMethod()]
-    //public void UnitTypeIDNullTest()
-    //{
-    //    UnitType testObj = new UnitType();
 
-    //    testObj.ID = null;
-
-    //    Assert.AreEqual(null, testObj.ID);
-    //}
-
-    //[TestMethod()]
-    //public void UnitTypeIDNegativeTest()
-    //{
-    //    UnitType testObj = new UnitType();
-
-    //    testObj.ID = -1;
-
-    //    Assert.IsTrue(testObj.ID == -1);
-
-    //    List<ErrorInfo> data = Validation.DataAnnotationValidator.GetErrors(testObj).ToList;
-
-    //    Assert.IsNotNull(data);
-    //    Assert.IsTrue(data.Count > 0);
-    //    Assert.IsTrue(data(0).PropertyName == "ID");
-    //}
     #endregion
-
     #region "UnitType.Name"
-	[TestMethod()]
+
+	[Test]
     public void UnitTypeNameTest ()
 	{
 		UnitType testObj = new UnitType ();
 
 		testObj.Name = "Test Name";
 
-		Assert.AreEqual<string> ("Test Name", testObj.Name);
+		Assert.AreEqual ("Test Name", testObj.Name);
 	}
-    //[TestMethod()]
-    //public void UnitTypeNameNullTest()
-    //{
-    //    UnitType testObj = new UnitType();
 
-    //    testObj.Name = null;
-
-    //    Assert.IsTrue(string.IsNullOrWhiteSpace(testObj.Name));
-
-    //    List<ErrorInfo> data = Validation.DataAnnotationValidator.GetErrors(testObj).ToList;
-
-    //    Assert.IsNotNull(data);
-    //    Assert.IsTrue(data.Count > 0);
-    //    Assert.IsTrue(data(0).PropertyName == "Name");
-    //}
     #endregion
-
     #region "IEquatable"
-	[TestMethod()]
+
+	[Test]
     public void UnitType_EqualityTest ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
@@ -135,7 +66,7 @@ public class UnitTypeTest
 		Assert.IsTrue (expected == target);
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest2 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
@@ -144,7 +75,7 @@ public class UnitTypeTest
 		Assert.IsFalse (expected == target);
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest3 ()
 	{
 		UnitType expected = null;
@@ -153,7 +84,7 @@ public class UnitTypeTest
 		Assert.IsFalse (expected == target);
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest4 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Mass"];
@@ -162,7 +93,7 @@ public class UnitTypeTest
 		Assert.IsFalse (expected == target);
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest5 ()
 	{
 		UnitType expected = null;
@@ -171,7 +102,7 @@ public class UnitTypeTest
 		Assert.IsTrue (expected == target);
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest6 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
@@ -180,7 +111,7 @@ public class UnitTypeTest
 		Assert.IsTrue (expected != target);
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest7 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
@@ -189,7 +120,7 @@ public class UnitTypeTest
 		Assert.IsTrue (expected != target);
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest8 ()
 	{
 		UnitType expected = null;
@@ -198,7 +129,7 @@ public class UnitTypeTest
 		Assert.IsTrue (expected != target);
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest8_1 ()
 	{
 		UnitType expected = null;
@@ -207,7 +138,7 @@ public class UnitTypeTest
 		Assert.IsFalse (expected != target);
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest9 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Mass"];
@@ -216,7 +147,7 @@ public class UnitTypeTest
 		Assert.IsFalse (expected.Equals(target));
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest10 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
@@ -225,7 +156,7 @@ public class UnitTypeTest
 		Assert.IsTrue (expected.Equals(target));
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest11 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
@@ -234,7 +165,7 @@ public class UnitTypeTest
 		Assert.IsFalse (expected.Equals(target));
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest12 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
@@ -243,7 +174,7 @@ public class UnitTypeTest
 		Assert.IsFalse (expected.Equals(target));
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest13 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
@@ -252,7 +183,7 @@ public class UnitTypeTest
 		Assert.IsTrue (expected.Equals((object)target));
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest14 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
@@ -261,7 +192,7 @@ public class UnitTypeTest
 		Assert.IsFalse (expected.Equals((object)target));
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest154 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
@@ -270,47 +201,13 @@ public class UnitTypeTest
 		Assert.IsFalse (expected.Equals((object)target));
 	}
 
-	[TestMethod()]
+	[Test]
     public void UnitType_EqualityTest15 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 
 		Assert.IsTrue (expected.GetHashCode() == expected.Name.GetHashCode());
 	}
-    #endregion
 
-    #region "Serialization"
-    //[TestMethod()]
-    //public void UnitType_BinarySerializationTest()
-    //{
-    //    UnitType expected = unitPro.UnitTypes["Length"];
-    //    UnitType actual = default(UnitType);
-
-    //    byte[] data = Utility.BinarySerialize(expected);
-    //    actual = (UnitType)Utility.BinaryDeserialize(data);
-
-    //    Assert.IsNotNull(actual);
-    //    Assert.AreEqual(expected.ID, actual.ID);
-    //    Assert.AreEqual(expected.Name, actual.Name);
-    //    Assert.AreEqual(expected.Description, actual.Description);
-    //    Assert.AreEqual(expected.Units.Count, actual.Units.Count);
-    //}
-
-    //[TestMethod()]
-    //public void UnitType_DataContractSerializationTest()
-    //{
-    //    UnitType expected = unitPro.UnitTypes["Length"];
-    //    UnitType actual = default(UnitType);
-
-    //    string data = Utility.DataContractSerialize(expected);
-    //    actual = (UnitType)Utility.DataContractDeserialize(data, typeof(UnitType));
-
-    //    Assert.IsNotNull(actual);
-    //    Assert.AreEqual(expected.ID, actual.ID);
-    //    Assert.AreEqual(expected.Name, actual.Name);
-    //    Assert.AreEqual(expected.Description, actual.Description);
-    //    Assert.AreEqual(expected.Units.Count, actual.Units.Count);
-    //}
     #endregion
 }
-

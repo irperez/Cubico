@@ -38,7 +38,6 @@
     <Compile Include="UnitConverterTest4.cs" />
     <Compile Include="UnitProviderTest.cs" />
     <Compile Include="UnitTest.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="UnitTestCategory.cs" />
     <Compile Include="UnitTypeTest.cs" />
   </ItemGroup>

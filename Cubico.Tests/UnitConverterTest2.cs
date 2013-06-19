@@ -2,55 +2,27 @@
 using NUnit.Framework;
 using Cubico;
 
-namespace Cubico.Test
+namespace Cubico.Tests
 {
-	[TestClass()]
+	[TestFixture]
     public class UnitConverterTest2
 	{
-		private TestContext testContextInstance;
-		private UnitProvider unitPro = new UnitProvider ();
-        ///<summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
+		TestContext testContextInstance;
+		UnitProvider unitPro = new UnitProvider ();
+
+        // Gets or sets the test context which provides information about and functionality for the current test run.
 		public TestContext TestContext {
 			get { return testContextInstance; }
 			set { testContextInstance = value; }
 		}
-        #region "Additional test attributes"
-        //
-        //You can use the following additional attributes as you write your tests:
-        //
-        //Use ClassInitialize to run code before running the first test in the class
-        //<ClassInitialize()> _  _
-        //Public Shared Sub MyClassInitialize(ByVal testContext As TestContext)
-        //End Sub
-        //
-        //Use ClassCleanup to run code after all tests in a class have run
-        //<ClassCleanup()> _  _
-        //Public Shared Sub MyClassCleanup()
-        //End Sub
-        //
-        //Use TestInitialize to run code before running each test
-        //<TestInitialize()> _  _
-        //Public Sub MyTestInitialize()
-        //End Sub
-        //
-        //Use TestCleanup to run code after each test has run
-        //<TestCleanup()> _  _
-        //Public Sub MyTestCleanup()
-        //End Sub
-        //
 
-        #endregion
         #region "UnitConverter.ConvertUnits"
-
         #region "Force Tests"
         #region "Source as Newton (N)"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_dyn_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -63,9 +35,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_dyn_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -78,9 +50,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_lbf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -93,9 +65,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_lbf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -108,9 +80,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_tonf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -123,9 +95,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_tonf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -138,9 +110,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_tonnef_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -153,9 +125,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_tonnef_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -168,9 +140,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_Meganewton_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -183,9 +155,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_Meganewton_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -198,9 +170,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_GN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -213,9 +185,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_GN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -229,9 +201,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_kN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -244,9 +216,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_kN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -259,9 +231,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_mN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -274,9 +246,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_mN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -289,9 +261,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_µN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -304,9 +276,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_µN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -319,9 +291,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_nN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -334,9 +306,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_N_to_nN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -352,9 +324,9 @@ namespace Cubico.Test
 
         #region "Source as Dyne (dyn)"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_N_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -367,9 +339,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_N_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -382,9 +354,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_lbf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -397,9 +369,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_lbf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -412,9 +384,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_tonf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -427,9 +399,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_tonf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -442,9 +414,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_ng_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -457,9 +429,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_tonnef_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -472,9 +444,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_Meganewton_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -487,9 +459,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_Meganewton_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -503,9 +475,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_GN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -518,9 +490,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_GN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -534,9 +506,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_kN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -549,9 +521,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_kN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -564,9 +536,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_mN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -579,9 +551,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_mN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -594,9 +566,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_µN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -609,9 +581,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_µN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -624,9 +596,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_nN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -639,9 +611,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_dyn_to_nN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -657,9 +629,9 @@ namespace Cubico.Test
 
         #region "Source as Pound-force (lbf)"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_N_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -672,9 +644,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_N_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -687,9 +659,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_dyn_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -702,9 +674,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_dyn_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -717,9 +689,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_tonf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -732,9 +704,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_tonf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -747,9 +719,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_tonnef_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -762,9 +734,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_tonnef_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -777,9 +749,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_Meganewton_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -792,9 +764,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_Meganewton_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -807,9 +779,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_GN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -822,9 +794,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_GN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -837,9 +809,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_kN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -852,9 +824,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_kN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -867,9 +839,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_mN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -882,9 +854,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_mN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -897,9 +869,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_µN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -912,9 +884,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_µN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -927,9 +899,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_nN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -942,9 +914,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbf_to_nN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -960,9 +932,9 @@ namespace Cubico.Test
 
         #region "Source as Ton-force(short) (tonf)"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_N_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -975,9 +947,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_N_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -990,9 +962,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_dyn_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1005,9 +977,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_dyn_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1020,9 +992,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_lbf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1035,9 +1007,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_lbf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1050,9 +1022,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_tonnef_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1065,9 +1037,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_tonnef_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1080,9 +1052,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_Meganewton_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1095,9 +1067,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_Meganewton_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1110,9 +1082,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_GN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1125,9 +1097,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_GN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1140,9 +1112,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_kN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1155,9 +1127,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_kN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1170,9 +1142,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_mN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1185,9 +1157,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_mN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1200,9 +1172,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_µN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1215,9 +1187,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_µN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1230,9 +1202,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_nN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1245,9 +1217,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonf_to_nN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1263,9 +1235,9 @@ namespace Cubico.Test
 
         #region "Source as Tonnes force(metric) (tonnef,tf)"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_N_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1278,9 +1250,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_N_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1293,9 +1265,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_dyn_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1308,9 +1280,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_dyn_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1323,9 +1295,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_lbf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1338,9 +1310,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_lbf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1353,9 +1325,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_tonf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1368,9 +1340,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_tonf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1383,9 +1355,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_Meganewton_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1398,9 +1370,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_Meganewton_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1413,9 +1385,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_GN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1428,9 +1400,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_GN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1443,9 +1415,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_kN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1458,9 +1430,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_kN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1473,9 +1445,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_mN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1488,9 +1460,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_mN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1503,9 +1475,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_µN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1518,9 +1490,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_µN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1533,9 +1505,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_nN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1549,9 +1521,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_tonnef_to_nN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1568,9 +1540,9 @@ namespace Cubico.Test
         #region "Source as Meganewton (MN)"
 
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_N_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1583,9 +1555,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_N_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1598,9 +1570,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_dyn_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1613,9 +1585,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_dyn_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1628,9 +1600,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_lbf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1643,9 +1615,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_lbf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1658,9 +1630,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_tonf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1673,9 +1645,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_tonf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1688,9 +1660,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_tonnef_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1703,9 +1675,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_tonnef_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1718,9 +1690,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_GN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1733,9 +1705,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_GN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1748,9 +1720,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_kN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1763,9 +1735,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_kN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1778,9 +1750,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_mN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1793,9 +1765,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_mN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1808,9 +1780,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_µN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1823,9 +1795,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_µN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1838,9 +1810,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_nN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1853,9 +1825,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Meganewton_to_nN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1872,9 +1844,9 @@ namespace Cubico.Test
         #region "Source as Giganewton (GN)"
 
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_N_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1887,9 +1859,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_N_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1902,9 +1874,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_dyn_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1917,9 +1889,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_dyn_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1932,9 +1904,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_lbf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1947,9 +1919,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_lbf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1962,9 +1934,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_tonf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1977,9 +1949,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_tonf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1992,9 +1964,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_ng_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2007,9 +1979,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_tonnef_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2022,9 +1994,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_Meganewton_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2037,9 +2009,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_Meganewton_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2052,9 +2024,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_kN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2067,9 +2039,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_kN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2082,9 +2054,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_mN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2097,9 +2069,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_mN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2112,9 +2084,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_µN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2127,9 +2099,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_µN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2142,9 +2114,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_nN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2157,9 +2129,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GN_to_nN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2176,9 +2148,9 @@ namespace Cubico.Test
         #region "Source as Kilonewton (kN)"
 
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_N_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2191,9 +2163,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_N_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2206,9 +2178,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_dyn_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2221,9 +2193,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_dyn_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2236,9 +2208,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_lbf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2251,9 +2223,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_lbf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2266,9 +2238,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_tonf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2281,9 +2253,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_tonf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2296,9 +2268,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_tonnef_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2311,9 +2283,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_tonnef_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2326,9 +2298,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_Meganewton_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2341,9 +2313,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_Meganewton_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2356,9 +2328,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_GN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2371,9 +2343,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_GN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2386,9 +2358,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_mN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2401,9 +2373,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_mN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2416,9 +2388,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_µN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2431,9 +2403,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_µN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2446,9 +2418,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_nN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2461,9 +2433,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kN_to_nN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2480,9 +2452,9 @@ namespace Cubico.Test
         #region "Source as Milinewton (mN)"
 
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_N_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2495,9 +2467,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_N_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2510,9 +2482,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_dyn_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2525,9 +2497,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_dyn_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2540,9 +2512,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_lbf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2555,9 +2527,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_lbf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2570,9 +2542,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_tonf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2585,9 +2557,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_tonf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2600,9 +2572,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_tonnef_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2615,9 +2587,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_tonnef_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2630,9 +2602,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_Meganewton_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2645,9 +2617,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_Meganewton_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2661,9 +2633,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_GN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2676,9 +2648,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_GN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2692,9 +2664,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_kN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2707,9 +2679,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_kN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2722,9 +2694,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_µN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2737,9 +2709,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_µN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2752,9 +2724,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_nN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2767,9 +2739,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mN_to_nN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2785,9 +2757,9 @@ namespace Cubico.Test
 
         #region "Source as Micronewton (µN)"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_N_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2800,9 +2772,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_N_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2815,9 +2787,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_dyn_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2830,9 +2802,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_dyn_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2845,9 +2817,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_lbf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2860,9 +2832,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_lbf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2875,9 +2847,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_tonf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2890,9 +2862,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_tonf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2905,9 +2877,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_tonnef_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2920,9 +2892,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_tonnef_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2935,9 +2907,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_Meganewton_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2950,9 +2922,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_Meganewton_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2966,9 +2938,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_GN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2981,9 +2953,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_GN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2997,9 +2969,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_kN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3012,9 +2984,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_kN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3028,9 +3000,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_mN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3043,9 +3015,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_mN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3058,9 +3030,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_nN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3073,9 +3045,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µN_to_nN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3092,9 +3064,9 @@ namespace Cubico.Test
         #region "Source as Nananewton (nN)"
 
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_N_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3107,9 +3079,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_N_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3123,9 +3095,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_dyn_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3138,9 +3110,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_dyn_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3153,9 +3125,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_lbf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3168,9 +3140,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_lbf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3183,9 +3155,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_tonf_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3198,9 +3170,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_tonf_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3213,9 +3185,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_tonnef_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3228,9 +3200,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_tonnef_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3243,9 +3215,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_Meganewton_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3258,9 +3230,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_Meganewton_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3274,9 +3246,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_GN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3290,9 +3262,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_GN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3306,9 +3278,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_kN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3321,9 +3293,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_kN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3337,9 +3309,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_mN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3352,9 +3324,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_mN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3367,9 +3339,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_µN_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3382,9 +3354,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nN_to_µN_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3402,9 +3374,9 @@ namespace Cubico.Test
         #region "Momentum Tests"
         #region "Source as kg m/s"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kgMetersPerSec_to_lbFtPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3417,9 +3389,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kgMetersPerSec_to_lbFtPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3432,9 +3404,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kgMeterPerSec_to_GramCentimeterPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3447,9 +3419,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kgMeterPerSec_to_GramCentimeterPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3462,9 +3434,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kgMeterPerSec_to_lbFtPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3477,9 +3449,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kgMeterPerSec_to_lbFtPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3492,9 +3464,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kgMeterPerSec_to_lbFtPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3507,9 +3479,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kgMeterPerSec_to_lbFtPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3525,9 +3497,9 @@ namespace Cubico.Test
 
         #region "Source as lb ft/hr"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerHr_to_kgMetersPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3540,9 +3512,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerHr_to_kgMetersPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3555,9 +3527,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerHr_to_GramCentimeterPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3570,9 +3542,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerHr_to_GramCentimeterPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3585,9 +3557,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerHr_to_lbFtPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3600,9 +3572,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerHr_to_lbFtPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3615,9 +3587,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerHr_to_lbFtPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3630,9 +3602,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerHr_to_lbFtPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3648,9 +3620,9 @@ namespace Cubico.Test
 
         #region "Source as g cm/s"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GramCentimeterPerSec_to_kgMetersPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3663,9 +3635,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GramCentimeterPerSec_to_kgMetersPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3678,9 +3650,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GramCentimeterPerSec_to_lbFtPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3693,9 +3665,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GramCentimeterPerSec_to_lbFtPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3708,9 +3680,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GramCentimeterPerSec_to_lbFtPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3723,9 +3695,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GramCentimeterPerSec_to_lbFtPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3738,9 +3710,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GramCentimeterPerSec_to_lbFtPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3753,9 +3725,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GramCentimeterPerSec_to_lbFtPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3771,9 +3743,9 @@ namespace Cubico.Test
 
         #region "Source as lb ft/min"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerMin_to_kgMetersPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3786,9 +3758,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerMin_to_kgMetersPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3801,9 +3773,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerMin_to_lbFtPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3816,9 +3788,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerMin_to_lbFtPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3831,9 +3803,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerMin_to_GramCentimeterPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3846,9 +3818,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerMin_to_GramCentimeterPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3861,9 +3833,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerMin_to_lbFtPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3876,9 +3848,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerMin_to_lbFtPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3894,9 +3866,9 @@ namespace Cubico.Test
 
         #region "Source as lb ft/sec"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerSec_to_kgMetersPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3909,9 +3881,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerSec_to_kgMetersPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3924,9 +3896,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerSec_to_lbFtPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3939,9 +3911,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerSec_to_lbFtPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3954,9 +3926,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerSec_to_GramCentimeterPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3969,9 +3941,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerSec_to_GramCentimeterPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3984,9 +3956,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerSec_to_lbFtPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3999,9 +3971,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_lbFtPerSec_to_lbFtPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4019,9 +3991,9 @@ namespace Cubico.Test
         #region "Speed Tests"
         #region "Source as Meters/Second"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerSec_to_KmPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4034,9 +4006,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerSec_to_KmPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4049,9 +4021,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerSec_to_MilesPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4064,9 +4036,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerSec_to_MilesPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4079,9 +4051,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerSec_to_MetersPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4094,9 +4066,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerSec_to_MetersPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4109,9 +4081,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerSec_to_FtPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4124,9 +4096,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerSec_to_FtPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4142,9 +4114,9 @@ namespace Cubico.Test
 
         #region "Source as Kilometers/Hour"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_KmPerHr_to_MetersPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4157,9 +4129,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_KmPerHr_to_MetersPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4172,9 +4144,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_KmPerHr_to_MilesPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4187,9 +4159,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_KmPerHr_to_MilesPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4202,9 +4174,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_KmPerHr_to_MetersPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4217,9 +4189,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_KmPerHr_to_MetersPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4232,9 +4204,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_KmPerHr_to_FtPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4247,9 +4219,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_KmPerHr_to_FtPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4265,9 +4237,9 @@ namespace Cubico.Test
 
         #region "Source as Miles/Hour"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MilesPerHr_to_MetersPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4280,9 +4252,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MilesPerHr_to_MetersPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4295,9 +4267,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MilesPerHr_to_KmPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4310,9 +4282,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MilesPerHr_to_KmPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4325,9 +4297,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MilesPerHr_to_MetersPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4340,9 +4312,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MilesPerHr_to_MetersPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4355,9 +4327,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MilesPerHr_to_FtPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4370,9 +4342,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MilesPerHr_to_FtPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4388,9 +4360,9 @@ namespace Cubico.Test
 
         #region "Source as Meters/Minute"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerMin_to_MetersPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4403,9 +4375,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerMin_to_MetersPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4418,9 +4390,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerMin_to_KmPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4433,9 +4405,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerMin_to_KmPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4448,9 +4420,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerMin_to_MilesPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4463,9 +4435,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerMin_to_MilesPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4478,9 +4450,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerMin_to_FtPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4493,9 +4465,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_MetersPerMin_to_FtPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4511,9 +4483,9 @@ namespace Cubico.Test
 
         #region "Source as Feet/Second"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtPerSec_to_MetersPerSec_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4527,9 +4499,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtPerSec_to_MetersPerSec_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4542,9 +4514,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtPerSec_to_KmPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4558,9 +4530,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtPerSec_to_KmPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4573,9 +4545,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtPerSec_to_MilesPerHr_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4588,9 +4560,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtPerSec_to_MilesPerHr_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4603,9 +4575,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtPerSec_to_MetersPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4618,9 +4590,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtPerSec_to_MetersPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4638,9 +4610,9 @@ namespace Cubico.Test
         #region "Length Tests"
         #region "Source as Metres"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4653,9 +4625,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4668,9 +4640,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4684,9 +4656,9 @@ namespace Cubico.Test
 			Assert.AreEqual (Result.NoError, actual.ConversionResult);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4699,9 +4671,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4714,9 +4686,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4729,9 +4701,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_mile_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4744,9 +4716,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_mile_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4759,9 +4731,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4774,9 +4746,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4789,9 +4761,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4804,9 +4776,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4819,9 +4791,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4834,9 +4806,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4849,9 +4821,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4864,9 +4836,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4879,9 +4851,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4894,9 +4866,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4909,9 +4881,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4924,9 +4896,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4939,9 +4911,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4954,9 +4926,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4969,9 +4941,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4984,9 +4956,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4999,9 +4971,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5014,9 +4986,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5032,9 +5004,9 @@ namespace Cubico.Test
 
         #region "Source as Yards"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5048,9 +5020,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5063,9 +5035,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5078,9 +5050,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5093,9 +5065,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5108,9 +5080,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5123,9 +5095,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_mile_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5138,9 +5110,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_mile_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5153,9 +5125,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5168,9 +5140,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5183,9 +5155,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5198,9 +5170,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5213,9 +5185,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5228,9 +5200,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5243,9 +5215,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5258,9 +5230,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5273,9 +5245,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5288,9 +5260,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5303,9 +5275,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5318,9 +5290,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5333,9 +5305,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5348,9 +5320,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5364,9 +5336,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5379,9 +5351,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5394,9 +5366,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5409,9 +5381,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5427,9 +5399,9 @@ namespace Cubico.Test
 
         #region "Source as Feet"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5442,9 +5414,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5457,9 +5429,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_m_negative_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5472,9 +5444,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5487,9 +5459,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5502,9 +5474,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5517,9 +5489,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5532,9 +5504,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_mile_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5547,9 +5519,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_mile_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5562,9 +5534,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5577,9 +5549,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5592,9 +5564,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5607,9 +5579,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5622,9 +5594,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5637,9 +5609,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5652,9 +5624,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5667,9 +5639,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5682,9 +5654,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5697,9 +5669,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5712,9 +5684,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5727,9 +5699,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5742,9 +5714,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5757,9 +5729,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5772,9 +5744,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5787,9 +5759,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5802,9 +5774,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5817,9 +5789,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5835,9 +5807,9 @@ namespace Cubico.Test
 
         #region "Source as Chain"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5850,9 +5822,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5865,9 +5837,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5880,9 +5852,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5895,9 +5867,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5910,9 +5882,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5925,9 +5897,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_mile_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5940,9 +5912,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_mile_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5955,9 +5927,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5970,9 +5942,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5985,9 +5957,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6000,9 +5972,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6015,9 +5987,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6030,9 +6002,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6045,9 +6017,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6060,9 +6032,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6075,9 +6047,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6090,9 +6062,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6105,9 +6077,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6120,9 +6092,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6135,9 +6107,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6150,9 +6122,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6165,9 +6137,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6180,9 +6152,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6195,9 +6167,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6210,9 +6182,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_chain_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6228,9 +6200,9 @@ namespace Cubico.Test
 
         #region "Source as Miles"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6243,9 +6215,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6258,9 +6230,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6273,9 +6245,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6288,9 +6260,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6303,9 +6275,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6318,9 +6290,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6333,9 +6305,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6348,9 +6320,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6363,9 +6335,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6378,9 +6350,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6393,9 +6365,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6408,9 +6380,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6423,9 +6395,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6438,9 +6410,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6453,9 +6425,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6468,9 +6440,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6483,9 +6455,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6498,9 +6470,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6513,9 +6485,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6528,9 +6500,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6543,9 +6515,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6558,9 +6530,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6573,9 +6545,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6588,9 +6560,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6603,9 +6575,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_miles_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6621,9 +6593,9 @@ namespace Cubico.Test
 
         #region "Source as Kilometres"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6636,9 +6608,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6651,9 +6623,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6666,9 +6638,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6681,9 +6653,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6696,9 +6668,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6711,9 +6683,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6726,9 +6698,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6741,9 +6713,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_miles_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6756,9 +6728,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_miles_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6771,9 +6743,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6786,9 +6758,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6801,9 +6773,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6816,9 +6788,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6831,9 +6803,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6846,9 +6818,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6861,9 +6833,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6876,9 +6848,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6891,9 +6863,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6906,9 +6878,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6921,9 +6893,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6936,9 +6908,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6951,9 +6923,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6966,9 +6938,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6981,9 +6953,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6996,9 +6968,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_km_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7014,9 +6986,9 @@ namespace Cubico.Test
 
         #region "Source as Megametres"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7029,9 +7001,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7044,9 +7016,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7059,9 +7031,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7074,9 +7046,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7089,9 +7061,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7104,9 +7076,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7119,9 +7091,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7134,9 +7106,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_miles_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7149,9 +7121,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_miles_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7164,9 +7136,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7179,9 +7151,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7194,9 +7166,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7209,9 +7181,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7224,9 +7196,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7239,9 +7211,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7254,9 +7226,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7269,9 +7241,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7284,9 +7256,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7299,9 +7271,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7314,9 +7286,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7329,9 +7301,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7344,9 +7316,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7359,9 +7331,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7374,9 +7346,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7389,9 +7361,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megametres_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7407,9 +7379,9 @@ namespace Cubico.Test
 
         #region "Source as Gigametres"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7422,9 +7394,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7437,9 +7409,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7452,9 +7424,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7467,9 +7439,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7482,9 +7454,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7497,9 +7469,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7512,9 +7484,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7527,9 +7499,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_miles_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7542,9 +7514,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_miles_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7557,9 +7529,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7572,9 +7544,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gms_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7587,9 +7559,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7602,9 +7574,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7617,9 +7589,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7632,9 +7604,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7647,9 +7619,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7662,9 +7634,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7677,9 +7649,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7692,9 +7664,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7707,9 +7679,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7722,9 +7694,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7737,9 +7709,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7752,9 +7724,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7767,9 +7739,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7782,9 +7754,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Gm_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7800,9 +7772,9 @@ namespace Cubico.Test
 
         #region "Source as Furlongs"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7815,9 +7787,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7830,9 +7802,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7845,9 +7817,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7860,9 +7832,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7875,9 +7847,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7890,9 +7862,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_mile_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7905,9 +7877,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_mile_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7920,9 +7892,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7935,9 +7907,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7950,9 +7922,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7965,9 +7937,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7980,9 +7952,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7995,9 +7967,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8010,9 +7982,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8025,9 +7997,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8040,9 +8012,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8055,9 +8027,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8070,9 +8042,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8085,9 +8057,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8100,9 +8072,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8115,9 +8087,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8130,9 +8102,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8145,9 +8117,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8160,9 +8132,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8175,9 +8147,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_furlong_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8193,9 +8165,9 @@ namespace Cubico.Test
 
         #region "Source as Thou"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8208,9 +8180,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8223,9 +8195,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8238,9 +8210,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8253,9 +8225,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8268,9 +8240,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8283,9 +8255,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_mile_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8298,9 +8270,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_mile_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8313,9 +8285,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8328,9 +8300,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8343,9 +8315,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8358,9 +8330,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8373,9 +8345,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8388,9 +8360,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8403,9 +8375,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8418,9 +8390,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8433,9 +8405,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8448,9 +8420,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8463,9 +8435,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8478,9 +8450,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8493,9 +8465,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8508,9 +8480,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8523,9 +8495,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8538,9 +8510,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8553,9 +8525,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8568,9 +8540,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_thou_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8586,9 +8558,9 @@ namespace Cubico.Test
 
         #region "Source as Microns"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8601,9 +8573,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8616,9 +8588,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8631,9 +8603,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8646,9 +8618,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8662,9 +8634,9 @@ namespace Cubico.Test
 			Assert.AreEqual (Result.NoError, actual.ConversionResult);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8677,9 +8649,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8692,9 +8664,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8707,9 +8679,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_mile_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8722,9 +8694,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_mile_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8737,9 +8709,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8752,9 +8724,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8767,9 +8739,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8782,9 +8754,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8797,9 +8769,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8812,9 +8784,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8827,9 +8799,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8842,9 +8814,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8857,9 +8829,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8872,9 +8844,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8887,9 +8859,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8902,9 +8874,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8917,9 +8889,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8932,9 +8904,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8947,9 +8919,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8962,9 +8934,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µm_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8980,9 +8952,9 @@ namespace Cubico.Test
 
         #region "Source as Inches"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8995,9 +8967,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9010,9 +8982,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9025,9 +8997,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9040,9 +9012,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9055,9 +9027,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9070,9 +9042,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_mile_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9085,9 +9057,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_mile_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9100,9 +9072,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9115,9 +9087,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9130,9 +9102,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9145,9 +9117,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9160,9 +9132,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9175,9 +9147,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9190,9 +9162,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9205,9 +9177,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9220,9 +9192,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9235,9 +9207,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9250,9 +9222,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9265,9 +9237,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9280,9 +9252,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9295,9 +9267,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9310,9 +9282,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9325,9 +9297,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9340,9 +9312,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9355,9 +9327,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9373,9 +9345,9 @@ namespace Cubico.Test
 
         #region "Source as Centimetres"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9388,9 +9360,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9403,9 +9375,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9418,9 +9390,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9433,9 +9405,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9449,9 +9421,9 @@ namespace Cubico.Test
 			Assert.AreEqual (Result.NoError, actual.ConversionResult);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9464,9 +9436,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9479,9 +9451,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9494,9 +9466,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_mile_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9509,9 +9481,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_mile_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9524,9 +9496,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9539,9 +9511,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9554,9 +9526,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9569,9 +9541,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9584,9 +9556,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9599,9 +9571,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9614,9 +9586,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9629,9 +9601,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9644,9 +9616,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9659,9 +9631,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9674,9 +9646,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9689,9 +9661,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9704,9 +9676,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9719,9 +9691,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9734,9 +9706,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_millimetres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9749,9 +9721,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cm_to_millimetres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9767,9 +9739,9 @@ namespace Cubico.Test
 
         #region "Source as Millimetres"
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_m_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9782,9 +9754,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_m_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9797,9 +9769,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_yd_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9812,9 +9784,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_yd_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9827,9 +9799,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_ft_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9843,9 +9815,9 @@ namespace Cubico.Test
 			Assert.AreEqual (Result.NoError, actual.ConversionResult);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_ft_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9858,9 +9830,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_chain_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9873,9 +9845,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_chain_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9888,9 +9860,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_mile_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9903,9 +9875,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_mile_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9918,9 +9890,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_km_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9933,9 +9905,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_km_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9948,9 +9920,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_Megametres_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9963,9 +9935,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_Megametres_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9978,9 +9950,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_Gm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -9993,9 +9965,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_Gm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -10008,9 +9980,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_furlong_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -10023,9 +9995,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_furlong_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -10038,9 +10010,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_thou_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -10053,9 +10025,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_thou_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -10068,9 +10040,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_µm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -10083,9 +10055,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_µm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -10098,9 +10070,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_in_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -10113,9 +10085,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_in_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -10128,9 +10100,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_cm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -10143,9 +10115,9 @@ namespace Cubico.Test
 			Assert.AreEqual (expected.Value, actual.Value);
 		}
 
-		[TestMethod()]
-		[TestCategory(UnitTestCategory.Integration)]
-		[TestCategory(UnitTestCategory.UnitConversion)]
+		[Test]
+		[TestCase(UnitTestCategory.Integration)]
+		[TestCase(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_millimetres_to_cm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
