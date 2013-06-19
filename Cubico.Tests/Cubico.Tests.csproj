@@ -40,6 +40,7 @@
     <Compile Include="UnitTest.cs" />
     <Compile Include="UnitTestCategory.cs" />
     <Compile Include="UnitTypeTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cubico\Cubico.csproj">

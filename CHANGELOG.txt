@@ -1,4 +1,8 @@
-README
+CHANGELOG
+
+Version 0.2
+- Added number string parser
+- Converted tests to run against NUnit
 
 Version 0.1
-A .Net based Unit Conversion API that is web service friendly and comprehensive, yet easy to program against.
+- Initial project
