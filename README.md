@@ -17,17 +17,12 @@ Console.WriteLine(result.GetValueAs("yrd").ToString()); // = 1 yard
 Length, Temperature, Mass, Area, Volume, Time, Speed, Force, Momentum, Power, Energy, Plane Angle, Fluid Volume
 
 ## Accuracy & Precision
-The accuracy of unit conversions is one of the missions for this library. From my experience, a lot of the
-unit converters out there are not precise, especially when scientific precision is needed. Since using
-double precision is not precise by definition, it becomes very hard to come up with unit conversions that are
-precise.  This library has come up with approximately 2000 unit tests, each testing a conversion with various test
-scenarios.
+The accuracy of unit conversions is one of the missions for this library. From experience, a lot of the unit converters out there are not precise, especially when scientific precision is needed. Since using double precision is not precise by definition, it becomes very hard to come up with unit conversions that are precise. This library has come up with approximately 2000 unit tests, each testing a conversion with various test scenarios.
 
 ## License
 Copyright 2012-2013.
 
-This software is licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except for what is in compliance with the License.
+This software is licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except for what is in compliance with the License.
 
 You may obtain a copy of this license at
 
@@ -35,8 +30,6 @@ You may obtain a copy of this license at
 http://www.apache.org/licenses/LICENSE-2.0
 ```
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressed or implied.
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressed or implied.
 
 See the License for the specific language governing permissions and limitations.
