@@ -11,13 +11,11 @@ namespace Cubico.Tests
 	{
 		TestContext testContextInstance;
 		UnitProvider unitPro = new UnitProvider ();
-
 		// Gets or sets the test context which provides information about and functionality for the current test run.
 		public TestContext TestContext {
 			get { return testContextInstance; }
 			set { testContextInstance = value; }
 		}
-
 		// A test for UnitTypes
 		[Test]
 		public void UnitTypesTest ()
@@ -28,7 +26,6 @@ namespace Cubico.Tests
 			Assert.IsNotNull (actual);
 			Assert.IsTrue (actual.Count > 0);
 		}
-
 		// A test for Units
 		[Test]
 		public void UnitsTest ()
@@ -39,7 +36,6 @@ namespace Cubico.Tests
 			Assert.IsNotNull (actual);
 			Assert.IsTrue (actual.Count > 0);
 		}
-
 		// A test for Symbols
 		[Test]
 		public void SymbolsTest ()

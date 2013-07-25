@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 
 namespace Cubico
 {
-    // A structure that defines a measurement with a numeric value and a unit of measure.
+	// A structure that defines a measurement with a numeric value and a unit of measure.
 	[Serializable]
 	[DataContract]
 	[KnownType(typeof(Unit))]
@@ -15,14 +15,13 @@ namespace Cubico
 	[KnownType(typeof(ConversionResult))]
 	public struct Measurement : IEquatable<Measurement>, IComparable<Measurement>
 	{
-        #region "Private Fields"
-
+		#region "Private Fields"
 		MeasurementFlags _flags;
 		UnitConverter _uc;
 		double _maxbound;
 		double _minbound;
 		double _standardValue;
-        // Unit _standardUnit;
+		//Unit _standardUnit;
 		double _value;
 		Unit _unit;
 		string _symbol;
@@ -30,10 +29,8 @@ namespace Cubico
 
 		public event EventHandler OnValueChanged;
 		public event EventHandler OnUnitChanged;
-
-        #endregion
-        #region "Constructors"
-
+		#endregion
+		#region "Constructors"
 		internal Measurement (string unitSymbol)
 		{
 			// Reference the unit converter that created us.
@@ -114,27 +111,22 @@ namespace Cubico
 			OnValueChanged = null;
 			OnUnitChanged = null;
 		}
-
-        #endregion
-        #region "measurement flags and properties methods"
-
-        // Gets a reference to the current unit of the measurement.
+		#endregion
+		#region "measurement flags and properties methods"
+		// Gets a reference to the current unit of the measurement.
 		public Unit Unit {
 			get { return _unit; }
 		}
-
-        // Gets or sets the flags on this measurement.
+		// Gets or sets the flags on this measurement.
 		public MeasurementFlags Flags {
 			get { return _flags; }
 			set { _flags = value; }
 		}
-
-        // Gets the unit converter associated with this measurement.
+		// Gets the unit converter associated with this measurement.
 		public UnitConverter Converter {
 			get { return _uc; }
 		}
-
-        // Displays the result of a conversion.
+		// Displays the result of a conversion.
 		// This property will default to NoError unless there were problems after a conversion.
 		public Result ConversionResult {
 			get { return _conversionResult; }
@@ -154,8 +146,7 @@ namespace Cubico
 				}
 			}
 		}
-
-        // Gets the current value of the measurement in string form.
+		// Gets the current value of the measurement in string form.
 		public string FullValue {
 			get {
 				string str = _value.ToString ();
@@ -185,11 +176,9 @@ namespace Cubico
 				}
 			}
 		}
-
-        #endregion
-        #region "Value getting and setting methods"
-
-        // Sets the unit of the measurement.
+		#endregion
+		#region "Value getting and setting methods"
+		// Sets the unit of the measurement.
 		internal Result SetUnit (string unitSymbol)
 		{
 			Unit unit = _uc.GetUnitBySymbol (unitSymbol);
@@ -211,8 +200,7 @@ namespace Cubico
 				return Result.NoError;
 			}
 		}
-
-        // Given a string in the format "[value] [unit]" parses and applies the value and unit.
+		// Given a string in the format "[value] [unit]" parses and applies the value and unit.
 		internal Result SetValue (string measurement)
 		{
 			if (string.IsNullOrEmpty (measurement)) {
@@ -247,8 +235,7 @@ namespace Cubico
 			SetValue (d);
 			return res;
 		}
-
-        // Sets a value in the currently set unit format.
+		// Sets a value in the currently set unit format.
 		internal Result SetValue (double value)
 		{
 			Measurement res = default(Measurement);
@@ -270,8 +257,7 @@ namespace Cubico
 
 			return res.ConversionResult;
 		}
-
-        // Gets the value of the measurement in the specified units.
+		// Gets the value of the measurement in the specified units.
 		public Measurement GetValueAs (string unitSymbol)
 		{
 			return _uc.ConvertUnits (_value, _unit.Name, unitSymbol);
@@ -288,11 +274,9 @@ namespace Cubico
 				return res.FullValue;
 			}
 		}
-
-        #endregion
-        #region "Validation methods"
-
-        // Validates input to the measurement.
+		#endregion
+		#region "Validation methods"
+		// Validates input to the measurement.
 		public Result ValidateEntry (string entry)
 		{
 			string unit = null;
@@ -341,11 +325,9 @@ namespace Cubico
 
 			return Result.NoError;
 		}
-
-        #endregion
-        #region "Bounds setting methods"
-
-        // Sets the maximum bound of the measurement.
+		#endregion
+		#region "Bounds setting methods"
+		// Sets the maximum bound of the measurement.
 		public Result SetMaxBound (double maxbound, string unitSymbol)
 		{
 			if (string.IsNullOrEmpty (unitSymbol)) {
@@ -362,8 +344,7 @@ namespace Cubico
 
 			return Result.NoError;
 		}
-
-        // Sets the minimum bound of the measurement.
+		// Sets the minimum bound of the measurement.
 		public Result SetMinBound (double minbound, string unitSymbol)
 		{
 			if (string.IsNullOrEmpty (unitSymbol)) {
@@ -380,17 +361,14 @@ namespace Cubico
 
 			return Result.NoError;
 		}
-
-        #endregion
-        #region "Operator overloads"
-
-        // Gets a string representation of the measurement.
+		#endregion
+		#region "Operator overloads"
+		// Gets a string representation of the measurement.
 		public override string ToString ()
 		{
 			return this.FullValue;
 		}
-
-        // Adds two measurements together.
+		// Adds two measurements together.
 		public static Measurement operator + (Measurement d1, Measurement d2)
 		{
 			double x = 0;
@@ -409,8 +387,7 @@ namespace Cubico
 			var result = new Measurement (x + y, d1.Unit);
 			return result;
 		}
-
-        // Subtracts two measurements.
+		// Subtracts two measurements.
 		public static Measurement operator - (Measurement d1, Measurement d2)
 		{
 			double x = 0;
@@ -429,8 +406,7 @@ namespace Cubico
 			var result = new Measurement (x - y, d1.Unit);
 			return result;
 		}
-
-        // Multiplies two measurements.
+		// Multiplies two measurements.
 		public static Measurement operator * (Measurement d1, Measurement d2)
 		{
 			double x = 0;
@@ -449,8 +425,7 @@ namespace Cubico
 			var result = new Measurement (x * y, d1.Unit);
 			return result;
 		}
-
-        // Divides two measurements.
+		// Divides two measurements.
 		public static Measurement operator / (Measurement d1, Measurement d2)
 		{
 			double x = 0;
@@ -499,10 +474,8 @@ namespace Cubico
 		{
 			return (left.CompareTo (right) >= 0);
 		}
-
-        #endregion
-        #region "IEquatable(Of Measurement)"
-
+		#endregion
+		#region "IEquatable(Of Measurement)"
 		public override int GetHashCode ()
 		{
 			Measurement MeRes = default(Measurement);
@@ -523,7 +496,7 @@ namespace Cubico
 
 		public override bool Equals (object obj)
 		{
-			if (obj == null || !object.ReferenceEquals (obj.GetType(), typeof(Measurement))) {
+			if (obj == null || !object.ReferenceEquals (obj.GetType (), typeof(Measurement))) {
 				return false;
 			}
 
@@ -565,10 +538,8 @@ namespace Cubico
 				}
 			}
 		}
-
-        #endregion
-        #region "ICompareTo(Of Measurement)"
-
+		#endregion
+		#region "ICompareTo(Of Measurement)"
 		public int CompareTo (Measurement other)
 		{
 			if (other.ConversionResult != Result.NoError) {
@@ -596,7 +567,6 @@ namespace Cubico
 
 			return meRes.Value.CompareTo (otherRes.Value);
 		}
-
-        #endregion
+		#endregion
 	}
 }

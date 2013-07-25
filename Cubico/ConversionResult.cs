@@ -7,8 +7,7 @@ namespace Cubico
 	[DataContract]
 	public class ConversionResult : IEquatable<ConversionResult>
 	{
-        #region "Constructors"
-
+		#region "Constructors"
 		public ConversionResult ()
 		{
 			_result = Cubico.Result.NoError;
@@ -38,14 +37,12 @@ namespace Cubico
 		{
 			_result = result;
 		}
-
-        #endregion
-        #region "Properties"
-
+		#endregion
+		#region "Properties"
 		Result _result;
 
 		[DataMember]
-        public Result Result {
+		public Result Result {
 			get { return _result; }
 			set { _result = value; }
 		}
@@ -53,7 +50,7 @@ namespace Cubico
 		double _value;
 
 		[DataMember]
-        public double Value {
+		public double Value {
 			get { return _value; }
 			set { _value = value; }
 		}
@@ -61,14 +58,12 @@ namespace Cubico
 		string _symbol;
 
 		[DataMember]
-        public string Symbol {
+		public string Symbol {
 			get { return _symbol; }
 			set { _symbol = value; }
 		}
-
-        #endregion
-        #region "IEquatable"
-
+		#endregion
+		#region "IEquatable"
 		public override int GetHashCode ()
 		{
 			return (this.Value.ToString () + this.Symbol.ToString () + this.Result.ToString ()).GetHashCode ();
@@ -78,7 +73,7 @@ namespace Cubico
 		{
 			if (obj == null) {
 				return false;
-			} else if (!object.ReferenceEquals (obj.GetType(), typeof(ConversionResult))) {
+			} else if (!object.ReferenceEquals (obj.GetType (), typeof(ConversionResult))) {
 				return false;
 			}
 
@@ -113,7 +108,6 @@ namespace Cubico
 		{
 			return left.Equals (right);
 		}
-
-        #endregion
+		#endregion
 	}
 }

@@ -7,14 +7,13 @@ namespace Cubico
 {
 	public class UnitConverter
 	{
-        //TODO: Fix this; was Previously NaN
+		//TODO: Fix this; was Previously NaN
 		const double _failsafeValue = 0;
 		Dictionary<string, Unit> _SymbolDictionary;
 		Dictionary<string, Symbol> _IndividualSymbolDictionary;
 		Dictionary<string, Unit> _UnitDictionary;
 		Dictionary<string, UnitType> _UnitTypeDictionary;
-
-        // Constructor, sets up the unit converter.
+		// Constructor, sets up the unit converter.
 		public UnitConverter ()
 		{
 			//Set up the tables we need
@@ -25,10 +24,8 @@ namespace Cubico
 			_UnitTypeDictionary = unitPro.UnitTypes;
 
 		}
-
-        #region "Unit related methods"
-
-        // Given the full name of the unit, returns the unit entry.
+		#region "Unit related methods"
+		// Given the full name of the unit, returns the unit entry.
 		public Unit GetUnitByName (string unitName)
 		{
 			if (string.IsNullOrEmpty (unitName)) {
@@ -41,8 +38,7 @@ namespace Cubico
 				throw new ArgumentException ("The unit '" + unitName + "' was not found in the UnitConverter.  Add this unit to the database for compatability.");
 			}
 		}
-
-        // Given a unit symbol, gets the unit entry.
+		// Given a unit symbol, gets the unit entry.
 		public Unit GetUnitBySymbol (string unitSymbol)
 		{
 			if (string.IsNullOrWhiteSpace (unitSymbol)) {
@@ -65,11 +61,9 @@ namespace Cubico
 			throw new ArgumentException ("The unit/symbol '" + unitSymbol + "' was not found in the UnitConverter.  Add this unit to the database for compatability.");
 
 		}
-
-        #endregion
-        #region "Group related methods"
-
-        // Gets a value that determines whether the given units are compatible or not.
+		#endregion
+		#region "Group related methods"
+		// Gets a value that determines whether the given units are compatible or not.
 		public bool IsCompatible (string leftSymbol, string rightSymbol)
 		{
 			if (string.IsNullOrEmpty (leftSymbol) || string.IsNullOrEmpty (rightSymbol)) {
@@ -86,8 +80,7 @@ namespace Cubico
 
 			return (this.GetUnitType (leftUnit.Name) == this.GetUnitType (rightUnit.Name));
 		}
-
-        // Creates a new unit group and adds it to the group table.
+		// Creates a new unit group and adds it to the group table.
 		Result CreateNewGroup (string groupName)
 		{
 			//Create the new group
@@ -98,8 +91,7 @@ namespace Cubico
 
 			return Result.NoError;
 		}
-
-        // Adds the named unit to the specified group.
+		// Adds the named unit to the specified group.
 		Result AddUnitToGroup (string unitName, string unitTypeName)
 		{
 			Unit unit = this._UnitDictionary [unitName];
@@ -120,8 +112,7 @@ namespace Cubico
 
 			return Result.NoError;
 		}
-
-        // Given the name of a unit, searches for the unit group it belongs to.
+		// Given the name of a unit, searches for the unit group it belongs to.
 		UnitType GetUnitType (string unitName)
 		{
 			if (string.IsNullOrEmpty (unitName)) {
@@ -143,11 +134,9 @@ namespace Cubico
 				return null;
 			}
 		}
-
-        #endregion
-        #region "Conversion methods"
-
-        // Performs a unit conversion between two units, given a value to convert.
+		#endregion
+		#region "Conversion methods"
+		// Performs a unit conversion between two units, given a value to convert.
 		public Measurement ConvertUnits (double value, string currentUnitName, string targetUnitName)
 		{
 			double x = value;
@@ -175,8 +164,7 @@ namespace Cubico
 
 			return ConvertCurrentToTarget (x, currentUnit.Name, targetUnit.Name);
 		}
-
-        // Performs a unit conversion from the standard value into the specified unit.
+		// Performs a unit conversion from the standard value into the specified unit.
 		public Measurement ConvertCurrentToTarget (double value, string currentUnitName, string targetUnitName)
 		{
 			double x = value;
@@ -241,15 +229,13 @@ namespace Cubico
 
 			return new Measurement (output, targetUnit);
 		}
-
-        #endregion
-        #region "Parsing routines"
-
+		#endregion
+		#region "Parsing routines"
 		// Parses a number string with operators.
-		ConversionResult ParseNumberString(string input)
+		ConversionResult ParseNumberString (string input)
 		{
-			if (string.IsNullOrEmpty(input)) {
-				throw new ArgumentException("input must have a value");
+			if (string.IsNullOrEmpty (input)) {
+				throw new ArgumentException ("input must have a value");
 			}
 
 			//Default value
@@ -258,30 +244,29 @@ namespace Cubico
 
 			//Split the numbers on the ^ operator
 			string[] numbers = null;
-			numbers = input.Split(new char[] { '^' });
+			numbers = input.Split (new char[] { '^' });
 
 			if (numbers.Length == 1) {
 				//Only one value, so there was no ^ operator present, so just return the one number.
 				try {
-					value = Convert.ToDouble(numbers[0]);
+					value = Convert.ToDouble (numbers [0]);
 				} catch {
-					return new ConversionResult(0, Result.BadValue);
+					return new ConversionResult (0, Result.BadValue);
 				}
 			} else {
 				//There is a ^ operator, so try to use it.
 				try {
-					value = Convert.ToDouble(numbers[0]);
-					value = Convert.ToDouble(System.Math.Pow(value, Convert.ToDouble(numbers[1])));
+					value = Convert.ToDouble (numbers [0]);
+					value = Convert.ToDouble (System.Math.Pow (value, Convert.ToDouble (numbers [1])));
 				} catch {
-					return new ConversionResult(0, Result.BadValue);
+					return new ConversionResult (0, Result.BadValue);
 
 				}
 			}
 
-			return new ConversionResult(value);
+			return new ConversionResult (value);
 		}
-
-        // Given a string in the format "[value] [unit]", splits and returns the parts.
+		// Given a string in the format "[value] [unit]", splits and returns the parts.
 		public Measurement ParseUnitString (string input)
 		{
 			//Defaults
@@ -307,7 +292,7 @@ namespace Cubico
 						break; // TODO: might not be correct. Was : Exit While
 					}
 				}
-				System.Math.Max (System.Threading.Interlocked.Increment(ref i), i - 1);
+				System.Math.Max (System.Threading.Interlocked.Increment (ref i), i - 1);
 			}
 
 			s1 = input.Substring (0, i);
@@ -336,7 +321,6 @@ namespace Cubico
 
 			return new Measurement (value, symbol);
 		}
-
-        #endregion
+		#endregion
 	}
 }

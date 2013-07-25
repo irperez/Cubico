@@ -9,15 +9,12 @@ namespace Cubico.Tests
 	{
 		TestContext testContextInstance;
 		UnitProvider unitPro = new UnitProvider ();
-
 		// Gets or sets the test context which provides information about and functionality for the current test run.
 		public TestContext TestContext {
 			get { return testContextInstance; }
 			set { testContextInstance = value; }
 		}
-
 		#region "Symbol.Symbol()"
-
 		[Test]
 		public void SymbolNewTest ()
 		{
@@ -28,10 +25,8 @@ namespace Cubico.Tests
 			Assert.IsTrue (testObj.Value == null);
 			Assert.IsNull (testObj.Unit);
 		}
-
 		#endregion
 		#region "Symbol.Symbol(Unit)"
-
 		[Test]
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void SymbolNewEfUnitSymbolUnitNullTest ()
@@ -52,23 +47,21 @@ namespace Cubico.Tests
 
 			Assert.IsNotNull (testObj);
 
-			Assert.IsTrue (string.IsNullOrEmpty(testObj.Value));
+			Assert.IsTrue (string.IsNullOrEmpty (testObj.Value));
 
 			Assert.IsNotNull (testObj.Unit);
 			Assert.IsTrue (testObj.Unit.ID == unitObj.ID);
 		}
-
 		#endregion
 		#region "Symbol.ID"
-
 		[Test]
-		public void SymbolIDNullTest()
+		public void SymbolIDNullTest ()
 		{
-		    Symbol testObj = new Symbol();
+			Symbol testObj = new Symbol ();
 
-		    testObj.Id = null;
+			testObj.Id = null;
 
-		    Assert.AreEqual(null, testObj.Id);
+			Assert.AreEqual (null, testObj.Id);
 		}
 
 		[Test]
@@ -80,10 +73,8 @@ namespace Cubico.Tests
 
 			Assert.AreEqual (99, testObj.Id);
 		}
-
 		#endregion
 		#region "Symbol.ParentUnit"
-
 		[Test]
 		public void SymbolParentUnitTest ()
 		{
@@ -105,10 +96,8 @@ namespace Cubico.Tests
 
 			Assert.IsNull (testObj.Unit);
 		}
-
 		#endregion
 		#region "Symbol.Value"
-
 		[Test]
 		public void SymbolValueTest ()
 		{
@@ -118,10 +107,8 @@ namespace Cubico.Tests
 
 			Assert.AreEqual ("Test Name", testObj.Value);
 		}
-
 		#endregion
 		#region "Symbol.IsDefault"
-
 		[Test]
 		public void SymbolIsDefaultTest ()
 		{
@@ -131,10 +118,8 @@ namespace Cubico.Tests
 
 			Assert.AreEqual (true, testObj.IsDefault);
 		}
-
 		#endregion
 		#region "IEquatable"
-
 		[Test]
 		public void Symbol_EqualityTest ()
 		{
@@ -222,7 +207,7 @@ namespace Cubico.Tests
 			Symbol expected = unitPro.Symbols ["in"].Symbols [0];
 			Symbol target = unitPro.Symbols ["ft"].Symbols [0];
 
-			Assert.IsFalse (expected.Equals(target));
+			Assert.IsFalse (expected.Equals (target));
 		}
 
 		[Test]
@@ -231,7 +216,7 @@ namespace Cubico.Tests
 			Symbol expected = unitPro.Symbols ["ft"].Symbols [0];
 			Symbol target = unitPro.Symbols ["ft"].Symbols [0];
 
-			Assert.IsTrue (expected.Equals(target));
+			Assert.IsTrue (expected.Equals (target));
 		}
 
 		[Test]
@@ -240,7 +225,7 @@ namespace Cubico.Tests
 			Symbol expected = unitPro.Symbols ["ft"].Symbols [0];
 			Symbol target = unitPro.Symbols ["in"].Symbols [0];
 
-			Assert.IsFalse (expected.Equals(target));
+			Assert.IsFalse (expected.Equals (target));
 		}
 
 		[Test]
@@ -249,7 +234,7 @@ namespace Cubico.Tests
 			Symbol expected = unitPro.Symbols ["ft"].Symbols [0];
 			Symbol target = null;
 
-			Assert.IsFalse (expected.Equals(target));
+			Assert.IsFalse (expected.Equals (target));
 		}
 
 		[Test]
@@ -258,7 +243,7 @@ namespace Cubico.Tests
 			Symbol expected = unitPro.Symbols ["ft"].Symbols [0];
 			Symbol target = unitPro.Symbols ["ft"].Symbols [0];
 
-			Assert.IsTrue (expected.Equals((object)target));
+			Assert.IsTrue (expected.Equals ((object)target));
 		}
 
 		[Test]
@@ -267,7 +252,7 @@ namespace Cubico.Tests
 			Symbol expected = unitPro.Symbols ["ft"].Symbols [0];
 			Symbol target = unitPro.Symbols ["in"].Symbols [0];
 
-			Assert.IsFalse (expected.Equals((object)target));
+			Assert.IsFalse (expected.Equals ((object)target));
 		}
 
 		[Test]
@@ -276,7 +261,7 @@ namespace Cubico.Tests
 			Symbol expected = unitPro.Symbols ["ft"].Symbols [0];
 			Symbol target = null;
 
-			Assert.IsFalse (expected.Equals((object)target));
+			Assert.IsFalse (expected.Equals ((object)target));
 		}
 
 		[Test]
@@ -284,9 +269,8 @@ namespace Cubico.Tests
 		{
 			Symbol expected = unitPro.Symbols ["ft"].Symbols [0];
 
-			Assert.IsTrue (expected.GetHashCode() == expected.Value.GetHashCode());
+			Assert.IsTrue (expected.GetHashCode () == expected.Value.GetHashCode ());
 		}
-
 		#endregion
 	}
 }

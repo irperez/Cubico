@@ -8,15 +8,12 @@ namespace Cubico.Tests
 	public class ConversionResultTest
 	{
 		TestContext testContextInstance;
-
 		// Gets or sets the test context which provides information about and functionality for the current test run.
 		public TestContext TestContext {
 			get { return testContextInstance; }
 			set { testContextInstance = value; }
 		}
-
 		#region "ConversionResult.ConversionResult()"
-
 		[Test]
 		public void ConversionResultConstructorTest ()
 		{
@@ -27,10 +24,8 @@ namespace Cubico.Tests
 			Assert.AreEqual (Result.NoError, res.Result);
 			Assert.AreEqual (null, res.Symbol);
 		}
-
 		#endregion
 		#region "ConversionResult.ConversionResult(Double)"
-
 		[Test]
 		public void ConversionResultConstructorDoubleTest ()
 		{
@@ -52,10 +47,8 @@ namespace Cubico.Tests
 			Assert.AreEqual (Result.NoError, res.Result);
 			Assert.AreEqual (null, res.Symbol);
 		}
-
 		#endregion
 		#region "ConversionResult.ConversionResult(Double, String)"
-
 		[Test]
 		public void ConversionResultConstructorDoubleStringTest ()
 		{
@@ -99,10 +92,8 @@ namespace Cubico.Tests
 			Assert.AreEqual (Result.NoError, res.Result);
 			Assert.AreEqual ("lb", res.Symbol);
 		}
-
 		#endregion
 		#region "ConversionResult.ConversionResult(Double, Result)"
-
 		[Test]
 		public void ConversionResultConstructorDoubleResultTest ()
 		{
@@ -146,10 +137,8 @@ namespace Cubico.Tests
 			Assert.AreEqual (Result.GenericError, res.Result);
 			Assert.AreEqual (null, res.Symbol);
 		}
-
 		#endregion
 		#region "ConversionResult.ConversionResult(Result)"
-
 		[Test]
 		public void ConversionResultConstructorResultTest ()
 		{
@@ -171,10 +160,8 @@ namespace Cubico.Tests
 			Assert.AreEqual (Result.NoError, res.Result);
 			Assert.AreEqual (null, res.Symbol);
 		}
-
 		#endregion
 		#region "ConversionResult.Result"
-
 		[Test]
 		public void ConversionResultResultTest ()
 		{
@@ -200,10 +187,8 @@ namespace Cubico.Tests
 
 			Assert.AreEqual (Result.NoError, res.Result);
 		}
-
 		#endregion
 		#region "ConversionResult.Value"
-
 		[Test]
 		public void ConversionResultValueTest ()
 		{
@@ -229,10 +214,8 @@ namespace Cubico.Tests
 
 			Assert.AreEqual (0, res.Value);
 		}
-
 		#endregion
 		#region "ConversionResult.Symbol"
-
 		[Test]
 		public void ConversionResultSymbolTest ()
 		{
@@ -258,7 +241,6 @@ namespace Cubico.Tests
 
 			Assert.AreEqual (null, res.Symbol);
 		}
-
 		#endregion
 	}
 }

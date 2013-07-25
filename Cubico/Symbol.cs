@@ -3,15 +3,14 @@ using System.Runtime.Serialization;
 
 namespace Cubico
 {
-    // Represents a unit of measure's symbol, or alternate methods to identify a unit of measure.
-    // Inch = ", inches, in, in. etc.
+	// Represents a unit of measure's symbol, or alternate methods to identify a unit of measure.
+	// Inch = ", inches, in, in. etc.
 	[DataContract(IsReference = true)]
 	[KnownType(typeof(Unit))]
 	[Serializable]
 	public partial class Symbol
 	{
-        #region "Constructors"
-
+		#region "Constructors"
 		public Symbol ()
 		{
 		}
@@ -24,10 +23,8 @@ namespace Cubico
 
 			this.Unit = unit;
 		}
-
-        #endregion
+		#endregion
 		#region "Primitive Properties"
-
 		[DataMember]
 		public int Id { get; set; }
 
@@ -39,10 +36,8 @@ namespace Cubico
 
 		[DataMember]
 		public int UnitId { get; set; }
-
 		#endregion
 		#region "Navigation Properties"
-
 		[DataMember]
 		public Unit Unit {
 			get { return _unit; }
@@ -56,10 +51,8 @@ namespace Cubico
 		}
 
 		Unit _unit;
-
 		#endregion
 		#region "ChangeTracking"
-
 		bool _isDeserializing;
 
 		protected bool IsDeserializing {
@@ -97,10 +90,8 @@ namespace Cubico
 		{
 			IsSerializing = false;
 		}
-
 		#endregion
 		#region "Association Fixup"
-
 		void FixupUnit (Unit previousValue)
 		{
 			if (IsDeserializing) {
@@ -119,10 +110,8 @@ namespace Cubico
 				UnitId = Unit.ID;
 			}
 		}
-
 		#endregion
-        #region "IEquatable"
-
+		#region "IEquatable"
 		public override int GetHashCode ()
 		{
 			return this.Value.GetHashCode ();
@@ -132,7 +121,7 @@ namespace Cubico
 		{
 			if ((object)obj == null) {
 				return false;
-			} else if (!object.ReferenceEquals (obj.GetType(), this.GetType ())) {
+			} else if (!object.ReferenceEquals (obj.GetType (), this.GetType ())) {
 				return false;
 			} else {
 				return this.Equals ((Symbol)obj);
@@ -167,9 +156,7 @@ namespace Cubico
 				return left.Equals (right);
 			}
 		}
-
-        #endregion
-
+		#endregion
 		public override string ToString ()
 		{
 			return this.Value;
