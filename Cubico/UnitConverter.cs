@@ -9,7 +9,7 @@ namespace Cubico
 	{
 		//TODO: Fix this; was Previously NaN
 		const double _failsafeValue = 0;
-		Dictionary<string, Unit> _SymbolDictionary;
+		public Dictionary<string, Unit> _SymbolDictionary;
 		Dictionary<string, Symbol> _IndividualSymbolDictionary;
 		Dictionary<string, Unit> _UnitDictionary;
 		Dictionary<string, UnitType> _UnitTypeDictionary;

@@ -20,7 +20,7 @@ namespace Cubico
 		UnitConverter _uc;
 		double _maxbound;
 		double _minbound;
-		double _standardValue;
+		public double _standardValue;
 		//Unit _standardUnit;
 		double _value;
 		Unit _unit;
