@@ -7,17 +7,14 @@ public class UnitTypeTest
 {
 	TestContext testContextInstance;
 	UnitProvider unitPro = new UnitProvider ();
-
-    // Gets or sets the test context which provides information about and functionality for the current test run.
+	// Gets or sets the test context which provides information about and functionality for the current test run.
 	public TestContext TestContext {
 		get { return testContextInstance; }
 		set { testContextInstance = value; }
 	}
-
-    #region "UnitType.UnitType()"
-
+	#region "UnitType.UnitType()"
 	[Test]
-    public void UnitTypeNewTest ()
+	public void UnitTypeNewTest ()
 	{
 		UnitType testObj = new UnitType ();
 
@@ -25,14 +22,12 @@ public class UnitTypeTest
 		Assert.IsTrue (testObj.ID == 0);
 		Assert.IsNotNull (testObj.Units);
 		Assert.IsTrue (testObj.Units.Count == 0);
-		Assert.IsTrue (string.IsNullOrEmpty(testObj.Name));
+		Assert.IsTrue (string.IsNullOrEmpty (testObj.Name));
 	}
-
-    #endregion
-    #region "UnitType.ID"
-
+	#endregion
+	#region "UnitType.ID"
 	[Test]
-    public void UnitTypeIDTest ()
+	public void UnitTypeIDTest ()
 	{
 		UnitType testObj = new UnitType ();
 
@@ -40,12 +35,10 @@ public class UnitTypeTest
 
 		Assert.AreEqual (99, testObj.ID);
 	}
-
-    #endregion
-    #region "UnitType.Name"
-
+	#endregion
+	#region "UnitType.Name"
 	[Test]
-    public void UnitTypeNameTest ()
+	public void UnitTypeNameTest ()
 	{
 		UnitType testObj = new UnitType ();
 
@@ -53,12 +46,10 @@ public class UnitTypeTest
 
 		Assert.AreEqual ("Test Name", testObj.Name);
 	}
-
-    #endregion
-    #region "IEquatable"
-
+	#endregion
+	#region "IEquatable"
 	[Test]
-    public void UnitType_EqualityTest ()
+	public void UnitType_EqualityTest ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 		UnitType target = unitPro.UnitTypes ["Length"];
@@ -67,7 +58,7 @@ public class UnitTypeTest
 	}
 
 	[Test]
-    public void UnitType_EqualityTest2 ()
+	public void UnitType_EqualityTest2 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 		UnitType target = unitPro.UnitTypes ["Mass"];
@@ -76,7 +67,7 @@ public class UnitTypeTest
 	}
 
 	[Test]
-    public void UnitType_EqualityTest3 ()
+	public void UnitType_EqualityTest3 ()
 	{
 		UnitType expected = null;
 		UnitType target = unitPro.UnitTypes ["Mass"];
@@ -85,7 +76,7 @@ public class UnitTypeTest
 	}
 
 	[Test]
-    public void UnitType_EqualityTest4 ()
+	public void UnitType_EqualityTest4 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Mass"];
 		UnitType target = null;
@@ -94,7 +85,7 @@ public class UnitTypeTest
 	}
 
 	[Test]
-    public void UnitType_EqualityTest5 ()
+	public void UnitType_EqualityTest5 ()
 	{
 		UnitType expected = null;
 		UnitType target = null;
@@ -103,7 +94,7 @@ public class UnitTypeTest
 	}
 
 	[Test]
-    public void UnitType_EqualityTest6 ()
+	public void UnitType_EqualityTest6 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 		UnitType target = unitPro.UnitTypes ["Mass"];
@@ -112,7 +103,7 @@ public class UnitTypeTest
 	}
 
 	[Test]
-    public void UnitType_EqualityTest7 ()
+	public void UnitType_EqualityTest7 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 		UnitType target = null;
@@ -121,7 +112,7 @@ public class UnitTypeTest
 	}
 
 	[Test]
-    public void UnitType_EqualityTest8 ()
+	public void UnitType_EqualityTest8 ()
 	{
 		UnitType expected = null;
 		UnitType target = unitPro.UnitTypes ["Length"];
@@ -130,7 +121,7 @@ public class UnitTypeTest
 	}
 
 	[Test]
-    public void UnitType_EqualityTest8_1 ()
+	public void UnitType_EqualityTest8_1 ()
 	{
 		UnitType expected = null;
 		UnitType target = null;
@@ -139,75 +130,74 @@ public class UnitTypeTest
 	}
 
 	[Test]
-    public void UnitType_EqualityTest9 ()
+	public void UnitType_EqualityTest9 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Mass"];
 		UnitType target = unitPro.UnitTypes ["Length"];
 
-		Assert.IsFalse (expected.Equals(target));
+		Assert.IsFalse (expected.Equals (target));
 	}
 
 	[Test]
-    public void UnitType_EqualityTest10 ()
+	public void UnitType_EqualityTest10 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 		UnitType target = unitPro.UnitTypes ["Length"];
 
-		Assert.IsTrue (expected.Equals(target));
+		Assert.IsTrue (expected.Equals (target));
 	}
 
 	[Test]
-    public void UnitType_EqualityTest11 ()
+	public void UnitType_EqualityTest11 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 		UnitType target = unitPro.UnitTypes ["Mass"];
 
-		Assert.IsFalse (expected.Equals(target));
+		Assert.IsFalse (expected.Equals (target));
 	}
 
 	[Test]
-    public void UnitType_EqualityTest12 ()
+	public void UnitType_EqualityTest12 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 		UnitType target = null;
 
-		Assert.IsFalse (expected.Equals(target));
+		Assert.IsFalse (expected.Equals (target));
 	}
 
 	[Test]
-    public void UnitType_EqualityTest13 ()
+	public void UnitType_EqualityTest13 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 		UnitType target = unitPro.UnitTypes ["Length"];
 
-		Assert.IsTrue (expected.Equals((object)target));
+		Assert.IsTrue (expected.Equals ((object)target));
 	}
 
 	[Test]
-    public void UnitType_EqualityTest14 ()
+	public void UnitType_EqualityTest14 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 		UnitType target = unitPro.UnitTypes ["Mass"];
 
-		Assert.IsFalse (expected.Equals((object)target));
+		Assert.IsFalse (expected.Equals ((object)target));
 	}
 
 	[Test]
-    public void UnitType_EqualityTest154 ()
+	public void UnitType_EqualityTest154 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 		UnitType target = null;
 
-		Assert.IsFalse (expected.Equals((object)target));
+		Assert.IsFalse (expected.Equals ((object)target));
 	}
 
 	[Test]
-    public void UnitType_EqualityTest15 ()
+	public void UnitType_EqualityTest15 ()
 	{
 		UnitType expected = unitPro.UnitTypes ["Length"];
 
-		Assert.IsTrue (expected.GetHashCode() == expected.Name.GetHashCode());
+		Assert.IsTrue (expected.GetHashCode () == expected.Name.GetHashCode ());
 	}
-
-    #endregion
+	#endregion
 }

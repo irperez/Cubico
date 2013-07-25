@@ -8,15 +8,12 @@ namespace Cubico.Tests
 	public class ModifierTest
 	{
 		TestContext testContextInstance;
-
 		// Gets or sets the test context which provides information about and functionality for the current test run.
 		public TestContext TestContext {
 			get { return testContextInstance; }
 			set { testContextInstance = value; }
 		}
-
 		#region "Modifier.Modifier()"
-
 		[Test]
 		public void ModifierNewTest ()
 		{
@@ -27,10 +24,8 @@ namespace Cubico.Tests
 			Assert.IsTrue (testObj.Value == 0);
 			Assert.IsNull (testObj.ParentUnit);
 		}
-
 		#endregion
 		#region "Modifier.ID"
-
 		[Test]
 		public void ModifierIDTest ()
 		{
@@ -39,10 +34,8 @@ namespace Cubico.Tests
 
 			Assert.AreEqual (99, testObj.ID);
 		}
-
 		#endregion
 		#region "Modifier.ParentUnit"
-
 		[Test]
 		public void ModifierParentUnitTest ()
 		{
@@ -67,22 +60,18 @@ namespace Cubico.Tests
 
 			Assert.IsNull (testObj.ParentUnit);
 		}
-
 		#endregion
 		#region "Modifier.Value"
-
 		[Test]
 		public void ModifierValueTest ()
 		{
 			Modifier testObj = new Modifier ();
 			testObj.Value = Convert.ToDecimal (0.001);
 
-			Assert.AreEqual (Convert.ToDecimal(0.001), testObj.Value);
+			Assert.AreEqual (Convert.ToDecimal (0.001), testObj.Value);
 		}
-
 		#endregion
 		#region "Modifier.Order"
-
 		[Test]
 		public void ModifierOrderTest ()
 		{
@@ -91,10 +80,8 @@ namespace Cubico.Tests
 
 			Assert.AreEqual (10, testObj.Order);
 		}
-
 		#endregion
 		#region "Modifier.ModifierType"
-
 		[Test]
 		public void ModifierTypeTest ()
 		{
@@ -103,7 +90,6 @@ namespace Cubico.Tests
 
 			Assert.AreEqual (ModifierType.Multiply, testObj.ModifierType);
 		}
-
 		#endregion
 	}
 }

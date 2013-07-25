@@ -12,8 +12,7 @@ namespace Cubico
 	[Serializable]
 	public partial class Unit : IEquatable<Unit>
 	{
-        #region "Constructors"
-
+		#region "Constructors"
 		public Unit () : base()
 		{
 		}
@@ -38,29 +37,25 @@ namespace Cubico
 				return false;
 			}
 		}
-
 		#endregion
-        #region "Primitive Properties"
+		#region "Primitive Properties"
+		[DataMember]
+		public int ID { get; set; }
 
 		[DataMember]
-        public int ID { get; set; }
+		public string Name { get; set; }
 
 		[DataMember]
-        public string Name { get; set; }
-
+		public int UnitTypeID { get; set; }
+		#endregion
+		#region "Navigation Properties"
 		[DataMember]
-        public int UnitTypeID { get; set; }
-
-        #endregion
-        #region "Navigation Properties"
-
-		[DataMember]
-        public UnitType UnitType { get; set; }
+		public UnitType UnitType { get; set; }
 
 		private List<Symbol> _symbols;
 
 		[DataMember]
-        public List<Symbol> Symbols {
+		public List<Symbol> Symbols {
 			get {
 				if (_symbols == null && IsSerializing == false) {
 					_symbols = new List<Symbol> ();
@@ -77,7 +72,7 @@ namespace Cubico
 		private List<Modifier> _sources;
 
 		[DataMember]
-        public List<Modifier> Sources {
+		public List<Modifier> Sources {
 			get {
 				if (_sources == null && IsSerializing == false) {
 					_sources = new List<Modifier> ();
@@ -94,7 +89,7 @@ namespace Cubico
 		private List<Modifier> _modifiers;
 
 		[DataMember]
-        public List<Modifier> Modifiers {
+		public List<Modifier> Modifiers {
 			get {
 				if (_modifiers == null && IsSerializing == false) {
 					_modifiers = new List<Modifier> ();
@@ -107,10 +102,8 @@ namespace Cubico
 				}
 			}
 		}
-
-        #endregion
-        #region "ChangeTracking"
-
+		#endregion
+		#region "ChangeTracking"
 		private bool _isDeserializing;
 
 		protected bool IsDeserializing {
@@ -119,13 +112,13 @@ namespace Cubico
 		}
 
 		[OnDeserializing]
-        public void OnDeserializingMethod (StreamingContext context)
+		public void OnDeserializingMethod (StreamingContext context)
 		{
 			IsDeserializing = true;
 		}
 
 		[OnDeserialized]
-        public void OnDeserializedMethod (StreamingContext context)
+		public void OnDeserializedMethod (StreamingContext context)
 		{
 			IsDeserializing = false;
 		}
@@ -138,13 +131,13 @@ namespace Cubico
 		}
 
 		[OnSerializing]
-        public void OnSerializingMethod (StreamingContext context)
+		public void OnSerializingMethod (StreamingContext context)
 		{
 			IsSerializing = true;
 		}
 
 		[OnSerialized]
-        public void OnSerializedMethod (StreamingContext context)
+		public void OnSerializedMethod (StreamingContext context)
 		{
 			IsSerializing = false;
 		}
@@ -156,10 +149,8 @@ namespace Cubico
 			Sources.Clear ();
 			Modifiers.Clear ();
 		}
-
-        #endregion
-        #region "Properties"
-
+		#endregion
+		#region "Properties"
 		public string DefaultSymbol {
 			get {
 				Symbol symbol = (from s in this.Symbols
@@ -173,10 +164,8 @@ namespace Cubico
 				}
 			}
 		}
-
 		#endregion
-        #region "IEquatable"
-
+		#region "IEquatable"
 		public override int GetHashCode ()
 		{
 			return this.Name.GetHashCode ();
@@ -186,7 +175,7 @@ namespace Cubico
 		{
 			if ((object)obj == null) {
 				return false;
-			} else if (!object.ReferenceEquals (obj.GetType(), this.GetType ())) {
+			} else if (!object.ReferenceEquals (obj.GetType (), this.GetType ())) {
 				return false;
 			} else {
 				return this.Equals ((Unit)obj);
@@ -221,9 +210,7 @@ namespace Cubico
 				return left.Equals (right);
 			}
 		}
-
-        #endregion
-
+		#endregion
 		public override string ToString ()
 		{
 			return this.Name;

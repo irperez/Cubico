@@ -6,21 +6,18 @@ namespace Cubico
 {
 	[DataContract(IsReference = true)]
 	[KnownType(typeof(Unit))]
-	[Serializable()]
+	[Serializable]
 	public partial class UnitType : IEquatable<UnitType>
 	{
-        #region "Constructors"
-
+		#region "Constructors"
 		public UnitType () : base()
 		{
 		}
-
 		#endregion
 		#region "Primitive Properties"
-
 		int _iD;
 
-		[DataMember()]
+		[DataMember]
 		public int ID {
 			get { return _iD; }
 			set {
@@ -32,7 +29,7 @@ namespace Cubico
 
 		string _name;
 
-		[DataMember()]
+		[DataMember]
 		public string Name {
 			get { return _name; }
 			set {
@@ -44,7 +41,7 @@ namespace Cubico
 
 		string _description;
 
-		[DataMember()]
+		[DataMember]
 		public string Description {
 			get { return _description; }
 			set {
@@ -53,11 +50,9 @@ namespace Cubico
 				}
 			}
 		}
-
 		#endregion
 		#region "Navigation Properties"
-
-		[DataMember()]
+		[DataMember]
 		public List<Unit> Units {
 			get {
 				if (_units == null && IsSerializing == false) {
@@ -73,10 +68,8 @@ namespace Cubico
 		}
 
 		List<Unit> _units;
-
 		#endregion
 		#region "ChangeTracking"
-
 		bool _isDeserializing;
 
 		protected bool IsDeserializing {
@@ -84,13 +77,13 @@ namespace Cubico
 			set { _isDeserializing = value; }
 		}
 
-		[OnDeserializing()]
+		[OnDeserializing]
 		public void OnDeserializingMethod (StreamingContext context)
 		{
 			IsDeserializing = true;
 		}
 
-		[OnDeserialized()]
+		[OnDeserialized]
 		public void OnDeserializedMethod (StreamingContext context)
 		{
 			IsDeserializing = false;
@@ -103,13 +96,13 @@ namespace Cubico
 			set { _isSerializing = value; }
 		}
 
-		[OnSerializing()]
+		[OnSerializing]
 		public void OnSerializingMethod (StreamingContext context)
 		{
 			IsSerializing = true;
 		}
 
-		[OnSerialized()]
+		[OnSerialized]
 		public void OnSerializedMethod (StreamingContext context)
 		{
 			IsSerializing = false;
@@ -119,10 +112,8 @@ namespace Cubico
 		{
 			Units.Clear ();
 		}
-
 		#endregion
 		#region "IEquatable(Of UnitType)"
-
 		public override int GetHashCode ()
 		{
 			return (this.Name).GetHashCode ();
@@ -130,7 +121,7 @@ namespace Cubico
 
 		public override bool Equals (object obj)
 		{
-			if (obj == null || !object.ReferenceEquals (obj.GetType(), typeof(UnitType))) {
+			if (obj == null || !object.ReferenceEquals (obj.GetType (), typeof(UnitType))) {
 				return false;
 			}
 
@@ -167,7 +158,6 @@ namespace Cubico
 				return left.Equals (right);
 			}
 		}
-
 		#endregion
 	}
 }
