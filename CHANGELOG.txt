@@ -1,0 +1,8 @@
+CHANGELOG
+
+Version 0.2
+- Added number string parser
+- Converted tests to run against NUnit
+
+Version 0.1
+- Initial project
