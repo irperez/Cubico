@@ -14,7 +14,19 @@ Console.WriteLine(result.GetValueAs("yrd").ToString()); // = 1 yard
 ```
 	
 ## Unit Categories to Date
-Length, Temperature, Mass, Area, Volume, Time, Speed, Force, Momentum, Power, Energy, Plane Angle, Fluid Volume
+* Area
+* Energy
+* Fluid Volume
+* Force
+* Length
+* Mass
+* Momentum
+* Plane Angle
+* Power
+* Speed
+* Temperature
+* Time
+* Volume
 
 ## Accuracy & Precision
 The accuracy of unit conversions is one of the missions for this library. From experience, a lot of the unit converters out there are not precise, especially when scientific precision is needed. Since using double precision is not precise by definition, it becomes very hard to come up with unit conversions that are precise. This library has come up with approximately 2000 unit tests, each testing a conversion with various test scenarios.
