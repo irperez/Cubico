@@ -7,29 +7,25 @@ using System.Xml;
 
 namespace Cubico
 {
-    // Facilitates the loading and caching of the unit of measure data.
+	// Facilitates the loading and caching of the unit of measure data.
 	public class UnitProvider
 	{
-        #region "Constructors"
-
+		#region "Constructors"
 		public UnitProvider ()
 		{
 			if (_dataFile == null) {
 				this.LoadDataFile ();
 			}
 		}
-
-        #endregion
-        #region "Properties"
-
+		#endregion
+		#region "Properties"
 		static XmlDocument _dataFile;
 
 		protected XmlDocument DataFile {
 			get{ return _dataFile;}
 			set{ _dataFile = value;}
 		}
-
-        //Singleton
+		//Singleton
 		static Dictionary<string, UnitType> _unitTypes;
 
 		public Dictionary<string, UnitType> UnitTypes {
@@ -65,11 +61,9 @@ namespace Cubico
 				return _symbols;
 			}
 		}
-
-        #endregion
-        #region "Methods"
-        #region "File Load Methods"
-
+		#endregion
+		#region "Methods"
+		#region "File Load Methods"
 		void LoadDataFile ()
 		{
 			const string fileName = "Cubico.UnitData.xml";
@@ -283,19 +277,15 @@ namespace Cubico
 				}
 			}
 		}
-
-        #endregion
-        #region "UnitTypes"
-
-        //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
+		#endregion
+		#region "UnitTypes"
+		//TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
 		void GetAllUnitTypes ()
 		{
 		}
-
-        #endregion
-        #region "Units"
-
-        //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
+		#endregion
+		#region "Units"
+		//TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
 		Dictionary<string, Unit> GetAllUnits ()
 		{
 			var unitDict = new Dictionary<string, Unit> ();
@@ -317,11 +307,8 @@ namespace Cubico
 
 			return unitDict;
 		}
-
-        #endregion
-        #region "Symbols"
-
-
+		#endregion
+		#region "Symbols"
 		public Dictionary<string, Symbol> IndividualSymbols {
 			get {
 				if (_individualSymbols == null) {
@@ -330,8 +317,7 @@ namespace Cubico
 				return _individualSymbols;
 			}
 		}
-
-        //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
+		//TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
 		Dictionary<string, Unit> GetAllSymbols ()
 		{
 			var unitDict = new Dictionary<string, Unit> ();
@@ -368,8 +354,7 @@ namespace Cubico
 
 			return unitDict;
 		}
-
-        //TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
+		//TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
 		Dictionary<string, Symbol> GetAllIndividualSymbols ()
 		{
 			var unitDict = new Dictionary<string, Symbol> ();
@@ -394,8 +379,7 @@ namespace Cubico
 
 			return unitDict;
 		}
-
-        #endregion
-        #endregion
+		#endregion
+		#endregion
 	}
 }

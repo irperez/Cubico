@@ -9,34 +9,29 @@ public class UnitTest
 {
 	TestContext testContextInstance;
 	UnitProvider unitPro = new UnitProvider ();
-
-    // Gets or sets the test context which provides information about and functionality for the current test run.
+	// Gets or sets the test context which provides information about and functionality for the current test run.
 	public TestContext TestContext {
 		get { return testContextInstance; }
 		set { testContextInstance = value; }
 	}
-
-    #region "Unit.Unit()"
-
+	#region "Unit.Unit()"
 	[Test]
-    public void UnitNewTest ()
+	public void UnitNewTest ()
 	{
 		Unit testObj = new Unit ();
 
 		Assert.IsNotNull (testObj);
 		Assert.IsTrue (testObj.ID == 0);
-		Assert.IsTrue (string.IsNullOrEmpty(testObj.DefaultSymbol));
+		Assert.IsTrue (string.IsNullOrEmpty (testObj.DefaultSymbol));
 		Assert.IsNull (testObj.UnitType);
 		Assert.IsNotNull (testObj.Symbols);
 		Assert.IsTrue (testObj.Symbols.Count == 0);
 		Assert.IsNotNull (testObj.Modifiers);
 		Assert.IsTrue (testObj.Modifiers.Count == 0);
-		Assert.IsTrue (string.IsNullOrEmpty(testObj.Name));
+		Assert.IsTrue (string.IsNullOrEmpty (testObj.Name));
 	}
-
-    #endregion
-    #region "Unit.Unit(UnitType)"
-
+	#endregion
+	#region "Unit.Unit(UnitType)"
 	[Test]
 	[ExpectedException(typeof(ArgumentNullException))]
 	public void UnitNewEfUnitUnitTypeNullTest ()
@@ -47,7 +42,7 @@ public class UnitTest
 	}
 
 	[Test]
-    public void UnitNewEfUnitUnitTypeTest ()
+	public void UnitNewEfUnitUnitTypeTest ()
 	{
 		UnitType testunittype = new UnitType {
 			ID = 99,
@@ -67,12 +62,10 @@ public class UnitTest
 		Assert.IsTrue (testObj.Modifiers.Count == 0);
 		// Assert.IsTrue(testUnit.UnitModifiers(0).Value = testObj.Modifiers(0).Value)
 	}
-
-    #endregion
-    #region "Unit.ParentType"
-
+	#endregion
+	#region "Unit.ParentType"
 	[Test]
-    public void UnitParentTypeTest ()
+	public void UnitParentTypeTest ()
 	{
 		UnitType testUnitType = new UnitType {
 			ID = 99,
@@ -89,7 +82,7 @@ public class UnitTest
 	}
 
 	[Test]
-    public void UnitParentTypeNullTest ()
+	public void UnitParentTypeNullTest ()
 	{
 		Unit testObj = new Unit ();
 
@@ -97,12 +90,10 @@ public class UnitTest
 
 		Assert.IsNull (testObj.UnitType);
 	}
-
-    #endregion
-    #region "Unit.ID"
-
+	#endregion
+	#region "Unit.ID"
 	[Test]
-    public void UnitIDTest ()
+	public void UnitIDTest ()
 	{
 		Unit testObj = new Unit ();
 
@@ -110,12 +101,10 @@ public class UnitTest
 
 		Assert.AreEqual (99, testObj.ID);
 	}
-
-    #endregion
-    #region "Unit.Name"
-
+	#endregion
+	#region "Unit.Name"
 	[Test]
-    public void UnitNameTest ()
+	public void UnitNameTest ()
 	{
 		Unit testObj = new Unit ();
 
@@ -123,12 +112,10 @@ public class UnitTest
 
 		Assert.AreEqual ("Test Name", testObj.Name);
 	}
-
-    #endregion
-    #region "IEquatable"
-
+	#endregion
+	#region "IEquatable"
 	[Test]
-    public void Unit_EqualityTest ()
+	public void Unit_EqualityTest ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 		Unit target = unitPro.Units ["Feet"];
@@ -137,7 +124,7 @@ public class UnitTest
 	}
 
 	[Test]
-    public void Unit_EqualityTest2 ()
+	public void Unit_EqualityTest2 ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 		Unit target = unitPro.Units ["Inch"];
@@ -146,7 +133,7 @@ public class UnitTest
 	}
 
 	[Test]
-    public void Unit_EqualityTest3 ()
+	public void Unit_EqualityTest3 ()
 	{
 		Unit expected = null;
 		Unit target = unitPro.Units ["Inch"];
@@ -155,7 +142,7 @@ public class UnitTest
 	}
 
 	[Test]
-    public void Unit_EqualityTest4 ()
+	public void Unit_EqualityTest4 ()
 	{
 		Unit expected = unitPro.Units ["Inch"];
 		Unit target = null;
@@ -164,7 +151,7 @@ public class UnitTest
 	}
 
 	[Test]
-    public void Unit_EqualityTest5 ()
+	public void Unit_EqualityTest5 ()
 	{
 		Unit expected = null;
 		Unit target = null;
@@ -173,7 +160,7 @@ public class UnitTest
 	}
 
 	[Test]
-    public void Unit_EqualityTest6 ()
+	public void Unit_EqualityTest6 ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 		Unit target = unitPro.Units ["Inch"];
@@ -182,7 +169,7 @@ public class UnitTest
 	}
 
 	[Test]
-    public void Unit_EqualityTest7 ()
+	public void Unit_EqualityTest7 ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 		Unit target = null;
@@ -191,7 +178,7 @@ public class UnitTest
 	}
 
 	[Test]
-    public void Unit_EqualityTest8 ()
+	public void Unit_EqualityTest8 ()
 	{
 		Unit expected = null;
 		Unit target = unitPro.Units ["Feet"];
@@ -200,7 +187,7 @@ public class UnitTest
 	}
 
 	[Test]
-    public void Unit_EqualityTest8_1 ()
+	public void Unit_EqualityTest8_1 ()
 	{
 		Unit expected = null;
 		Unit target = null;
@@ -209,75 +196,74 @@ public class UnitTest
 	}
 
 	[Test]
-    public void Unit_EqualityTest9 ()
+	public void Unit_EqualityTest9 ()
 	{
 		Unit expected = unitPro.Units ["Inch"];
 		Unit target = unitPro.Units ["Feet"];
 
-		Assert.IsFalse (expected.Equals(target));
+		Assert.IsFalse (expected.Equals (target));
 	}
 
 	[Test]
-    public void Unit_EqualityTest10 ()
+	public void Unit_EqualityTest10 ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 		Unit target = unitPro.Units ["Feet"];
 
-		Assert.IsTrue (expected.Equals(target));
+		Assert.IsTrue (expected.Equals (target));
 	}
 
 	[Test]
-    public void Unit_EqualityTest11 ()
+	public void Unit_EqualityTest11 ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 		Unit target = unitPro.Units ["Inch"];
 
-		Assert.IsFalse (expected.Equals(target));
+		Assert.IsFalse (expected.Equals (target));
 	}
 
 	[Test]
-    public void Unit_EqualityTest12 ()
+	public void Unit_EqualityTest12 ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 		Unit target = null;
 
-		Assert.IsFalse (expected.Equals(target));
+		Assert.IsFalse (expected.Equals (target));
 	}
 
 	[Test]
-    public void Unit_EqualityTest13 ()
+	public void Unit_EqualityTest13 ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 		Unit target = unitPro.Units ["Feet"];
 
-		Assert.IsTrue (expected.Equals((object)target));
+		Assert.IsTrue (expected.Equals ((object)target));
 	}
 
 	[Test]
-    public void Unit_EqualityTest14 ()
+	public void Unit_EqualityTest14 ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 		Unit target = unitPro.Units ["Inch"];
 
-		Assert.IsFalse (expected.Equals((object)target));
+		Assert.IsFalse (expected.Equals ((object)target));
 	}
 
 	[Test]
-    public void Unit_EqualityTest154 ()
+	public void Unit_EqualityTest154 ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 		Unit target = null;
 
-		Assert.IsFalse (expected.Equals((object)target));
+		Assert.IsFalse (expected.Equals ((object)target));
 	}
 
 	[Test]
-    public void Unit_EqualityTest15 ()
+	public void Unit_EqualityTest15 ()
 	{
 		Unit expected = unitPro.Units ["Feet"];
 
-		Assert.IsTrue (expected.GetHashCode() == expected.Name.GetHashCode());
+		Assert.IsTrue (expected.GetHashCode () == expected.Name.GetHashCode ());
 	}
-
-    #endregion
+	#endregion
 }

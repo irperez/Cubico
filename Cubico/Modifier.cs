@@ -7,15 +7,12 @@ namespace Cubico
 	[Serializable]
 	public partial class Modifier
 	{
-        #region "Contructors"
-
+		#region "Contructors"
 		public Modifier () : base()
 		{
 		}
-
 		#endregion
 		#region "Primitive Properties"
-
 		[DataMember]
 		public int ID { get; set; }
 
@@ -33,10 +30,8 @@ namespace Cubico
 
 		[DataMember]
 		public Nullable<int> Precision { get; set; }
-
 		#endregion
 		#region "ChangeTracking"
-
 		bool _isDeserializing;
 
 		protected bool IsDeserializing {
@@ -78,15 +73,12 @@ namespace Cubico
 		protected virtual void ClearNavigationProperties ()
 		{
 		}
-
 		#endregion
-        #region "Properties"
-
+		#region "Properties"
 		[DataMember]
 		public Unit ParentUnit { get; set; }
 
 		public ModifierType ModifierType { get; set; }
-
 		#endregion
 	}
 }
