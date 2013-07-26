@@ -902,17 +902,17 @@ namespace Cubico.Tests
 		}
 		#endregion
 		#region "Measurement.GetValueAs(unitSymbol)"
-		[Test]
-		public void MeasurementGetValueAsTest ()
-		{
-			Measurement target = new Measurement (5, "ft");
-			string unitSymbol = "in";
-			Measurement expected = new Measurement (Convert.ToDecimal ("60.0000"), "in");
-			Measurement actual = default(Measurement);
-			actual = target.GetValueAs (unitSymbol);
-			Assert.AreEqual (expected.Value, actual.Value);
-			Assert.AreEqual (expected.ToString, actual.ToString);
-		}
+//		[Test]
+//		public void MeasurementGetValueAsTest ()
+//		{
+//			Measurement target = new Measurement (5, "ft");
+//			string unitSymbol = "in";
+//			Measurement expected = new Measurement (Convert.ToDecimal ("60.0000"), "in");
+//			Measurement actual = default(Measurement);
+//			actual = target.GetValueAs (unitSymbol);
+//			Assert.AreEqual (expected.Value, actual.Value);
+//			Assert.AreEqual (expected.ToString, actual.ToString);
+//		}
 
 		[Test]
 		public void MeasurementGetValueAsInvalidUnitSymbolTest ()

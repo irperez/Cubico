@@ -59,8 +59,6 @@ namespace Cubico.Tests
 		{
 			Symbol testObj = new Symbol ();
 
-			testObj.Id = null;
-
 			Assert.AreEqual (null, testObj.Id);
 		}
 
