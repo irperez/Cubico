@@ -219,6 +219,7 @@ namespace Cubico.Tests
 		{
 			UnitConverter target = new UnitConverter ();
 			bool actual = false;
+			actual.GetType();
 			actual = target.IsCompatible (null, null);
 
 			Assert.Fail ();
@@ -232,6 +233,7 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 			string rightSymbol = "in";
 			bool actual = false;
+			actual.GetType();
 			actual = target.IsCompatible (null, rightSymbol);
 
 			Assert.Fail ();
@@ -245,6 +247,7 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 			string leftSymbol = "C";
 			bool actual = false;
+			actual.GetType();
 			actual = target.IsCompatible (leftSymbol, null);
 
 			Assert.Fail ();
@@ -257,6 +260,7 @@ namespace Cubico.Tests
 		{
 			UnitConverter target = new UnitConverter ();
 			bool actual = false;
+			actual.GetType();
 			actual = target.IsCompatible (string.Empty, string.Empty);
 
 			Assert.Fail ();
@@ -270,6 +274,7 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 			string rightSymbol = "in";
 			bool actual = false;
+			actual.GetType();
 			actual = target.IsCompatible (string.Empty, rightSymbol);
 
 			Assert.Fail ();
@@ -283,6 +288,7 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 			string leftSymbol = "C";
 			bool actual = false;
+			actual.GetType();
 			actual = target.IsCompatible (leftSymbol, string.Empty);
 
 			Assert.Fail ();
@@ -308,6 +314,7 @@ namespace Cubico.Tests
 		{
 			UnitConverter target = new UnitConverter ();
 			Unit actual = default(Unit);
+			actual.GetType();
 			actual = target.GetUnitBySymbol (null);
 
 			Assert.Fail ();
@@ -320,6 +327,7 @@ namespace Cubico.Tests
 		{
 			UnitConverter target = new UnitConverter ();
 			Unit actual = default(Unit);
+			actual.GetType();
 			actual = target.GetUnitBySymbol (string.Empty);
 
 			Assert.Fail ();
@@ -333,6 +341,7 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 			string unitName = "BogusUnitSymbol";
 			Unit actual = default(Unit);
+			actual.GetType();
 			actual = target.GetUnitByName (unitName);
 			Assert.Fail ();
 		}
@@ -358,6 +367,7 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 
 			Unit actual = default(Unit);
+			actual.GetType();
 			actual = target.GetUnitByName (null);
 
 			Assert.Fail ();
@@ -371,6 +381,7 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 
 			Unit actual = default(Unit);
+			actual.GetType();
 			actual = target.GetUnitByName (string.Empty);
 
 			Assert.Fail ();
@@ -384,6 +395,7 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 			string unitName = "BogusUnitName";
 			Unit actual = default(Unit);
+			actual.GetType();
 			actual = target.GetUnitByName (unitName);
 			Assert.Fail ();
 		}

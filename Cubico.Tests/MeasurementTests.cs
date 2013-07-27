@@ -332,6 +332,7 @@ namespace Cubico.Tests
 		{
 			Measurement target = new Measurement ("ft");
 			Result actual = default(Result);
+			actual.GetType();
 			actual = target.SetValue ((string)null);
 			Assert.Fail ();
 		}
@@ -342,6 +343,7 @@ namespace Cubico.Tests
 		{
 			Measurement target = new Measurement ("ft");
 			Result actual = default(Result);
+			actual.GetType();
 			actual = target.SetValue (string.Empty);
 			Assert.Fail ();
 		}
@@ -430,15 +432,15 @@ namespace Cubico.Tests
 			Assert.AreEqual (expected, actual);
 		}
 
-		[Test]
-		[ExpectedException(typeof(ArgumentNullException))]
-		public void MeasurementSetMinBoundNullTest ()
-		{
-			Measurement target = new Measurement (10, "ft");
-			Result actual;
-			actual = target.SetMinBound (0, null);
-			Assert.Fail ();
-		}
+//		[Test]
+//		[ExpectedException(typeof(ArgumentNullException))]
+//		public void MeasurementSetMinBoundNullTest ()
+//		{
+//			Measurement target = new Measurement (10, "ft");
+//			Result actual;
+//			actual = target.SetMinBound (0, null);
+//			Assert.Fail ();
+//		}
 
 		[Test]
 		[ExpectedException(typeof(ArgumentNullException))]
@@ -446,6 +448,7 @@ namespace Cubico.Tests
 		{
 			Measurement target = new Measurement (10, "ft");
 			Result actual = default(Result);
+			actual.GetType();
 			actual = target.SetMinBound (1, string.Empty);
 			Assert.Fail ();
 		}
@@ -481,6 +484,7 @@ namespace Cubico.Tests
 		{
 			Measurement target = new Measurement (10, "ft");
 			Result actual = default(Result);
+			actual.GetType();
 			actual = target.SetMinBound (0, null);
 			Assert.Fail ();
 		}
@@ -491,6 +495,7 @@ namespace Cubico.Tests
 		{
 			Measurement target = new Measurement (10, "ft");
 			Result actual = default(Result);
+			actual.GetType();
 			actual = target.SetMinBound (1, string.Empty);
 			Assert.Fail ();
 		}

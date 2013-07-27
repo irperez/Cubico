@@ -31,7 +31,8 @@ namespace Cubico.Tests
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void SymbolNewEfUnitSymbolUnitNullTest ()
 		{
-			Symbol testObj = new Symbol (null);
+			Symbol testObj = new Symbol ();
+			testObj.Equals (null);
 
 			Assert.Fail ("Null values are not allowed for this constructor.");
 		}

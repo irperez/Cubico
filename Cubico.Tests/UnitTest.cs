@@ -36,7 +36,8 @@ public class UnitTest
 	[ExpectedException(typeof(ArgumentNullException))]
 	public void UnitNewEfUnitUnitTypeNullTest ()
 	{
-		Unit testObj = new Unit (null);
+		Unit testObj = new Unit ();
+		testObj.Equals (null);
 
 		Assert.Fail ("Constructor should cause a ContractException.  Nulls are not allowed");
 	}
