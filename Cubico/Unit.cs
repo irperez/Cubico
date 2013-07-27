@@ -17,7 +17,7 @@ namespace Cubico
 		{
 		}
 
-		internal Unit (UnitType unitType)
+		public Unit (UnitType unitType)
 		{
 			if (unitType == null) {
 				throw new ArgumentNullException ("unitType");

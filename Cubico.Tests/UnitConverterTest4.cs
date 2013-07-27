@@ -8,7 +8,6 @@ namespace Cubico.Tests
 	public class UnitConverterTest4
 	{
 		TestContext testContextInstance;
-		UnitProvider unitPro = new UnitProvider ();
 		// Gets or sets the test context which provides information about and functionality for the current test run.
 		public TestContext TestContext {
 			get { return testContextInstance; }

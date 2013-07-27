@@ -31,7 +31,7 @@ namespace Cubico
 		public event EventHandler OnUnitChanged;
 		#endregion
 		#region "Constructors"
-		internal Measurement (string unitSymbol)
+		public Measurement (string unitSymbol)
 		{
 			// Reference the unit converter that created us.
 			_uc = new UnitConverter ();
@@ -75,7 +75,7 @@ namespace Cubico
 			_value = value;
 		}
 
-		internal Measurement (double value, string unitSymbol, Result conversionResult)
+		public Measurement (double value, string unitSymbol, Result conversionResult)
             : this(unitSymbol)
 		{
 
@@ -84,7 +84,7 @@ namespace Cubico
 			_conversionResult = conversionResult;
 		}
 
-		internal Measurement (double value, Result conversionResult)
+		public Measurement (double value, Result conversionResult)
             : this(null)
 		{
 
@@ -93,7 +93,7 @@ namespace Cubico
 			_conversionResult = conversionResult;
 		}
 
-		internal Measurement (double value, Unit unit, Result conversionResult = Result.NoError)
+		public Measurement (double value, Unit unit, Result conversionResult = Result.NoError)
 		{
 			// Reference the unit converter that created us.
 			_uc = new UnitConverter ();
@@ -179,7 +179,7 @@ namespace Cubico
 		#endregion
 		#region "Value getting and setting methods"
 		// Sets the unit of the measurement.
-		internal Result SetUnit (string unitSymbol)
+		public Result SetUnit (string unitSymbol)
 		{
 			Unit unit = _uc.GetUnitBySymbol (unitSymbol);
 
@@ -201,7 +201,7 @@ namespace Cubico
 			}
 		}
 		// Given a string in the format "[value] [unit]" parses and applies the value and unit.
-		internal Result SetValue (string measurement)
+		public Result SetValue (string measurement)
 		{
 			if (string.IsNullOrEmpty (measurement)) {
 				throw new ArgumentNullException ("measurement");
@@ -236,7 +236,7 @@ namespace Cubico
 			return res;
 		}
 		// Sets a value in the currently set unit format.
-		internal Result SetValue (double value)
+		public Result SetValue (double value)
 		{
 			Measurement res = default(Measurement);
 			Unit standardUnit = default(Unit);
