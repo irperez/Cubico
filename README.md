@@ -32,7 +32,7 @@ Console.WriteLine(result.GetValueAs("yrd").ToString()); // = 1 yard
 The accuracy of unit conversions is one of the missions for this library. From experience, a lot of the unit converters out there are not precise, especially when scientific precision is needed. Since using double precision is not precise by definition, it becomes very hard to come up with unit conversions that are precise. This library has come up with approximately 2000 unit tests, each testing a conversion with various test scenarios.
 
 ## License
-Copyright 2012-2013.
+Copyright 2012-2013 Ivan R. Perez & Taylor Shuler.
 
 This software is licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except for what is in compliance with the License.
 
