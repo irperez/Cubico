@@ -5,12 +5,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubico", "Cubico\Cubico.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubico.Tests", "Cubico.Tests\Cubico.Tests.csproj", "{8D4882D3-8D97-4D82-BE0E-AAC8A1D8B487}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubico.Data", "Cubico.Data\Cubico.Data.csproj", "{37B76CE6-2382-49D8-BDF5-73CC5E9C837B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37B76CE6-2382-49D8-BDF5-73CC5E9C837B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B76CE6-2382-49D8-BDF5-73CC5E9C837B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B76CE6-2382-49D8-BDF5-73CC5E9C837B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B76CE6-2382-49D8-BDF5-73CC5E9C837B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5C21F8E4-02C4-4614-97C7-1899F4E6E634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5C21F8E4-02C4-4614-97C7-1899F4E6E634}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C21F8E4-02C4-4614-97C7-1899F4E6E634}.Release|Any CPU.ActiveCfg = Release|Any CPU
