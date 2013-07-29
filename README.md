@@ -1,11 +1,10 @@
 # Cubico
-An extensive Measurement & Unit Conversion library for .Net.
+An extensive Measurement & Unit Conversion library for .NET.
 
 ## What can it be used for?
 Taking and storing measurements reliably, performing calculations between different units of measurement, and sending measurements over webservices, making it very easy to work with! Also, it can be used as an extensible unit converter, providing the ability to easily add units of measurement and their calculations between units very easily and precisely.
 
-## Example Usage
-
+### Example Usage
 ```csharp
 var length_in_ft = new Measurement(2, "ft");
 var length_in_in = new Measurement(12, "in");
@@ -15,9 +14,11 @@ Console.WriteLine(result.GetValueAs("yrd").ToString()); // = 1 yard
 	
 ## Unit Categories to Date
 * Area
+* Bytes
 * Energy
 * Fluid Volume
 * Force
+* Hexadecimals
 * Length
 * Mass
 * Momentum
