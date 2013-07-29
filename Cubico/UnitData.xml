@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <UnitConverterData>
 	<Modifiers>
 		<Modifier ID="1" Name="PreAdd" />
@@ -1154,7 +1154,7 @@
 		<UnitSymbol ID="2" Symbol="C" IsDefault="1" UnitID="2" />
 		<UnitSymbol ID="3" Symbol="F" IsDefault="1" UnitID="4" />
 		<UnitSymbol ID="4" Symbol="mK" IsDefault="1" UnitID="5" />
-		<UnitSymbol ID="5" Symbol="�K" IsDefault="1" UnitID="6" />
+		<UnitSymbol ID="5" Symbol="µK" IsDefault="1" UnitID="6" />
 		<UnitSymbol ID="6" Symbol="nK" IsDefault="1" UnitID="7" />
 		<UnitSymbol ID="7" Symbol="kK" IsDefault="1" UnitID="8" />
 		<UnitSymbol ID="8" Symbol="MK" IsDefault="1" UnitID="9" />
@@ -1162,7 +1162,7 @@
 		<UnitSymbol ID="10" Symbol="kg" IsDefault="1" UnitID="11" />
 		<UnitSymbol ID="11" Symbol="g" IsDefault="1" UnitID="12" />
 		<UnitSymbol ID="12" Symbol="mg" IsDefault="1" UnitID="13" />
-		<UnitSymbol ID="13" Symbol="�g" IsDefault="0" UnitID="14" />
+		<UnitSymbol ID="13" Symbol="µg" IsDefault="0" UnitID="14" />
 		<UnitSymbol ID="14" Symbol="ng" IsDefault="1" UnitID="15" />
 		<UnitSymbol ID="15" Symbol="Mg" IsDefault="1" UnitID="16" />
 		<UnitSymbol ID="16" Symbol="Gg" IsDefault="1" UnitID="17" />
@@ -1182,7 +1182,7 @@
 		<UnitSymbol ID="32" Symbol="GN" IsDefault="1" UnitID="35" />
 		<UnitSymbol ID="33" Symbol="kN" IsDefault="1" UnitID="36" />
 		<UnitSymbol ID="34" Symbol="mN" IsDefault="1" UnitID="37" />
-		<UnitSymbol ID="35" Symbol="�N" IsDefault="1" UnitID="38" />
+		<UnitSymbol ID="35" Symbol="µN" IsDefault="1" UnitID="38" />
 		<UnitSymbol ID="36" Symbol="nN" IsDefault="1" UnitID="39" />
 		<UnitSymbol ID="37" Symbol="kg m/s" IsDefault="1" UnitID="40" />
 		<UnitSymbol ID="38" Symbol="lb ft/hr" IsDefault="1" UnitID="41" />
@@ -1197,7 +1197,7 @@
 		<UnitSymbol ID="47" Symbol="km" IsDefault="1" UnitID="52" />
 		<UnitSymbol ID="48" Symbol="Mm" IsDefault="1" UnitID="53" />
 		<UnitSymbol ID="49" Symbol="Gm" IsDefault="1" UnitID="54" />
-		<UnitSymbol ID="50" Symbol="�m" IsDefault="1" UnitID="57" />
+		<UnitSymbol ID="50" Symbol="µm" IsDefault="1" UnitID="57" />
 		<UnitSymbol ID="51" Symbol="in" IsDefault="1" UnitID="58" />
 		<UnitSymbol ID="52" Symbol="cm" IsDefault="1" UnitID="59" />
 		<UnitSymbol ID="53" Symbol="mm" IsDefault="1" UnitID="60" />
@@ -1205,7 +1205,7 @@
 		<UnitSymbol ID="55" Symbol="hp" IsDefault="1" UnitID="62" />
 		<UnitSymbol ID="56" Symbol="MW" IsDefault="1" UnitID="63" />
 		<UnitSymbol ID="57" Symbol="kW" IsDefault="1" UnitID="64" />
-		<UnitSymbol ID="58" Symbol="�W" IsDefault="1" UnitID="65" />
+		<UnitSymbol ID="58" Symbol="µW" IsDefault="1" UnitID="65" />
 		<UnitSymbol ID="59" Symbol="nW" IsDefault="1" UnitID="66" />
 		<UnitSymbol ID="60" Symbol="mW" IsDefault="1" UnitID="67" />
 		<UnitSymbol ID="61" Symbol="J" IsDefault="1" UnitID="68" />
@@ -1215,7 +1215,7 @@
 		<UnitSymbol ID="65" Symbol="MJ" IsDefault="1" UnitID="74" />
 		<UnitSymbol ID="66" Symbol="kJ" IsDefault="1" UnitID="75" />
 		<UnitSymbol ID="67" Symbol="GJ" IsDefault="1" UnitID="76" />
-		<UnitSymbol ID="68" Symbol="�J" IsDefault="1" UnitID="77" />
+		<UnitSymbol ID="68" Symbol="µJ" IsDefault="1" UnitID="77" />
 		<UnitSymbol ID="69" Symbol="nJ" IsDefault="1" UnitID="78" />
 		<UnitSymbol ID="70" Symbol="rad" IsDefault="1" UnitID="79" />
 		<UnitSymbol ID="71" Symbol="deg" IsDefault="1" UnitID="80" />
@@ -1237,16 +1237,16 @@
 		<UnitSymbol ID="87" Symbol="&quot;" IsDefault="0" UnitID="58" />
 		<UnitSymbol ID="88" Symbol="uW" IsDefault="0" UnitID="65" />
 		<UnitSymbol ID="89" Symbol="uJ" IsDefault="0" UnitID="77" />
-		<UnitSymbol ID="90" Symbol="m�" IsDefault="0" UnitID="83" />
-		<UnitSymbol ID="92" Symbol="ft�" IsDefault="0" UnitID="84" />
-		<UnitSymbol ID="94" Symbol="mi�" IsDefault="0" UnitID="85" />
-		<UnitSymbol ID="96" Symbol="in�" IsDefault="0" UnitID="87" />
-		<UnitSymbol ID="98" Symbol="ft�" IsDefault="0" UnitID="88" />
-		<UnitSymbol ID="100" Symbol="yd�" IsDefault="0" UnitID="89" />
-		<UnitSymbol ID="102" Symbol="m�" IsDefault="0" UnitID="90" />
-		<UnitSymbol ID="104" Symbol="�" IsDefault="0" UnitID="80" />
-		<UnitSymbol ID="105" Symbol="�F" IsDefault="0" UnitID="4" />
-		<UnitSymbol ID="106" Symbol="�C" IsDefault="0" UnitID="2" />
+		<UnitSymbol ID="90" Symbol="m²" IsDefault="0" UnitID="83" />
+		<UnitSymbol ID="92" Symbol="ft²" IsDefault="0" UnitID="84" />
+		<UnitSymbol ID="94" Symbol="mi²" IsDefault="0" UnitID="85" />
+		<UnitSymbol ID="96" Symbol="in³" IsDefault="0" UnitID="87" />
+		<UnitSymbol ID="98" Symbol="ft³" IsDefault="0" UnitID="88" />
+		<UnitSymbol ID="100" Symbol="yd³" IsDefault="0" UnitID="89" />
+		<UnitSymbol ID="102" Symbol="m³" IsDefault="0" UnitID="90" />
+		<UnitSymbol ID="104" Symbol="˚" IsDefault="0" UnitID="80" />
+		<UnitSymbol ID="105" Symbol="˚F" IsDefault="0" UnitID="4" />
+		<UnitSymbol ID="106" Symbol="˚C" IsDefault="0" UnitID="2" />
 		<UnitSymbol ID="107" Symbol="mmHg" IsDefault="1" UnitID="91" />
 		<UnitSymbol ID="108" Symbol="cc" IsDefault="1" UnitID="92" />
 		<UnitSymbol ID="109" Symbol="cm3" IsDefault="0" UnitID="92" />
@@ -1263,13 +1263,13 @@
 		<UnitSymbol ID="122" Symbol="Gy" IsDefault="1" UnitID="99" />
 		<UnitSymbol ID="123" Symbol="cGy" IsDefault="1" UnitID="100" />
 		<UnitSymbol ID="124" Symbol="mGy" IsDefault="1" UnitID="101" />
-		<UnitSymbol ID="125" Symbol="�Gy" IsDefault="1" UnitID="102" />
+		<UnitSymbol ID="125" Symbol="µGy" IsDefault="1" UnitID="102" />
 		<UnitSymbol ID="126" Symbol="kGy" IsDefault="1" UnitID="103" />
 		<UnitSymbol ID="127" Symbol="Ra" IsDefault="1" UnitID="104" />
-		<UnitSymbol ID="130" Symbol="�Ra" IsDefault="0" UnitID="104" />
-		<UnitSymbol ID="131" Symbol="�Re" IsDefault="0" UnitID="10" />
-		<UnitSymbol ID="132" Symbol="�R�" IsDefault="0" UnitID="10" />
-		<UnitSymbol ID="134" Symbol="R�" IsDefault="0" UnitID="10" />
+		<UnitSymbol ID="130" Symbol="ï¿½Ra" IsDefault="0" UnitID="104" />
+		<UnitSymbol ID="131" Symbol="ï¿½Re" IsDefault="0" UnitID="10" />
+		<UnitSymbol ID="132" Symbol="ï¿½Rï¿½" IsDefault="0" UnitID="10" />
+		<UnitSymbol ID="134" Symbol="Rï¿½" IsDefault="0" UnitID="10" />
 		<UnitSymbol ID="135" Symbol="mi" IsDefault="1" UnitID="51" />
 		<UnitSymbol ID="136" Symbol="yrd" IsDefault="0" UnitID="48" />
 		<UnitSymbol ID="137" Symbol="meter" IsDefault="1" UnitID="47" />
@@ -1281,21 +1281,21 @@
 		<UnitSymbol ID="144" Symbol="gigameter" IsDefault="0" UnitID="54" />
 		<UnitSymbol ID="145" Symbol="centimeter" IsDefault="0" UnitID="59" />
 		<UnitSymbol ID="146" Symbol="millimeter" IsDefault="0" UnitID="60" />
-		<UnitSymbol ID="148" Symbol="cm�" IsDefault="0" UnitID="92" />
+		<UnitSymbol ID="148" Symbol="cm³" IsDefault="0" UnitID="92" />
 		<UnitSymbol ID="149" Symbol="sq m" IsDefault="0" UnitID="83" />
 		<UnitSymbol ID="150" Symbol="sq ft" IsDefault="0" UnitID="84" />
 		<UnitSymbol ID="151" Symbol="sq mi" IsDefault="0" UnitID="85" />
 		<UnitSymbol ID="152" Symbol="in2" IsDefault="1" UnitID="105" />
-		<UnitSymbol ID="153" Symbol="in�" IsDefault="0" UnitID="105" />
+		<UnitSymbol ID="153" Symbol="in²" IsDefault="0" UnitID="105" />
 		<UnitSymbol ID="154" Symbol="sq in" IsDefault="0" UnitID="105" />
 		<UnitSymbol ID="155" Symbol="cm2" IsDefault="1" UnitID="106" />
-		<UnitSymbol ID="157" Symbol="cm�" IsDefault="0" UnitID="106" />
+		<UnitSymbol ID="157" Symbol="cm²" IsDefault="0" UnitID="106" />
 		<UnitSymbol ID="158" Symbol="sq cm" IsDefault="0" UnitID="106" />
 		<UnitSymbol ID="159" Symbol="yd2" IsDefault="1" UnitID="107" />
-		<UnitSymbol ID="160" Symbol="yd�" IsDefault="0" UnitID="107" />
+		<UnitSymbol ID="160" Symbol="yd²" IsDefault="0" UnitID="107" />
 		<UnitSymbol ID="161" Symbol="sq yd" IsDefault="0" UnitID="107" />
 		<UnitSymbol ID="162" Symbol="km2" IsDefault="1" UnitID="108" />
-		<UnitSymbol ID="163" Symbol="km�" IsDefault="0" UnitID="108" />
+		<UnitSymbol ID="163" Symbol="km²" IsDefault="0" UnitID="108" />
 		<UnitSymbol ID="164" Symbol="sq km" IsDefault="0" UnitID="108" />
 		<UnitSymbol ID="165" Symbol="ha" IsDefault="1" UnitID="109" />
 		<UnitSymbol ID="168" Symbol="d" IsDefault="1" UnitID="110" />
@@ -1375,8 +1375,8 @@
 		<UnitSymbol ID="259" Symbol="inches/-2" IsDefault="0" UnitID="105" />
 		<UnitSymbol ID="260" Symbol="inch/-2" IsDefault="0" UnitID="105" />
 		<UnitSymbol ID="261" Symbol="in/-2" IsDefault="0" UnitID="105" />
-		<UnitSymbol ID="262" Symbol="inches�" IsDefault="0" UnitID="105" />
-		<UnitSymbol ID="263" Symbol="inch�" IsDefault="0" UnitID="105" />
+		<UnitSymbol ID="262" Symbol="inches²" IsDefault="0" UnitID="105" />
+		<UnitSymbol ID="263" Symbol="inch²" IsDefault="0" UnitID="105" />
 		<UnitSymbol ID="264" Symbol="inches^2" IsDefault="0" UnitID="105" />
 		<UnitSymbol ID="265" Symbol="inch^2" IsDefault="0" UnitID="105" />
 		<UnitSymbol ID="266" Symbol="in^2" IsDefault="0" UnitID="105" />
@@ -1390,9 +1390,9 @@
 		<UnitSymbol ID="274" Symbol="yards^2" IsDefault="0" UnitID="107" />
 		<UnitSymbol ID="275" Symbol="yard^2" IsDefault="0" UnitID="107" />
 		<UnitSymbol ID="276" Symbol="yds^2" IsDefault="0" UnitID="107" />
-		<UnitSymbol ID="277" Symbol="yard�" IsDefault="0" UnitID="107" />
-		<UnitSymbol ID="278" Symbol="yards�" IsDefault="0" UnitID="107" />
-		<UnitSymbol ID="279" Symbol="yds�" IsDefault="0" UnitID="107" />
+		<UnitSymbol ID="277" Symbol="yard²" IsDefault="0" UnitID="107" />
+		<UnitSymbol ID="278" Symbol="yards²" IsDefault="0" UnitID="107" />
+		<UnitSymbol ID="279" Symbol="yds²" IsDefault="0" UnitID="107" />
 		<UnitSymbol ID="280" Symbol="qt." IsDefault="0" UnitID="97" />
 		<UnitSymbol ID="281" Symbol="pt." IsDefault="0" UnitID="96" />
 		<UnitSymbol ID="282" Symbol="gal liq" IsDefault="0" UnitID="95" />
@@ -1478,8 +1478,8 @@
 		<UnitSymbol ID="372" Symbol="DYN" IsDefault="0" UnitID="30" />
 		<UnitSymbol ID="373" Symbol="ST" IsDefault="0" UnitID="20" />
 		<UnitSymbol ID="374" Symbol="st." IsDefault="0" UnitID="20" />
-		<UnitSymbol ID="375" Symbol="�R" IsDefault="0" UnitID="10" />
-		<UnitSymbol ID="376" Symbol="�r" IsDefault="0" UnitID="10" />
+		<UnitSymbol ID="375" Symbol="ï¿½R" IsDefault="0" UnitID="10" />
+		<UnitSymbol ID="376" Symbol="ï¿½r" IsDefault="0" UnitID="10" />
 		<UnitSymbol ID="377" Symbol="hwt" IsDefault="0" UnitID="22" />
 		<UnitSymbol ID="378" Symbol="HWT" IsDefault="0" UnitID="22" />
 		<UnitSymbol ID="379" Symbol="m/sec" IsDefault="0" UnitID="42" />
