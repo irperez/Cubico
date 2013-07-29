@@ -28,13 +28,10 @@ namespace Cubico.Tests
 		#endregion
 		#region "Symbol.Symbol(Unit)"
 		[Test]
-		[ExpectedException(typeof(ArgumentNullException))]
 		public void SymbolNewEfUnitSymbolUnitNullTest ()
 		{
 			Symbol testObj = new Symbol ();
-			testObj.Equals (null);
-
-			Assert.Fail ("Null values are not allowed for this constructor.");
+		    Assert.IsFalse(testObj.Equals (null));
 		}
 
 		[Test]
@@ -60,7 +57,7 @@ namespace Cubico.Tests
 		{
 			Symbol testObj = new Symbol ();
 
-			Assert.AreEqual (null, testObj.Id);
+			Assert.AreEqual (0, testObj.Id);
 		}
 
 		[Test]

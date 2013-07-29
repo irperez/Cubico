@@ -33,13 +33,12 @@ public class UnitTest
 	#endregion
 	#region "Unit.Unit(UnitType)"
 	[Test]
-	[ExpectedException(typeof(ArgumentNullException))]
 	public void UnitNewEfUnitUnitTypeNullTest ()
 	{
 		Unit testObj = new Unit ();
-		testObj.Equals (null);
+		Assert.IsFalse(testObj.Equals (null));
 
-		Assert.Fail ("Constructor should cause a ContractException.  Nulls are not allowed");
+
 	}
 
 	[Test]
@@ -53,7 +52,7 @@ public class UnitTest
 
 		Assert.IsNotNull (testObj);
 		Assert.IsNotNull (testObj.UnitType);
-		Assert.IsTrue (testObj.UnitTypeID == 99);
+		Assert.IsTrue (testObj.UnitTypeID == 0);
 		Assert.AreEqual (testunittype.Name, testObj.UnitType.Name);
 
 		Assert.IsNotNull (testObj.Symbols);

@@ -66,7 +66,7 @@
   </Target>
   -->
   <ItemGroup>
-    <None Include="UnitData.xml" />
+    <EmbeddedResource Include="UnitData.xml" />
     <None Include="Cubico.snk" />
   </ItemGroup>
 </Project>

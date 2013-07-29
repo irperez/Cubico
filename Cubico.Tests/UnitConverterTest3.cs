@@ -17,8 +17,8 @@ namespace Cubico.Tests
 		#region "Power Tests"
 		#region "Source as Watts"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_Horsepower_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -32,8 +32,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_Horsepower_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -47,8 +47,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_Megawatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -62,8 +62,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_Megawatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -77,8 +77,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_Kilowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -92,8 +92,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_Kilowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -107,8 +107,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_Microwatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -122,8 +122,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_Microwatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -137,8 +137,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_Nanowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -152,8 +152,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_Nanowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -167,8 +167,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_MilliWatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -182,8 +182,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_MilliWatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -197,8 +197,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_BTUperMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -212,8 +212,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_BTUperMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -227,8 +227,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_FtLbPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -242,8 +242,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Watts_to_FtLbPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -258,8 +258,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Horsepower"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_Watts_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -273,8 +273,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_Watts_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -288,8 +288,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_Megawatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -303,8 +303,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_Megawatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -318,8 +318,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_Kilowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -333,8 +333,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_Kilowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -348,8 +348,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_Microwatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -363,8 +363,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_Microwatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -378,8 +378,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_Nanowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -393,8 +393,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_Nanowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -408,8 +408,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_MilliWatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -423,8 +423,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_MilliWatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -438,8 +438,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_BTUperMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -453,8 +453,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_BTUperMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -468,8 +468,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_FtLbPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -483,8 +483,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Horsepower_to_FtLbPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -499,8 +499,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Megawatts"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_Watts_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -514,8 +514,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_Watts_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -529,8 +529,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_Horsepower_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -544,8 +544,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_Horsepower_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -559,8 +559,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_Kilowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -574,8 +574,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_Kilowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -589,8 +589,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_Microwatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -604,8 +604,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_Microwatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -619,8 +619,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_Nanowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -634,8 +634,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_Nanowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -649,8 +649,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_MilliWatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -664,8 +664,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_MilliWatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -679,8 +679,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_BTUperMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -694,8 +694,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_BTUperMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -709,8 +709,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_FtLbPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -724,8 +724,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megawatts_to_FtLbPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -740,8 +740,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Kilowatts"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_Watts_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -755,8 +755,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_Watts_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -770,8 +770,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_Horsepower_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -785,8 +785,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_Horsepower_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -800,8 +800,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_Megawatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -815,8 +815,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_Megawatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -830,8 +830,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_Microwatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -845,8 +845,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_Microwatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -860,8 +860,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_Nanowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -875,8 +875,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_Nanowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -890,8 +890,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_MilliWatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -905,8 +905,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_MilliWatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -920,8 +920,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_BTUperMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -935,8 +935,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_BTUperMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -950,8 +950,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_FtLbPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -965,8 +965,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Kilowatts_to_FtLbPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -981,8 +981,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Microwatts"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Watts_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -996,8 +996,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Watts_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1011,8 +1011,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Horsepower_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1026,8 +1026,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Horsepower_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1041,8 +1041,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Megawatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1056,8 +1056,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Megawatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1072,8 +1072,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_kikowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1087,8 +1087,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Kilowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1103,8 +1103,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Nanowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1118,8 +1118,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Nanowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1133,8 +1133,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Milliwatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1148,8 +1148,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_Milliwatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1163,8 +1163,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_BTUperMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1178,8 +1178,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_BTUperMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1193,8 +1193,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_FtLbPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1208,8 +1208,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Microwatts_to_FtLbPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1224,8 +1224,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Nanowatts"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Watts_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1239,8 +1239,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Watts_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1255,8 +1255,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Horsepower_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1270,8 +1270,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Horsepower_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1285,8 +1285,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Megawatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1300,8 +1300,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Megawatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1316,8 +1316,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Kilowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1331,8 +1331,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Kilowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1347,8 +1347,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Microwatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1362,8 +1362,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Microwatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1377,8 +1377,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Milliwatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1392,8 +1392,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_Milliwatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1407,8 +1407,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_BTUperMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1422,8 +1422,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_BTUperMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1437,8 +1437,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_FtLbPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1452,8 +1452,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Nanowatts_to_FtLbPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1468,8 +1468,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Milliwatts"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Watts_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1483,8 +1483,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Watts_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1498,8 +1498,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Horsepower_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1513,8 +1513,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Horsepower_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1528,8 +1528,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Megawatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1543,8 +1543,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Megawatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1559,8 +1559,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Kilowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1574,8 +1574,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Kilowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1589,8 +1589,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Microwatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1604,8 +1604,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Microwatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1619,8 +1619,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Nanowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1634,8 +1634,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_Nanowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1649,8 +1649,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_BTUperMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1664,8 +1664,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_BTUperMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1679,8 +1679,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_FtLbPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1694,8 +1694,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Milliwatts_to_FtLbPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1710,8 +1710,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as BTU/min"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Watts_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1725,8 +1725,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Watts_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1740,8 +1740,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Horsepower_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1755,8 +1755,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Horsepower_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1770,8 +1770,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Megawatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1785,8 +1785,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Megawatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1800,8 +1800,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Kilowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1815,8 +1815,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Kilowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1830,8 +1830,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Microwatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1845,8 +1845,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Microwatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1860,8 +1860,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Nanowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1875,8 +1875,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Nanowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1890,8 +1890,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Milliwatts_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1905,8 +1905,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_Milliwatts_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1920,8 +1920,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_FtLbPerMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1935,8 +1935,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_BTUperMin_to_FtLbPerMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1951,8 +1951,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as ft lb/min"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Watts_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1966,8 +1966,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Watts_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1981,8 +1981,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Horsepower_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -1996,8 +1996,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Horsepower_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2011,8 +2011,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Megawatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2026,8 +2026,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Megawatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2041,8 +2041,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Kilowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2056,8 +2056,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Kilowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2071,8 +2071,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Microwatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2086,8 +2086,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Microwatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2101,8 +2101,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Nanowatt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2116,8 +2116,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Nanowatt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2131,8 +2131,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Milliwatts_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2146,8 +2146,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_Milliwatts_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2161,8 +2161,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_BTUperMin_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2176,8 +2176,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_FtLbPerMin_to_BTUperMin_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2194,8 +2194,8 @@ namespace Cubico.Tests
 		#region "Energy Tests"
 		#region "Source as Joule"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_erg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2209,8 +2209,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_erg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2224,8 +2224,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_cal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2239,8 +2239,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_cal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2254,8 +2254,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_Btu_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2269,8 +2269,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_Btu_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2284,8 +2284,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_therm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2299,8 +2299,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_therm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2314,8 +2314,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_mJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2329,8 +2329,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_mJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2344,8 +2344,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_Megajoule_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2359,8 +2359,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_Megajoule_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2374,8 +2374,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_kJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2389,8 +2389,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_kJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2404,8 +2404,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_GJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2419,8 +2419,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_GJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2435,8 +2435,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_µJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2450,8 +2450,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_µJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2465,8 +2465,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_nJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2480,8 +2480,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_J_to_nJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2496,8 +2496,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Energy (erg)"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_J_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2511,8 +2511,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_J_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2526,8 +2526,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_cal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2541,8 +2541,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_cal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2556,8 +2556,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_Btu_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2571,8 +2571,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_Btu_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2586,8 +2586,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_therm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2601,8 +2601,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_therm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2617,8 +2617,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_mJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2632,8 +2632,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_mJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2647,8 +2647,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_Megajoule_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2662,8 +2662,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_Megajoule_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2678,8 +2678,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_kJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2693,8 +2693,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_kJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2709,8 +2709,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_GJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2724,8 +2724,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_GJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2740,8 +2740,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_µJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2755,8 +2755,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_µJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2770,8 +2770,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_nJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2785,8 +2785,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_erg_to_nJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2801,8 +2801,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Calorie (cal)"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_J_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2816,8 +2816,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_J_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2831,8 +2831,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_erg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2846,8 +2846,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_erg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2861,8 +2861,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_Btu_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2876,8 +2876,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_Btu_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2891,8 +2891,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_therm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2906,8 +2906,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_therm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2921,8 +2921,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_mJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2936,8 +2936,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_mJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2951,8 +2951,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_Megajoule_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2966,8 +2966,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_Megajoule_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2981,8 +2981,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_kJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -2996,8 +2996,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_kJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3011,8 +3011,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_GJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3026,8 +3026,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_GJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3041,8 +3041,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_µJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3056,8 +3056,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_µJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3071,8 +3071,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_nJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3086,8 +3086,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cal_to_nJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3102,8 +3102,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as British thermal unit (Btu)"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_J_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3117,8 +3117,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_J_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3132,8 +3132,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_erg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3147,8 +3147,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_erg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3162,8 +3162,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_cal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3177,8 +3177,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_cal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3192,8 +3192,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_therm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3207,8 +3207,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_therm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3222,8 +3222,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_mJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3237,8 +3237,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_mJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3252,8 +3252,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_Megajoule_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3267,8 +3267,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_Megajoule_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3282,8 +3282,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_kJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3297,8 +3297,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_kJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3312,8 +3312,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_GJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3327,8 +3327,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_GJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3342,8 +3342,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_µJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3357,8 +3357,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_µJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3372,8 +3372,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_nJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3387,8 +3387,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Btu_to_nJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3403,8 +3403,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Therm (therm)"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_J_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3418,8 +3418,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_J_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3433,8 +3433,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_erg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3448,8 +3448,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_erg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3463,8 +3463,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_cal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3478,8 +3478,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_cal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3493,8 +3493,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_Btu_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3508,8 +3508,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_Btu_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3523,8 +3523,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_mJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3538,8 +3538,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_mJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3553,8 +3553,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_Megajoule_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3568,8 +3568,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_Megajoule_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3583,8 +3583,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_kJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3598,8 +3598,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_kJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3613,8 +3613,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_GJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3628,8 +3628,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_GJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3643,8 +3643,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_µJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3658,8 +3658,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_µJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3673,8 +3673,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_nJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3688,8 +3688,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_therm_to_nJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3704,8 +3704,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Millijoules (mJ)"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_J_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3719,8 +3719,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_J_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3735,8 +3735,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_erg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3750,8 +3750,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_erg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3765,8 +3765,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_cal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3780,8 +3780,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_cal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3795,8 +3795,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_Btu_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3810,8 +3810,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_Btu_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3825,8 +3825,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_therm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3840,8 +3840,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_therm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3855,8 +3855,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_Megajoule_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3870,8 +3870,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_Megajoule_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3886,8 +3886,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_kJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3901,8 +3901,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_kJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3916,8 +3916,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_GJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3931,8 +3931,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_GJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3947,8 +3947,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_µJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3962,8 +3962,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_µJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3977,8 +3977,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_nJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -3992,8 +3992,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_mJ_to_nJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4008,8 +4008,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Megajoules (MJ)"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_J_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4023,8 +4023,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_J_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4038,8 +4038,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_erg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4053,8 +4053,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_erg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4068,8 +4068,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_cal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4083,8 +4083,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_cal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4098,8 +4098,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_Btu_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4113,8 +4113,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_Btu_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4128,8 +4128,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_therm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4143,8 +4143,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_therm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4158,8 +4158,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_mJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4173,8 +4173,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_mJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4188,8 +4188,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_kJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4203,8 +4203,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_kJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4218,8 +4218,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_GJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4233,8 +4233,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_GJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4248,8 +4248,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_µJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4263,8 +4263,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_µJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4278,8 +4278,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_nJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4293,8 +4293,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_Megajoule_to_nJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4309,8 +4309,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Kilojoules (kJ)"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_J_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4324,8 +4324,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_J_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4339,8 +4339,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_erg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4354,8 +4354,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_erg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4369,8 +4369,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_cal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4384,8 +4384,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_cal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4399,8 +4399,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_Btu_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4414,8 +4414,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_Btu_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4429,8 +4429,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_therm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4444,8 +4444,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_therm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4459,8 +4459,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_mJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4474,8 +4474,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_mJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4489,8 +4489,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_Megajoule_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4504,8 +4504,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_Megajoule_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4519,8 +4519,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_GJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4534,8 +4534,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_GJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4549,8 +4549,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_µJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4564,8 +4564,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_µJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4579,8 +4579,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_nJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4594,8 +4594,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_kJ_to_nJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4610,8 +4610,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Gigajoules (GJ)"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_J_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4625,8 +4625,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_J_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4640,8 +4640,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_erg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4655,8 +4655,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_erg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4670,8 +4670,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_cal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4685,8 +4685,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_cal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4700,8 +4700,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_Btu_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4715,8 +4715,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_Btu_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4730,8 +4730,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_therm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4745,8 +4745,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_therm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4760,8 +4760,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_mJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4775,8 +4775,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_mJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4790,8 +4790,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_Megajoule_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4805,8 +4805,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_Megajoule_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4820,8 +4820,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_kJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4835,8 +4835,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_kJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4850,8 +4850,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_µJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4865,8 +4865,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_µJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4880,8 +4880,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_nJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4895,8 +4895,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_GJ_to_nJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4911,8 +4911,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Microjoules (µJ)"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_J_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4926,8 +4926,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_J_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4941,8 +4941,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_erg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4956,8 +4956,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_erg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4971,8 +4971,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_cal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -4986,8 +4986,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_cal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5001,8 +5001,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_Btu_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5016,8 +5016,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_Btu_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5031,8 +5031,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_therm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5046,8 +5046,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_therm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5061,8 +5061,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_mJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5076,8 +5076,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_mJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5091,8 +5091,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_Megajoule_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5106,8 +5106,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_Megajoule_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5122,8 +5122,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_kJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5137,8 +5137,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_kJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5153,8 +5153,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_GJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5168,8 +5168,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_GJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5184,8 +5184,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_nJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5199,8 +5199,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_µJ_to_nJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5215,8 +5215,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Nanojoules (nJ)"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_J_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5230,8 +5230,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_J_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5246,8 +5246,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_erg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5261,8 +5261,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_erg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5276,8 +5276,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_cal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5291,8 +5291,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_cal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5306,8 +5306,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_Btu_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5321,8 +5321,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_Btu_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5336,8 +5336,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_therm_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5352,8 +5352,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_therm_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5368,8 +5368,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_mJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5383,8 +5383,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_mJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5398,8 +5398,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_Megajoule_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5413,8 +5413,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_Megajoule_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5429,8 +5429,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_kJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5444,8 +5444,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_kJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5460,8 +5460,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_GJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5476,8 +5476,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_GJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5492,8 +5492,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_µJ_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5507,8 +5507,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_nJ_to_µJ_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5525,8 +5525,8 @@ namespace Cubico.Tests
 		#region "Plane Angle Tests"
 		#region "Source as Radians"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rad_to_deg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5540,8 +5540,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rad_to_deg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5555,8 +5555,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rad_to_grad_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5570,8 +5570,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rad_to_grad_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5585,8 +5585,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rad_to_rev_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5600,8 +5600,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rad_to_rev_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5616,8 +5616,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Degrees"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_deg_to_rad_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5631,8 +5631,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_deg_to_rad_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5646,8 +5646,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_deg_to_grad_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5661,8 +5661,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_deg_to_grad_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5676,8 +5676,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_deg_to_rev_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5691,8 +5691,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_deg_to_rev_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5707,8 +5707,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Gradians"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_grad_to_rad_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5722,8 +5722,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_grad_to_rad_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5737,8 +5737,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_grad_to_deg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5752,8 +5752,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_grad_to_deg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5767,8 +5767,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_grad_to_rev_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5782,8 +5782,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_grad_to_rev_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5798,8 +5798,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Revolutions"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rev_to_rad_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5813,8 +5813,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rev_to_rad_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5828,8 +5828,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rev_to_deg_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5843,8 +5843,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rev_to_deg_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5858,8 +5858,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rev_to_grad_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5873,8 +5873,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_rev_to_grad_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5891,8 +5891,8 @@ namespace Cubico.Tests
 		#region "Volume Tests"
 		#region "Source as Cubic Inches"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_ft3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5906,8 +5906,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_ft3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5921,8 +5921,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_yd3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5936,8 +5936,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_yd3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5951,8 +5951,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_m3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5966,8 +5966,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_m3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5981,8 +5981,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_cc_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -5996,8 +5996,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_cc_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6011,8 +6011,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_L_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6026,8 +6026,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_L_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6041,8 +6041,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_floz_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6056,8 +6056,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_floz_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6071,8 +6071,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_gal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6086,8 +6086,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_gal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6101,8 +6101,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_pt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6116,8 +6116,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_pt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6131,8 +6131,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_qt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6146,8 +6146,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_in3_to_qt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6162,8 +6162,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Cubic Feet"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_in3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6177,8 +6177,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_in3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6192,8 +6192,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_yd3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6207,8 +6207,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_yd3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6222,8 +6222,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_m3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6237,8 +6237,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_m3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6252,8 +6252,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_cc_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6267,8 +6267,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_cc_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6282,8 +6282,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_L_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6297,8 +6297,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_L_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6312,8 +6312,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_floz_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6327,8 +6327,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_floz_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6342,8 +6342,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_gal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6357,8 +6357,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_gal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6372,8 +6372,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_pt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6387,8 +6387,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_pt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6402,8 +6402,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_qt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6417,8 +6417,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_ft3_to_qt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6433,8 +6433,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Cubic Yards"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_in3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6448,8 +6448,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_in3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6463,8 +6463,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_ft3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6478,8 +6478,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_ft3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6493,8 +6493,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_m3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6508,8 +6508,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_m3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6523,8 +6523,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_cc_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6538,8 +6538,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_cc_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6553,8 +6553,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_L_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6568,8 +6568,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_L_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6583,8 +6583,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_floz_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6598,8 +6598,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_floz_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6613,8 +6613,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_gal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6628,8 +6628,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_gal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6643,8 +6643,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_pt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6658,8 +6658,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_pt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6673,8 +6673,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_qt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6688,8 +6688,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_yd3_to_qt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6704,8 +6704,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Cubic Meters"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_in3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6719,8 +6719,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_in3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6734,8 +6734,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_ft3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6749,8 +6749,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_ft3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6764,8 +6764,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_yd3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6779,8 +6779,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_yd3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6794,8 +6794,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_cc_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6809,8 +6809,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_cc_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6824,8 +6824,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_L_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6839,8 +6839,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_L_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6854,8 +6854,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_floz_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6869,8 +6869,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_floz_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6884,8 +6884,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_gal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6899,8 +6899,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_gal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6914,8 +6914,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_pt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6929,8 +6929,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_pt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6944,8 +6944,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_qt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6959,8 +6959,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_m3_to_qt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6975,8 +6975,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Cubic Centimeters"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_in3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -6990,8 +6990,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_in3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7005,8 +7005,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_ft3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7020,8 +7020,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_ft3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7035,8 +7035,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_yd3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7050,8 +7050,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_yd3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7065,8 +7065,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_m3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7080,8 +7080,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_m3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7095,8 +7095,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_L_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7110,8 +7110,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_L_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7125,8 +7125,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_floz_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7140,8 +7140,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_floz_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7155,8 +7155,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_gal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7170,8 +7170,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_gal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7185,8 +7185,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_pt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7200,8 +7200,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_pt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7215,8 +7215,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_qt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7230,8 +7230,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_cc_to_qt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7246,8 +7246,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Liters"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_in3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7261,8 +7261,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_in3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7276,8 +7276,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_ft3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7291,8 +7291,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_ft3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7306,8 +7306,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_yd3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7321,8 +7321,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_yd3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7336,8 +7336,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_m3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7351,8 +7351,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_m3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7366,8 +7366,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_cc_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7381,8 +7381,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_cc_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7396,8 +7396,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_floz_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7411,8 +7411,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_floz_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7426,8 +7426,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_gal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7441,8 +7441,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_gal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7456,8 +7456,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_pt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7471,8 +7471,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_pt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7486,8 +7486,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_qt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7501,8 +7501,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_L_to_qt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7517,8 +7517,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Fluid Ounces"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_in3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7532,8 +7532,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_in3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7547,8 +7547,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_ft3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7563,8 +7563,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_ft3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7578,8 +7578,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_yd3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7593,8 +7593,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_yd3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7608,8 +7608,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_m3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7623,8 +7623,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_m3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7638,8 +7638,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_cc_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7653,8 +7653,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_cc_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7668,8 +7668,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_L_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7683,8 +7683,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_L_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7698,8 +7698,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_gal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7713,8 +7713,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_gal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7728,8 +7728,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_pt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7743,8 +7743,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_pt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7758,8 +7758,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_qt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7773,8 +7773,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_floz_to_qt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7789,8 +7789,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Gallons"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_in3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7804,8 +7804,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_in3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7819,8 +7819,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_ft3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7835,8 +7835,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_ft3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7850,8 +7850,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_yd3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7865,8 +7865,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_yd3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7880,8 +7880,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_m3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7895,8 +7895,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_m3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7910,8 +7910,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_cc_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7925,8 +7925,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_cc_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7940,8 +7940,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_L_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7955,8 +7955,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_L_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7970,8 +7970,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_floz_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -7985,8 +7985,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_floz_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8000,8 +8000,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_pt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8015,8 +8015,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_pt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8030,8 +8030,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_qt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8045,8 +8045,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_gal_to_qt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8061,8 +8061,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Pints"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_in3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8076,8 +8076,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_in3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8091,8 +8091,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_ft3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8107,8 +8107,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_ft3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8122,8 +8122,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_yd3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8137,8 +8137,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_yd3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8152,8 +8152,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_m3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8167,8 +8167,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_m3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8182,8 +8182,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_cc_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8197,8 +8197,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_cc_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8212,8 +8212,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_L_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8227,8 +8227,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_L_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8242,8 +8242,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_floz_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8257,8 +8257,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_floz_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8272,8 +8272,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_gal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8287,8 +8287,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_gal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8302,8 +8302,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_qt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8317,8 +8317,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_pt_to_qt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8333,8 +8333,8 @@ namespace Cubico.Tests
 		#endregion
 		#region "Source as Quarts"
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_in3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8348,8 +8348,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_in3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8363,8 +8363,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_ft3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8379,8 +8379,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_ft3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8394,8 +8394,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_yd3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8409,8 +8409,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_yd3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8424,8 +8424,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_m3_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8439,8 +8439,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_m3_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8454,8 +8454,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_cc_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8469,8 +8469,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_cc_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8484,8 +8484,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_L_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8499,8 +8499,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_L_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8514,8 +8514,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_floz_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8529,8 +8529,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_floz_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8544,8 +8544,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_gal_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8559,8 +8559,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_gal_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8574,8 +8574,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_pt_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
@@ -8589,8 +8589,8 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[TestCase(UnitTestCategory.Integration)]
-		[TestCase(UnitTestCategory.UnitConversion)]
+		[Category(UnitTestCategory.Integration)]
+		[Category(UnitTestCategory.UnitConversion)]
 		public void UnitConverter_ConvertUnits_qt_to_pt_Test2 ()
 		{
 			UnitConverter target = new UnitConverter ();
