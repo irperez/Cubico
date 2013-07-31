@@ -1146,8 +1146,29 @@
 		<UnitModifier ID="1676" Value="1000.000000000000000" Order="1" ModifierID="3" UnitSourceID="122" UnitTargetID="123" />
 		<UnitModifier ID="1677" Value="1000.000000000000000" Order="1" ModifierID="5" UnitSourceID="121" UnitTargetID="120" />
 		<UnitModifier ID="1678" Value="1000.000000000000000" Order="1" ModifierID="3" UnitSourceID="120" UnitTargetID="121" />
-		<UnitModifier ID="1679" Value="1.000000000000000" Order="1" ModifierID="5" UnitSourceID="123" UnitTargetID="123" />
-		<UnitModifier ID="1680" Value="1.000000000000000" Order="1" ModifierID="5" UnitSourceID="121" UnitTargetID="121" />
+		<UnitModifier ID="1679" Value="1.000000000000000" Order="1" ModifierID="3" UnitSourceID="124" UnitTargetID="124" />
+		<UnitModifier ID="1680" Value="8.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="125" />
+    <UnitModifier ID="1681" Value="1024.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="126" />
+    <UnitModifier ID="1682" Value="8192.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="127" />
+    <UnitModifier ID="1683" Value="1048576.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="128" />
+    <UnitModifier ID="1684" Value="8388608.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="129" />
+    <UnitModifier ID="1685" Value="1073741824.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="130" />
+    <UnitModifier ID="1686" Value="8589934592.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="131" />
+    <UnitModifier ID="1687" Value="1099511627776.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="132" />
+    <UnitModifier ID="1688" Value="8795755265206.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="133" />
+    <UnitModifier ID="1689" Value="1125899911454000.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="134" />
+    <UnitModifier ID="1690" Value="0.000000000000000" Order="1" ModifierID="5" UnitSourceID="124" UnitTargetID="135" /> <!-- Fix this modifier  bit -> PB-->
+    <UnitModifier ID="1691" Value="8.000000000000000" Order="1" ModifierID="3" UnitSourceID="125" UnitTargetID="124" />
+    <UnitModifier ID="1692" Value="1024.000000000000000" Order="1" ModifierID="3" UnitSourceID="126" UnitTargetID="124" />
+    <UnitModifier ID="1693" Value="8192.000000000000000" Order="1" ModifierID="3" UnitSourceID="127" UnitTargetID="124" />
+    <UnitModifier ID="1694" Value="1048576.000000000000000" Order="1" ModifierID="3" UnitSourceID="128" UnitTargetID="124" />
+    <UnitModifier ID="1695" Value="8388608.000000000000000" Order="1" ModifierID="3" UnitSourceID="129" UnitTargetID="124" />
+    <UnitModifier ID="1696" Value="1073741824.000000000000000" Order="1" ModifierID="3" UnitSourceID="130" UnitTargetID="124" />
+    <UnitModifier ID="1697" Value="8589934592.000000000000000" Order="1" ModifierID="3" UnitSourceID="131" UnitTargetID="124" />
+    <UnitModifier ID="1698" Value="1099511627776.000000000000000" Order="1" ModifierID="3" UnitSourceID="132" UnitTargetID="124" />
+    <UnitModifier ID="1699" Value="8795755265206.000000000000000" Order="1" ModifierID="3" UnitSourceID="133" UnitTargetID="124" />
+    <UnitModifier ID="1700" Value="1125899911454000.000000000000000" Order="1" ModifierID="3" UnitSourceID="134" UnitTargetID="124" />
+    <!--<UnitModifier ID="1701" Value="2.362526208162E-9" Order="1" ModifierID="3" UnitSourceID="135" UnitTargetID="124" />-->
 	</UnitModifiers>
 	<Symbols>
 		<UnitSymbol ID="1" Symbol="K" IsDefault="1" UnitID="1" />
@@ -1510,6 +1531,18 @@
 		<UnitSymbol ID="404" Symbol="mEq" IsDefault="1" UnitID="123" />
 		<UnitSymbol ID="405" Symbol="meq" IsDefault="0" UnitID="123" />
 		<UnitSymbol ID="406" Symbol="mci" IsDefault="0" UnitID="121" />
+    <UnitSymbol ID="407" Symbol="bit" IsDefault="0" UnitID="124" />
+    <UnitSymbol ID="408" Symbol="B" IsDefault="0" UnitID="125" />
+    <UnitSymbol ID="409" Symbol="Kbit" IsDefault="0" UnitID="126" />
+    <UnitSymbol ID="410" Symbol="KB" IsDefault="0" UnitID="127" />
+    <UnitSymbol ID="411" Symbol="Mbit" IsDefault="0" UnitID="128" />
+    <UnitSymbol ID="412" Symbol="MB" IsDefault="0" UnitID="129" />
+    <UnitSymbol ID="413" Symbol="Gbit" IsDefault="0" UnitID="130" />
+    <UnitSymbol ID="414" Symbol="GB" IsDefault="0" UnitID="131" />
+    <UnitSymbol ID="415" Symbol="Tbit" IsDefault="0" UnitID="132" />
+    <UnitSymbol ID="416" Symbol="TB" IsDefault="0" UnitID="133" />
+    <UnitSymbol ID="417" Symbol="Pbit" IsDefault="0" UnitID="134" />
+    <UnitSymbol ID="418" Symbol="PB" IsDefault="0" UnitID="135" />
 	</Symbols>
 	<Units>
 		<Unit ID="1" Name="Kelvin" UnitTypeID="1" />
@@ -1630,6 +1663,18 @@
 		<Unit ID="121" Name="Millicurie" UnitTypeID="17" />
 		<Unit ID="122" Name="Equivalent" UnitTypeID="18" />
 		<Unit ID="123" Name="Milliequivalent" UnitTypeID="18" />
+    <Unit ID="124" Name="bit" UnitTypeID="19" />
+    <Unit ID="125" Name="byte" UnitTypeID="19" />
+    <Unit ID="126" Name="kilobit" UnitTypeID="19" />
+    <Unit ID="127" Name="kilobyte" UnitTypeID="19" />
+    <Unit ID="128" Name="megabit" UnitTypeID="19" />
+    <Unit ID="129" Name="megabyte" UnitTypeID="19" />
+    <Unit ID="130" Name="gigabit" UnitTypeID="19" />
+    <Unit ID="131" Name="gigabyte" UnitTypeID="19" />
+    <Unit ID="132" Name="terabit" UnitTypeID="19" />
+    <Unit ID="133" Name="terabyte" UnitTypeID="19" />
+    <Unit ID="134" Name="petabit" UnitTypeID="19" />
+    <Unit ID="135" Name="petabyte" UnitTypeID="19" />
 	</Units>
 	<UnitTypes>
 		<UnitType ID="1" Name="Temperature" />
@@ -1650,5 +1695,6 @@
 		<UnitType ID="16" Name="Absorbed Radiation Dose" Description="SI unit of absorbed radiation dose due to ionizing radiation." />
 		<UnitType ID="17" Name="Radioactivity" Description="Common unit of radioactivity used to express a quantity of radioactive material" />
 		<UnitType ID="18" Name="Compound Equivalent Weight" Description="Used to measure amount of substance in a solution/fluid." />
+    <UnitType ID="19" Name="Memory Size" />
 	</UnitTypes>
 </UnitConverterData>

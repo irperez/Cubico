@@ -41,6 +41,7 @@
     <Compile Include="UnitConverterTest2.cs" />
     <Compile Include="UnitConverterTest3.cs" />
     <Compile Include="UnitConverterTest4.cs" />
+    <Compile Include="UnitConverterTestMemSize.cs" />
     <Compile Include="UnitProviderTest.cs" />
     <Compile Include="UnitTest.cs" />
     <Compile Include="UnitTestCategory.cs" />
