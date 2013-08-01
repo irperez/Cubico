@@ -166,6 +166,51 @@ namespace Cubico.Tests
             actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
             Assert.AreEqual(expected.Value, actual.Value);
         }
+
+        [Test]
+        [Category(UnitTestCategory.Integration)]
+        [Category(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_byte_to_byte_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(15);
+            string currentUnitName = "byte";
+            string targetUnitName = "byte";
+            Measurement expected = new Measurement(Convert.ToDouble(15), "byte");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [Test]
+        [Category(UnitTestCategory.Integration)]
+        [Category(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_byte_to_kilobit_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(1);
+            string currentUnitName = "byte";
+            string targetUnitName = "kilobit";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0078125), "kilobit");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
+
+        [Test]
+        [Category(UnitTestCategory.Integration)]
+        [Category(UnitTestCategory.UnitConversion)]
+        public void UnitConverter_ConvertUnits_byte_to_kilobyte_Test()
+        {
+            UnitConverter target = new UnitConverter();
+            double value = Convert.ToDouble(1);
+            string currentUnitName = "byte";
+            string targetUnitName = "kilobyte";
+            Measurement expected = new Measurement(Convert.ToDouble(0.0009765625), "kilobyte");
+            Measurement actual = default(Measurement);
+            actual = target.ConvertUnits(value, currentUnitName, targetUnitName);
+            Assert.AreEqual(expected.Value, actual.Value);
+        }
         #endregion
         #endregion
     }
