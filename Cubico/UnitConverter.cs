@@ -2,6 +2,7 @@
 using System.Diagnostics.Contracts;
 using System.Collections.Generic;
 using System.Linq;
+//using W3b.Sine;
 
 namespace Cubico
 {
@@ -205,6 +206,10 @@ namespace Cubico
 					case ModifierType.Multiply:
 						if (moder.Value > 0) {
 							x = System.Math.Round (x * (double)moder.Value, m_intPrecision);
+                            
+                            //var resultX = (new BigNumDec(x)) * (new BigNumDec((double)moder.Value));
+
+                            //resultX.
 						}
 						break;
 					case ModifierType.Divide:
