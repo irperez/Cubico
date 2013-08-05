@@ -6,10 +6,10 @@ Taking and storing measurements reliably, performing calculations between differ
 
 ### Example Usage
 ```csharp
-var length_in_ft = new Measurement(2, "ft");
-var length_in_in = new Measurement(12, "in");
+var length_in_ft = new Measurement(2, Units.Length.Feet);
+var length_in_in = new Measurement(12, Units.Length.Inches);
 var result = length_in_ft + length_in_in;
-Console.WriteLine(result.GetValueAs("yrd").ToString()); // = 1 yard
+Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
 ```
 	
 ## Unit Categories to Date
