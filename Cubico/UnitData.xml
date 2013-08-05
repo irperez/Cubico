@@ -1638,7 +1638,7 @@
 		<Unit ID="59" Name="Centimetre" UnitTypeID="7" />
 		<Unit ID="60" Name="Millimetre" UnitTypeID="7" />
 		<Unit ID="61" Name="Watt" UnitTypeID="8" />
-		<Unit ID="62" Name="Hoursepower" UnitTypeID="8" />
+		<Unit ID="62" Name="Horsepower" UnitTypeID="8" />
 		<Unit ID="63" Name="Megawatt" UnitTypeID="8" />
 		<Unit ID="64" Name="Kilowatt" UnitTypeID="8" />
 		<Unit ID="65" Name="Microwatt" UnitTypeID="8" />
