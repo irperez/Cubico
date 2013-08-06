@@ -7,7 +7,7 @@ using System.Linq;
 namespace Cubico
 {
 	public class UnitConverter
-	{
+	{ 
 		//TODO: Fix this; was Previously NaN
 		const double _failsafeValue = 0;
 		public Dictionary<string, Unit> _SymbolDictionary;
