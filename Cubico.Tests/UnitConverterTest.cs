@@ -314,7 +314,6 @@ namespace Cubico.Tests
 		{
 			UnitConverter target = new UnitConverter ();
 			Unit actual = default(Unit);
-			actual.GetType();
 			actual = target.GetUnitBySymbol (null);
 
 			Assert.Fail ();
@@ -327,7 +326,6 @@ namespace Cubico.Tests
 		{
 			UnitConverter target = new UnitConverter ();
 			Unit actual = default(Unit);
-			actual.GetType();
 			actual = target.GetUnitBySymbol (string.Empty);
 
 			Assert.Fail ();
@@ -341,7 +339,6 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 			string unitName = "BogusUnitSymbol";
 			Unit actual = default(Unit);
-			actual.GetType();
 			actual = target.GetUnitByName (unitName);
 			Assert.Fail ();
 		}
@@ -367,7 +364,6 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 
 			Unit actual = default(Unit);
-			actual.GetType();
 			actual = target.GetUnitByName (null);
 
 			Assert.Fail ();
@@ -381,7 +377,6 @@ namespace Cubico.Tests
 			UnitConverter target = new UnitConverter ();
 
 			Unit actual = default(Unit);
-			actual.GetType();
 			actual = target.GetUnitByName (string.Empty);
 
 			Assert.Fail ();
@@ -394,8 +389,7 @@ namespace Cubico.Tests
 		{
 			UnitConverter target = new UnitConverter ();
 			string unitName = "BogusUnitName";
-			Unit actual = default(Unit);
-			actual.GetType();
+			Unit actual = default(Unit);			
 			actual = target.GetUnitByName (unitName);
 			Assert.Fail ();
 		}
