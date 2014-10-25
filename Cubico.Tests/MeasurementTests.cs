@@ -129,15 +129,15 @@ namespace Cubico.Tests
 		}
 		#endregion
 		#region "Measurement.Converter"
-		[Test]
-		public void MeasurementConverterTest ()
-		{
-			Measurement target = new Measurement (10, "ft");
-			UnitConverter actual = default(UnitConverter);
-			actual = target.Converter;
+        //[Test]
+        //public void MeasurementConverterTest ()
+        //{
+        //    Measurement target = new Measurement (10, "ft");
+        //    UnitConverter actual = default(UnitConverter);
+        //    actual = target.Converter;
 
-			Assert.IsNotNull (actual);
-		}
+        //    Assert.IsNotNull (actual);
+        //}
 		#endregion
 		#region "Measurement.ConversionResult"
 		[Test]
@@ -278,134 +278,134 @@ namespace Cubico.Tests
 		}
 		#endregion
 		#region "Measurement.SetValue(measurementString)"
-		[Test]
-		public void MeasurementSetValueStringTest ()
-		{
-			Measurement target = new Measurement ("ft");
-			string measurement = "10ft";
-			Result expected = Result.NoError;
-			Result actual = default(Result);
-			actual = target.SetValue (measurement);
-			Assert.AreEqual (expected, actual);
-			Assert.AreEqual (10, target.Value);
-		}
+        //[Test]
+        //public void MeasurementSetValueStringTest ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    string measurement = "10ft";
+        //    Result expected = Result.NoError;
+        //    Result actual = default(Result);
+        //    actual = target.SetValue (measurement);
+        //    Assert.AreEqual (expected, actual);
+        //    Assert.AreEqual (10, target.Value);
+        //}
 
-		[Test]
-		public void MeasurementSetValueStringTest2 ()
-		{
-			Measurement target = new Measurement ("ft");
-			string measurement = "12in";
-			Result expected = Result.NoError;
-			Result actual = default(Result);
-			actual = target.SetValue (measurement);
-			Assert.AreEqual (expected, actual);
-			Assert.AreEqual (12, target.Value);
-		}
+        //[Test]
+        //public void MeasurementSetValueStringTest2 ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    string measurement = "12in";
+        //    Result expected = Result.NoError;
+        //    Result actual = default(Result);
+        //    actual = target.SetValue (measurement);
+        //    Assert.AreEqual (expected, actual);
+        //    Assert.AreEqual (12, target.Value);
+        //}
 
-		[Test]
-		public void MeasurementSetValueStringTest3 ()
-		{
-			Measurement target = new Measurement ("ft");
-			target.Flags = MeasurementFlags.ForceUnit;
-			string measurement = "12in";
-			Result expected = Result.NoError;
-			Result actual = default(Result);
-			actual = target.SetValue (measurement);
-			Assert.AreEqual (expected, actual);
-			Assert.AreEqual (1, target.Value);
-		}
+        //[Test]
+        //public void MeasurementSetValueStringTest3 ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    target.Flags = MeasurementFlags.ForceUnit;
+        //    string measurement = "12in";
+        //    Result expected = Result.NoError;
+        //    Result actual = default(Result);
+        //    actual = target.SetValue (measurement);
+        //    Assert.AreEqual (expected, actual);
+        //    Assert.AreEqual (1, target.Value);
+        //}
 
-		[Test]
-		public void MeasurementSetValueStringInvalidTest ()
-		{
-			Measurement target = new Measurement ("ft");
-			string measurement = "12hr";
-			Result expected = Result.UnitMismatch;
-			Result actual = default(Result);
-			actual = target.SetValue (measurement);
-			Assert.AreEqual (expected, actual);
-		}
+        //[Test]
+        //public void MeasurementSetValueStringInvalidTest ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    string measurement = "12hr";
+        //    Result expected = Result.UnitMismatch;
+        //    Result actual = default(Result);
+        //    actual = target.SetValue (measurement);
+        //    Assert.AreEqual (expected, actual);
+        //}
 
-		[Test]
-		[ExpectedException(typeof(ArgumentNullException))]
-		public void MeasurementSetValueStringNullTest ()
-		{
-			Measurement target = new Measurement ("ft");
-			Result actual = default(Result);
-			actual.GetType();
-			actual = target.SetValue ((string)null);
-			Assert.Fail ();
-		}
+        //[Test]
+        //[ExpectedException(typeof(ArgumentNullException))]
+        //public void MeasurementSetValueStringNullTest ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    Result actual = default(Result);
+        //    actual.GetType();
+        //    actual = target.SetValue ((string)null);
+        //    Assert.Fail ();
+        //}
 
-		[Test]
-		[ExpectedException(typeof(ArgumentNullException))]
-		public void MeasurementSetValueStringEmptyTest ()
-		{
-			Measurement target = new Measurement ("ft");
-			Result actual = default(Result);
-			actual.GetType();
-			actual = target.SetValue (string.Empty);
-			Assert.Fail ();
-		}
+        //[Test]
+        //[ExpectedException(typeof(ArgumentNullException))]
+        //public void MeasurementSetValueStringEmptyTest ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    Result actual = default(Result);
+        //    actual.GetType();
+        //    actual = target.SetValue (string.Empty);
+        //    Assert.Fail ();
+        //}
 		#endregion
 		#region "Measurement.SetValue(value)"
-		[Test]
-		public void MeasurementSetValueTest ()
-		{
-			Measurement target = new Measurement ("ft");
-			double value = 15;
-			Result expected = Result.NoError;
-			Result actual = default(Result);
-			actual = target.SetValue (value);
-			Assert.AreEqual (expected, actual);
-		}
+        //[Test]
+        //public void MeasurementSetValueTest ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    double value = 15;
+        //    Result expected = Result.NoError;
+        //    Result actual = default(Result);
+        //    actual = target.SetValue (value);
+        //    Assert.AreEqual (expected, actual);
+        //}
 		#endregion
 		#region "Measurement.SetUnit(symbol)"
-		[Test]
-		public void MeasurementSetUnitTest ()
-		{
-			Measurement target = new Measurement ("ft");
-			string unitSymbol = "s";
-			Result expected = Result.NoError;
-			Result actual = default(Result);
-			actual = target.SetUnit (unitSymbol);
-			Assert.AreEqual (expected, actual);
-			Assert.AreEqual ("Second", target.Unit.Name);
-		}
+        //[Test]
+        //public void MeasurementSetUnitTest ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    string unitSymbol = "s";
+        //    Result expected = Result.NoError;
+        //    Result actual = default(Result);
+        //    actual = target.SetUnit (unitSymbol);
+        //    Assert.AreEqual (expected, actual);
+        //    Assert.AreEqual ("Second", target.Unit.Name);
+        //}
 
-		[Test]
-		public void MeasurementSetUnitTest2 ()
-		{
-			Measurement target = new Measurement ("ft");
-			string unitSymbol = "ft";
-			Result expected = Result.NoError;
-			Result actual = default(Result);
-			actual = target.SetUnit (unitSymbol);
-			Assert.AreEqual (expected, actual);
-			Assert.AreEqual ("Feet", target.Unit.Name);
-		}
+        //[Test]
+        //public void MeasurementSetUnitTest2 ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    string unitSymbol = "ft";
+        //    Result expected = Result.NoError;
+        //    Result actual = default(Result);
+        //    actual = target.SetUnit (unitSymbol);
+        //    Assert.AreEqual (expected, actual);
+        //    Assert.AreEqual ("Feet", target.Unit.Name);
+        //}
 
-		[Test]
-		[ExpectedException(typeof(ArgumentNullException))]
-		public void MeasurementSetUnitNullTest ()
-		{
-			Measurement target = new Measurement ("ft");
-			Result expected = Result.BadUnit;
-			Result actual = default(Result);
-			actual = target.SetUnit (null);
-			Assert.AreEqual (expected, actual);
-		}
+        //[Test]
+        //[ExpectedException(typeof(ArgumentNullException))]
+        //public void MeasurementSetUnitNullTest ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    Result expected = Result.BadUnit;
+        //    Result actual = default(Result);
+        //    actual = target.SetUnit (null);
+        //    Assert.AreEqual (expected, actual);
+        //}
 
-		[Test]
-		[ExpectedException(typeof(ArgumentNullException))]
-		public void MeasurementSetUnitEmptyTest ()
-		{
-			Measurement target = new Measurement ("ft");
-			Result expected = Result.BadUnit;
-			Result actual = default(Result);
-			actual = target.SetUnit (string.Empty);
-			Assert.AreEqual (expected, actual);
-		}
+        //[Test]
+        //[ExpectedException(typeof(ArgumentNullException))]
+        //public void MeasurementSetUnitEmptyTest ()
+        //{
+        //    Measurement target = new Measurement ("ft");
+        //    Result expected = Result.BadUnit;
+        //    Result actual = default(Result);
+        //    actual = target.SetUnit (string.Empty);
+        //    Assert.AreEqual (expected, actual);
+        //}
 		#endregion
 		#region "Measurement.SetMinBound"
 		[Test]

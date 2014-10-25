@@ -2,10 +2,21 @@
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Cubico.Tests, PublicKey=0024000004800000940000000602000000240000525341310004000001000100a9a0195dc31c78d63e25c1b47a72bccca2d9f5be7c850437d6ecae03a9e2208dfb97c07969e6bdaf1530307c1c819c6948f99198622f966a08701eca0bfdebf745355dfadb9d37a89a230a3f604beb9b274338efd1fc822f72ca0787faa88efae7af7749a9e6e2f9870ffdd94895e0e352a9bffde2b917640042e4b05b527390")]
 
 namespace Cubico
 {
-	// A structure that defines a measurement with a numeric value and a unit of measure.
+	/// <summary>
+    /// A basic structure that defines a measurement with a numeric value and a unit of measure.
+	/// </summary>
+    /// <example>
+    /// var length_in_ft = new Measurement(2, Units.Length.Feet);
+    /// var length_in_in = new Measurement(12, Units.Length.Inches);
+    /// var result = length_in_ft + length_in_in;
+    /// Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
+    /// </example>    
 	[Serializable]
 	[DataContract]
 	[KnownType(typeof(Unit))]
@@ -20,15 +31,15 @@ namespace Cubico
 		UnitConverter _uc;
 		double _maxbound;
 		double _minbound;
-		public double _standardValue;
+        internal double _standardValue;
 		//Unit _standardUnit;
 		double _value;
 		Unit _unit;
 		string _symbol;
 		Result _conversionResult;
 
-		public event EventHandler OnValueChanged;
-		public event EventHandler OnUnitChanged;
+        //public event EventHandler OnValueChanged;
+        //public event EventHandler OnUnitChanged;
 		#endregion
 		#region "Constructors"
 		public Measurement (string unitSymbol)
@@ -42,8 +53,8 @@ namespace Cubico
 			_standardValue = 0;
 			// _standardUnit = null;
 			_symbol = null;
-			OnValueChanged = null;
-			OnUnitChanged = null;
+            //OnValueChanged = null;
+            //OnUnitChanged = null;
 
 			if (string.IsNullOrWhiteSpace (unitSymbol)) {
 				// System.Diagnostics.Debug.Print("First IF Statement")
@@ -108,35 +119,51 @@ namespace Cubico
 			_standardValue = 0;
 			// _standardUnit = null;
 			_symbol = null;
-			OnValueChanged = null;
-			OnUnitChanged = null;
+            //OnValueChanged = null;
+            //OnUnitChanged = null;
 		}
 		#endregion
 		#region "measurement flags and properties methods"
-		// Gets a reference to the current unit of the measurement.
+		/// <summary>
+        /// Gets a reference to the current unit of the measurement.
+		/// </summary>
 		public Unit Unit {
 			get { return _unit; }
 		}
-		// Gets or sets the flags on this measurement.
+		/// <summary>
+        /// Gets or sets the flags on this measurement.
+		/// </summary> 
 		public MeasurementFlags Flags {
 			get { return _flags; }
 			set { _flags = value; }
 		}
 		// Gets the unit converter associated with this measurement.
-		public UnitConverter Converter {
+		internal UnitConverter Converter {
 			get { return _uc; }
 		}
-		// Displays the result of a conversion.
-		// This property will default to NoError unless there were problems after a conversion.
+
+        	
+        /// <summary>
+        /// Displays the result of a conversion.
+        /// </summary>
+        /// <remarks>
+        /// This property will default to NoError unless there were problems after a conversion.
+        /// </remarks>
 		public Result ConversionResult {
 			get { return _conversionResult; }
 			set { _conversionResult = value; }
 		}
 
+        /// <summary>
+        /// The numerical value of this measurement
+        /// </summary>
 		public double Value {
 			get { return _value; }
 		}
 
+        /// <summary>
+        /// The unit symbol of this measurement
+        /// </summary>
 		public string Symbol {
 			get {
 				if (_unit == null) {
@@ -146,7 +173,10 @@ namespace Cubico
 				}
 			}
 		}
-		// Gets the current value of the measurement in string form.
+
+		/// <summary>
+        /// Gets the current value of the measurement in string form.
+		/// </summary>
 		public string FullValue {
 			get {
 				string str = _value.ToString ();
@@ -179,85 +209,90 @@ namespace Cubico
 		#endregion
 		#region "Value getting and setting methods"
 		// Sets the unit of the measurement.
-		public Result SetUnit (string unitSymbol)
-		{
-			Unit unit = _uc.GetUnitBySymbol (unitSymbol);
+        //internal Result SetUnit (string unitSymbol)
+        //{
+        //    Unit unit = _uc.GetUnitBySymbol (unitSymbol);
 
-			if (unit == null) {
-				return Result.BadUnit;
-			} else {
-				// If its the same don't touch it.
-				if (unit.DefaultSymbol == _unit.DefaultSymbol) {
-					return Result.NoError;
-				}
+        //    if (unit == null) {
+        //        return Result.BadUnit;
+        //    } else {
+        //        // If its the same don't touch it.
+        //        if (unit.DefaultSymbol == _unit.DefaultSymbol) {
+        //            return Result.NoError;
+        //        }
 
-				_unit = unit;
+        //        _unit = unit;
 
-				if (OnUnitChanged != null) {
-					OnUnitChanged (this, EventArgs.Empty);
-				}
+        //        if (OnUnitChanged != null) {
+        //            OnUnitChanged (this, EventArgs.Empty);
+        //        }
 
-				return Result.NoError;
-			}
-		}
+        //        return Result.NoError;
+        //    }
+        //}
 		// Given a string in the format "[value] [unit]" parses and applies the value and unit.
-		public Result SetValue (string measurement)
-		{
-			if (string.IsNullOrEmpty (measurement)) {
-				throw new ArgumentNullException ("measurement");
-			}
-			Contract.EndContractBlock ();
+        //public Result SetValue (string measurement)
+        //{
+        //    if (string.IsNullOrEmpty (measurement)) {
+        //        throw new ArgumentNullException ("measurement");
+        //    }
+        //    Contract.EndContractBlock ();
 
-			double d = 0;
-			string symbol = null;
-			Result res = default(Result);
+        //    double d = 0;
+        //    string symbol = null;
+        //    Result res = default(Result);
 
-			res = ValidateEntry (measurement);
-			if (res != Result.NoError) {
-				return res;
-			}
+        //    res = ValidateEntry (measurement);
+        //    if (res != Result.NoError) {
+        //        return res;
+        //    }
 
-			Measurement newRes = _uc.ParseUnitString (measurement);
+        //    Measurement newRes = _uc.ParseUnitString (measurement);
 
-			d = newRes.Value;
-			symbol = newRes.Symbol;
+        //    d = newRes.Value;
+        //    symbol = newRes.Symbol;
 
-			// Can we change the unit?
-			if ((_flags & MeasurementFlags.ForceUnit) > 0) {
-				// Can't change the unit, so turn the given units into the unit we want.
-				Measurement convRes = _uc.ConvertUnits (d, symbol, _unit.Name);
-				d = convRes.Value;
-			} else {
-				// Change the measurement unit to the given unit.
-				SetUnit (symbol);
-			}
+        //    // Can we change the unit?
+        //    if ((_flags & MeasurementFlags.ForceUnit) > 0) {
+        //        // Can't change the unit, so turn the given units into the unit we want.
+        //        Measurement convRes = _uc.ConvertUnits (d, symbol, _unit.Name);
+        //        d = convRes.Value;
+        //    } else {
+        //        // Change the measurement unit to the given unit.
+        //        SetUnit (symbol);
+        //    }
 
-			SetValue (d);
-			return res;
-		}
-		// Sets a value in the currently set unit format.
-		public Result SetValue (double value)
-		{
-			Measurement res = default(Measurement);
-			Unit standardUnit = default(Unit);
-			UnitType tp = _unit.UnitType;
-			standardUnit = (from un in tp.Units where un.IsDefault == true select un).FirstOrDefault ();
-			res = _uc.ConvertUnits (value, _unit.Name, standardUnit.Name);
+        //    SetValue (d);
+        //    return res;
+        //}
+        //// Sets a value in the currently set unit format.
+        //public Result SetValue (double value)
+        //{
+        //    Measurement res = default(Measurement);
+        //    Unit standardUnit = default(Unit);
+        //    UnitType tp = _unit.UnitType;
+        //    standardUnit = (from un in tp.Units where un.IsDefault == true select un).FirstOrDefault ();
+        //    res = _uc.ConvertUnits (value, _unit.Name, standardUnit.Name);
 
-			_value = value;
-			_standardValue = res.Value;
+        //    _value = value;
+        //    _standardValue = res.Value;
 
-			if (res.ConversionResult != Result.NoError) {
-				return res.ConversionResult;
-			}
+        //    if (res.ConversionResult != Result.NoError) {
+        //        return res.ConversionResult;
+        //    }
 
-			if (OnValueChanged != null) {
-				OnValueChanged (this, EventArgs.Empty);
-			}
+        //    if (OnValueChanged != null) {
+        //        OnValueChanged (this, EventArgs.Empty);
+        //    }
 
-			return res.ConversionResult;
-		}
-		// Gets the value of the measurement in the specified units.
+        //    return res.ConversionResult;
+        //}
+		
+        /// <summary>
+        /// Gets the value of the measurement in the specified units.
+        /// </summary>
+        /// <param name="unitSymbol"></param>
+        /// <returns></returns>
 		public Measurement GetValueAs (string unitSymbol)
 		{
 			return _uc.ConvertUnits (_value, _unit.Name, unitSymbol);
