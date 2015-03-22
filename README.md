@@ -6,9 +6,9 @@ Taking and storing measurements reliably, performing calculations between differ
 
 ### Example Usage
 ```csharp
-var fiveFeet = new Measurement(2, Units.Length.Feet);
+var twoFeet = new Measurement(2, Units.Length.Feet);
 var twelveInches = new Measurement(12, Units.Length.Inches);
-var result = fiveFeet + twelveInches;
+var result = twoFeet + twelveInches;
 Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
 ```
 	
