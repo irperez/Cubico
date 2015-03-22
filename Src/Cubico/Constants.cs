@@ -195,5 +195,15 @@ namespace Cubico
             public const string Petabits = "Petabits";
             public const string Petabytes = "Petabyte";
         }
+
+        public static class Pressure
+        {
+            public const string Atmosphere = "Atmosphere";
+            public const string Bar = "Bar";
+            public const string KiloPascal = "Kilo Pascal";
+            public const string MillimetreOfMercury = "Millimetre of Mercury";
+            public const string Pascal = "Pascal";
+            public const string PoundPerSquareInch = "Pound Per Square Inch";
+        }
     }
 }

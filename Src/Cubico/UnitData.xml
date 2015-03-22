@@ -1203,7 +1203,43 @@
     <UnitModifier ID="1731" Value="137438953472.000000000000000" Order="1" ModifierID="5" UnitSourceID="126" UnitTargetID="133" />
     <UnitModifier ID="1732" Value="1099469408151.000000000000000" Order="1" ModifierID="5" UnitSourceID="126" UnitTargetID="134" />
     <UnitModifier ID="1733" Value="140737488931800.000000000000000" Order="1" ModifierID="5" UnitSourceID="126" UnitTargetID="135" />
-	</UnitModifiers>
+    <UnitModifier ID="1734" Value="1.01325" Order="1" ModifierID="5" UnitSourceID="136" UnitTargetID="137" />
+    <UnitModifier ID="1735" Value="101.325" Order="1" ModifierID="5" UnitSourceID="136" UnitTargetID="138" />
+    <UnitModifier ID="1736" Value="760.1275318829707" Order="1" ModifierID="5" UnitSourceID="136" UnitTargetID="139" />
+    <UnitModifier ID="1737" Value="101325" Order="1" ModifierID="5" UnitSourceID="136" UnitTargetID="140" />
+    <UnitModifier ID="1738" Value="14.69594940039221" Order="1" ModifierID="5" UnitSourceID="136" UnitTargetID="141" />
+    <UnitModifier ID="1745" Value="1.000000000000000" Order="1" ModifierID="5" UnitSourceID="136" UnitTargetID="136" />
+    <UnitModifier ID="1739" Value="0.9869232667160128" Order="1" ModifierID="5" UnitSourceID="137" UnitTargetID="136" />
+    <UnitModifier ID="1740" Value="100" Order="1" ModifierID="5" UnitSourceID="137" UnitTargetID="138" />
+    <UnitModifier ID="1741" Value="750.1875468867217" Order="1" ModifierID="5" UnitSourceID="137" UnitTargetID="139" />
+    <UnitModifier ID="1742" Value="100000" Order="1" ModifierID="5" UnitSourceID="137" UnitTargetID="140" />
+    <UnitModifier ID="1743" Value="14.50377438972831" Order="1" ModifierID="5" UnitSourceID="137" UnitTargetID="141" />
+    <UnitModifier ID="1744" Value="1.00000000000000" Order="1" ModifierID="5" UnitSourceID="137" UnitTargetID="137" />
+    <UnitModifier ID="1746" Value="0.0098692326671601" Order="1" ModifierID="5" UnitSourceID="138" UnitTargetID="136" />
+    <UnitModifier ID="1747" Value="0.01" Order="1" ModifierID="5" UnitSourceID="138" UnitTargetID="137" />
+    <UnitModifier ID="1748" Value="1.00000000000000" Order="1" ModifierID="5" UnitSourceID="138" UnitTargetID="138" />
+    <UnitModifier ID="1749" Value="7.501875468867217" Order="1" ModifierID="5" UnitSourceID="138" UnitTargetID="139" />
+    <UnitModifier ID="1750" Value="1000" Order="1" ModifierID="5" UnitSourceID="138" UnitTargetID="140" />
+    <UnitModifier ID="1751" Value="0.1450377438972831" Order="1" ModifierID="5" UnitSourceID="138" UnitTargetID="141" />
+    <UnitModifier ID="1752" Value="0.0013155687145324" Order="1" ModifierID="5" UnitSourceID="139" UnitTargetID="136" />
+    <UnitModifier ID="1753" Value="0.001333" Order="1" ModifierID="5" UnitSourceID="139" UnitTargetID="137" />
+    <UnitModifier ID="1754" Value="0.1333" Order="1" ModifierID="5" UnitSourceID="139" UnitTargetID="138" />
+    <UnitModifier ID="1755" Value="1.00000000000000" Order="1" ModifierID="5" UnitSourceID="139" UnitTargetID="139" />
+    <UnitModifier ID="1756" Value="133.3" Order="1" ModifierID="5" UnitSourceID="139" UnitTargetID="140" />
+    <UnitModifier ID="1757" Value="0.0193335312615078" Order="1" ModifierID="5" UnitSourceID="139" UnitTargetID="141" />
+    <UnitModifier ID="1758" Value="9.869232667160128E-6" Order="1" ModifierID="5" UnitSourceID="140" UnitTargetID="136" />
+    <UnitModifier ID="1759" Value="0.00001" Order="1" ModifierID="5" UnitSourceID="140" UnitTargetID="137" />
+    <UnitModifier ID="1760" Value="0.001" Order="1" ModifierID="5" UnitSourceID="140" UnitTargetID="138" />
+    <UnitModifier ID="1761" Value="0.0075018754688672" Order="1" ModifierID="5" UnitSourceID="140" UnitTargetID="139" />
+    <UnitModifier ID="1762" Value="1.00000000000000" Order="1" ModifierID="5" UnitSourceID="140" UnitTargetID="140" />
+    <UnitModifier ID="1763" Value="1.450377438972831E-4" Order="1" ModifierID="5" UnitSourceID="140" UnitTargetID="141" />
+    <UnitModifier ID="1764" Value="0.068045961016531" Order="1" ModifierID="5" UnitSourceID="141" UnitTargetID="136" />
+    <UnitModifier ID="1765" Value="0.06894757" Order="1" ModifierID="5" UnitSourceID="141" UnitTargetID="137" />
+    <UnitModifier ID="1766" Value="6.894757" Order="1" ModifierID="5" UnitSourceID="141" UnitTargetID="138" />
+    <UnitModifier ID="1767" Value="51.72360840210053" Order="1" ModifierID="5" UnitSourceID="141" UnitTargetID="139" />
+    <UnitModifier ID="1768" Value="6894.757" Order="1" ModifierID="5" UnitSourceID="141" UnitTargetID="140" />
+    <UnitModifier ID="1769" Value="1.00000000000000" Order="1" ModifierID="5" UnitSourceID="141" UnitTargetID="141" />
+  </UnitModifiers>
 	<Symbols>
 		<UnitSymbol ID="1" Symbol="K" IsDefault="1" UnitID="1" />
 		<UnitSymbol ID="2" Symbol="C" IsDefault="1" UnitID="2" />
@@ -1577,6 +1613,12 @@
     <UnitSymbol ID="416" Symbol="TB" IsDefault="0" UnitID="133" />
     <UnitSymbol ID="417" Symbol="Pbit" IsDefault="0" UnitID="134" />
     <UnitSymbol ID="418" Symbol="PB" IsDefault="0" UnitID="135" />
+    <UnitSymbol ID="419" Symbol="atm" IsDefault="0" UnitID="136" />
+    <UnitSymbol ID="420" Symbol="bar" IsDefault="0" UnitID="137" />
+    <UnitSymbol ID="421" Symbol="KPa" IsDefault="0" UnitID="138" />
+    <UnitSymbol ID="422" Symbol="Torr" IsDefault="0" UnitID="139" />
+    <UnitSymbol ID="423" Symbol="Pa" IsDefault="0" UnitID="140" />
+    <UnitSymbol ID="424" Symbol="psi" IsDefault="0" UnitID="141" />
 	</Symbols>
 	<Units>
 		<Unit ID="1" Name="Kelvin" UnitTypeID="1" />
@@ -1709,6 +1751,12 @@
     <Unit ID="133" Name="terabyte" UnitTypeID="19" />
     <Unit ID="134" Name="petabit" UnitTypeID="19" />
     <Unit ID="135" Name="petabyte" UnitTypeID="19" />
+    <Unit ID="136" Name="Atmosphere" UnitTypeID="20" />
+    <Unit ID="137" Name="Bar" UnitTypeID="20" />
+    <Unit ID="138" Name="Kilo Pascal" UnitTypeID="20" />
+    <Unit ID="139" Name="Millimetre of Mercury" UnitTypeID="20" />
+    <Unit ID="140" Name="Pascal" UnitTypeID="20" />
+    <Unit ID="141" Name="Pounds per Square Inch" UnitTypeID="20" />
 	</Units>
 	<UnitTypes>
 		<UnitType ID="1" Name="Temperature" />
@@ -1730,5 +1778,6 @@
 		<UnitType ID="17" Name="Radioactivity" Description="Common unit of radioactivity used to express a quantity of radioactive material" />
 		<UnitType ID="18" Name="Compound Equivalent Weight" Description="Used to measure amount of substance in a solution/fluid." />
     <UnitType ID="19" Name="Memory Size" />
+    <UnitType ID="20" Name="Pressure" />
 	</UnitTypes>
 </UnitConverterData>
