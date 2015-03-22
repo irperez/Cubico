@@ -12,7 +12,7 @@ namespace Cubico
         public static class Length
         {
 			public const string Feet = "Feet";
-            public const string Inches = "Inches";
+            public const string Inches = "Inch";
             public const string Meters = "Metre";
             public const string Yards = "Yard";
             public const string Chains = "Chain";
@@ -50,8 +50,8 @@ namespace Cubico
             public const string Nanograms = "Nanogram";
             public const string Megagrams = "Megagram";
             public const string Gigagrams = "Gigagram";
-            public const string Pounds = "Pounds";
-            public const string Ounces = "Ounces";
+            public const string Pounds = "Pound";
+            public const string Ounces = "Ounce";
             public const string MetricTons = "Tonne (Metric)";
             public const string Tons = "Ton (Short US)";
             public const string CWT = "CWT";
