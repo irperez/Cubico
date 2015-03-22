@@ -78,7 +78,7 @@ namespace Cubico
             public const string Days = "Day";
             public const string Weeks = "Week";
         }
-        public static class Speed 
+        public static class Velocity 
         {
             public const string MetersPerSecond = "Metres per second";
             public const string KilometersPerHour = "Kilometres per hour";

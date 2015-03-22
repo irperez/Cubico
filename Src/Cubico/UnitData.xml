@@ -1764,7 +1764,7 @@
 		<UnitType ID="3" Name="Time" />
 		<UnitType ID="4" Name="Force" />
 		<UnitType ID="5" Name="Momentum" />
-		<UnitType ID="6" Name="Speed" />
+		<UnitType ID="6" Name="Velocity" />
 		<UnitType ID="7" Name="Length" />
 		<UnitType ID="8" Name="Power" />
 		<UnitType ID="9" Name="Energy" />
