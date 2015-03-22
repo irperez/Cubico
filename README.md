@@ -16,6 +16,7 @@ Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
 * Over 16 classes of units
 * Over 130 units of measure
 * One immutable type called "Measurement" that implements IEquatable, IComparable with operator overloads.
+* Unit enum for easy browsing and finding of units.
 * ToString implementation for easy string formatting.
 * Easily extensible by editing an XML file.
 * Over 2000 unit tests to ensure quality and precision.
