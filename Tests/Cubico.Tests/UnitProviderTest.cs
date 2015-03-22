@@ -46,5 +46,10 @@ namespace Cubico.Tests
 			Assert.IsNotNull (actual);
 			Assert.IsTrue (actual.Count > 0);
 		}
+
+        public void Test()
+        {
+            
+        }
 	}
 }
