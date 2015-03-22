@@ -46,15 +46,11 @@ namespace Cubico
 		{
 			// Reference the unit converter that created us.
 			_uc = new UnitConverter ();
-
 			_flags = MeasurementFlags.None;
 			_maxbound = 0;
 			_minbound = 0;
 			_standardValue = 0;
-			// _standardUnit = null;
 			_symbol = null;
-            //OnValueChanged = null;
-            //OnUnitChanged = null;
 
 			if (string.IsNullOrWhiteSpace (unitSymbol)) {
 				// System.Diagnostics.Debug.Print("First IF Statement")
@@ -89,18 +85,14 @@ namespace Cubico
 		public Measurement (double value, string unitSymbol, Result conversionResult)
             : this(unitSymbol)
 		{
-
 			_value = value;
-
 			_conversionResult = conversionResult;
 		}
 
 		public Measurement (double value, Result conversionResult)
             : this(null)
 		{
-
 			_value = value;
-
 			_conversionResult = conversionResult;
 		}
 
@@ -208,86 +200,6 @@ namespace Cubico
 		}
 		#endregion
 		#region "Value getting and setting methods"
-		// Sets the unit of the measurement.
-        //internal Result SetUnit (string unitSymbol)
-        //{
-        //    Unit unit = _uc.GetUnitBySymbol (unitSymbol);
-
-        //    if (unit == null) {
-        //        return Result.BadUnit;
-        //    } else {
-        //        // If its the same don't touch it.
-        //        if (unit.DefaultSymbol == _unit.DefaultSymbol) {
-        //            return Result.NoError;
-        //        }
-
-        //        _unit = unit;
-
-        //        if (OnUnitChanged != null) {
-        //            OnUnitChanged (this, EventArgs.Empty);
-        //        }
-
-        //        return Result.NoError;
-        //    }
-        //}
-		// Given a string in the format "[value] [unit]" parses and applies the value and unit.
-        //public Result SetValue (string measurement)
-        //{
-        //    if (string.IsNullOrEmpty (measurement)) {
-        //        throw new ArgumentNullException ("measurement");
-        //    }
-        //    Contract.EndContractBlock ();
-
-        //    double d = 0;
-        //    string symbol = null;
-        //    Result res = default(Result);
-
-        //    res = ValidateEntry (measurement);
-        //    if (res != Result.NoError) {
-        //        return res;
-        //    }
-
-        //    Measurement newRes = _uc.ParseUnitString (measurement);
-
-        //    d = newRes.Value;
-        //    symbol = newRes.Symbol;
-
-        //    // Can we change the unit?
-        //    if ((_flags & MeasurementFlags.ForceUnit) > 0) {
-        //        // Can't change the unit, so turn the given units into the unit we want.
-        //        Measurement convRes = _uc.ConvertUnits (d, symbol, _unit.Name);
-        //        d = convRes.Value;
-        //    } else {
-        //        // Change the measurement unit to the given unit.
-        //        SetUnit (symbol);
-        //    }
-
-        //    SetValue (d);
-        //    return res;
-        //}
-        //// Sets a value in the currently set unit format.
-        //public Result SetValue (double value)
-        //{
-        //    Measurement res = default(Measurement);
-        //    Unit standardUnit = default(Unit);
-        //    UnitType tp = _unit.UnitType;
-        //    standardUnit = (from un in tp.Units where un.IsDefault == true select un).FirstOrDefault ();
-        //    res = _uc.ConvertUnits (value, _unit.Name, standardUnit.Name);
-
-        //    _value = value;
-        //    _standardValue = res.Value;
-
-        //    if (res.ConversionResult != Result.NoError) {
-        //        return res.ConversionResult;
-        //    }
-
-        //    if (OnValueChanged != null) {
-        //        OnValueChanged (this, EventArgs.Empty);
-        //    }
-
-        //    return res.ConversionResult;
-        //}
-		
         /// <summary>
         /// Gets the value of the measurement in the specified units.
         /// </summary>
@@ -391,9 +303,7 @@ namespace Cubico
 			}
 
 			Measurement res = _uc.ConvertUnits (minbound, unitSymbol, _unit.Name);
-
 			this._minbound = res.Value;
-
 			return Result.NoError;
 		}
 		#endregion

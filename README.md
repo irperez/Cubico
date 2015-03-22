@@ -12,9 +12,17 @@ var result = fiveFeet + twelveInches;
 Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
 ```
 	
+## Features
+* Over 16 classes of units
+* Over 130 units of measure
+* One immutable type called "Measurement" that implements IEquatable, IComparable with operator overloads.
+* ToString implementation for easy string formatting.
+* Easily extensible by editing an XML file.
+* Over 2000 unit tests to ensure quality and precision.
+
 ## Unit Categories to Date
 * Area
-* Bytes
+* Digital Storage (Bytes)
 * Energy
 * Fluid Volume
 * Force
@@ -28,9 +36,24 @@ Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
 * Temperature
 * Time
 * Volume
+* Radioactivity
 
 ## Accuracy & Precision
 The accuracy of unit conversions is one of the missions for this library. From experience, a lot of the unit converters out there are not precise, especially when scientific precision is needed. Since using double precision is not precise by definition, it becomes very hard to come up with unit conversions that are precise. This library has come up with approximately 2000 unit tests, each testing a conversion with various test scenarios.
+
+## Installing
+Run the following command in the Package Manager Console or go to the NuGet site for the complete relase history.
+
+Install-Package Cubico
+
+Build Targets:
+
+* .Net 4.0 Full/Client
+* .Net 4.5 Full/Client
+* .NET 4.5.1
+
+## Contributions
+Feel free to add to the units of measure list.  All I ask is that you perform matching tests for each type of conversion.  Please follow the pattern performed in each test.
 
 ## License
 Copyright 2012-2015 Ivan R. Perez & Taylor Shuler.
