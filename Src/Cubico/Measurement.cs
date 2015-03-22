@@ -17,7 +17,9 @@ namespace Cubico
     /// var result = length_in_ft + length_in_in;
     /// Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
     /// </example>    
-	[Serializable]
+#if !PCL
+    [Serializable]
+#endif
 	[DataContract]
 	[KnownType(typeof(Unit))]
 	[KnownType(typeof(UnitType))]

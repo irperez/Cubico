@@ -5,9 +5,11 @@ namespace Cubico
 {
 	// Represents a unit of measure's symbol, or alternate methods to identify a unit of measure.
 	// Inch = ", inches, in, in. etc.
-	[DataContract(IsReference = true)]
+#if !PCL
+    [Serializable]
+#endif
+    [DataContract(IsReference = true)]
 	[KnownType(typeof(Unit))]
-	[Serializable]
 	public partial class Symbol
 	{
 		#region "Constructors"

@@ -3,7 +3,9 @@ using System.Runtime.Serialization;
 
 namespace Cubico
 {
+#if !PCL
 	[Serializable]
+#endif
 	[DataContract]
 	public class ConversionResult : IEquatable<ConversionResult>
 	{

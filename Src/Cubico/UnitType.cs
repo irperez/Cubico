@@ -4,9 +4,11 @@ using System.Collections.Generic;
 
 namespace Cubico
 {
+#if !PCL
+    [Serializable]
+#endif
 	[DataContract(IsReference = true)]
 	[KnownType(typeof(Unit))]
-	[Serializable]
 	public partial class UnitType : IEquatable<UnitType>
 	{
 		#region "Constructors"

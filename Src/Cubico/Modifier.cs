@@ -3,8 +3,10 @@ using System.Runtime.Serialization;
 
 namespace Cubico
 {
+#if !PCL
+    [Serializable]
+#endif
 	[DataContract(IsReference = true)]
-	[Serializable]
 	public partial class Modifier
 	{
 		#region "Contructors"

@@ -6,11 +6,13 @@ using System.Linq;
 
 namespace Cubico
 {
-	[DataContract(IsReference = true)]
+#if !PCL
+    [Serializable]
+#endif
+    [DataContract(IsReference = true)]
 	[KnownType(typeof(UnitType))]
 	[KnownType(typeof(Symbol))]
 	[KnownType(typeof(Modifier))]
-	[Serializable]
 	public partial class Unit : IEquatable<Unit>
 	{
 		#region "Constructors"
