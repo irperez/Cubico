@@ -52,6 +52,7 @@ Build Targets:
 * .Net 4.0 Full/Client
 * .Net 4.5 Full/Client
 * .NET 4.5.1
+* Portable 4.0 Profile 328 (.Net 4, Silverlight 5, Win 8, Win 8.1, Windows Phone 8.1, Xamarin Android, Xamarin iOS)
 
 ## Contributions
 Feel free to add to the units of measure list.  All I ask is that you perform matching tests for each type of conversion.  Please follow the pattern performed in each test.
