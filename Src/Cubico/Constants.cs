@@ -12,7 +12,7 @@ namespace Cubico
         public static class Length
         {
 			public const string Feet = "Feet";
-            public const string Inches = "Inches";
+            public const string Inches = "Inch";
             public const string Meters = "Metre";
             public const string Yards = "Yard";
             public const string Chains = "Chain";
@@ -50,8 +50,8 @@ namespace Cubico
             public const string Nanograms = "Nanogram";
             public const string Megagrams = "Megagram";
             public const string Gigagrams = "Gigagram";
-            public const string Pounds = "Pounds";
-            public const string Ounces = "Ounces";
+            public const string Pounds = "Pound";
+            public const string Ounces = "Ounce";
             public const string MetricTons = "Tonne (Metric)";
             public const string Tons = "Ton (Short US)";
             public const string CWT = "CWT";
@@ -78,7 +78,7 @@ namespace Cubico
             public const string Days = "Day";
             public const string Weeks = "Week";
         }
-        public static class Speed 
+        public static class Velocity 
         {
             public const string MetersPerSecond = "Metres per second";
             public const string KilometersPerHour = "Kilometres per hour";
@@ -194,6 +194,16 @@ namespace Cubico
             public const string Terabytes = "Terabyte";
             public const string Petabits = "Petabits";
             public const string Petabytes = "Petabyte";
+        }
+
+        public static class Pressure
+        {
+            public const string Atmosphere = "Atmosphere";
+            public const string Bar = "Bar";
+            public const string KiloPascal = "Kilo Pascal";
+            public const string MillimetreOfMercury = "Millimetre of Mercury";
+            public const string Pascal = "Pascal";
+            public const string PoundPerSquareInch = "Pound Per Square Inch";
         }
     }
 }

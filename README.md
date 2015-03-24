@@ -13,7 +13,7 @@ Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
 ```
 	
 ## Features
-* Over 16 classes of units
+* Over 17 classes of units
 * Over 130 units of measure
 * One immutable type called "Measurement" that implements IEquatable, IComparable with operator overloads.
 * Unit enum for easy browsing and finding of units.
@@ -30,10 +30,11 @@ Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
 * Hexadecimals
 * Length
 * Mass
+* Pressure
 * Momentum
 * Plane Angle
 * Power
-* Speed
+* Velocity
 * Temperature
 * Time
 * Volume

@@ -3948,7 +3948,7 @@ namespace Cubico.Tests
 		}
 		#endregion
 		#endregion
-		#region "Speed Tests"
+		#region "Velocity Tests"
 		#region "Source as Meters/Second"
 		[Test]
 		[Category(UnitTestCategory.Integration)]
