@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Newtonsoft;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+#if !PCL
 using System.Xml;
+#endif
 
 namespace Cubico
 {
@@ -13,18 +19,23 @@ namespace Cubico
 		#region "Constructors"
 		public UnitProvider ()
 		{
-			if (_dataFile == null) {
-				this.LoadDataFile ();
-			}
+            if (_jsonObj == null)
+            {
+                this.LoadJsonDataFile();
+            }
 		}
 		#endregion
 		#region "Properties"
+#if !PCL
 		static XmlDocument _dataFile;
 
 		protected XmlDocument DataFile {
 			get{ return _dataFile;}
 			set{ _dataFile = value;}
 		}
+#endif
+
+        private Cubico.UnitData.RootObject _jsonObj;
 		//Singleton
 		static Dictionary<string, UnitType> _unitTypes;
 
@@ -64,7 +75,8 @@ namespace Cubico
 		#endregion
 		#region "Methods"
 		#region "File Load Methods"
-		void LoadDataFile ()
+#if !PCL
+		private void LoadDataFile ()
 		{
 			const string fileName = "Cubico.UnitData.xml";
 			var assembly = Assembly.GetExecutingAssembly ();
@@ -79,7 +91,147 @@ namespace Cubico
 
 			this.ProcessUnitConverterData ();
 		}
+#endif
 
+        private void LoadJsonDataFile()
+        {
+            const string fileName = "Cubico.UnitData.json";
+            var assembly = Assembly.GetExecutingAssembly();
+            var stream = assembly.GetManifestResourceStream(fileName);
+
+            if (stream == null)
+            {
+                throw new InvalidOperationException("Cannot find unit data file " + fileName);
+            }
+
+            string json = "";
+            using (var reader = new StreamReader(stream, Encoding.UTF8))
+            {
+                json = reader.ReadToEnd();                
+            }
+            var settings = new JsonSerializerSettings();
+            settings.MissingMemberHandling = MissingMemberHandling.Error;
+            _jsonObj = JsonConvert.DeserializeObject<Cubico.UnitData.RootObject>(json, settings);
+            ProcessUnitConverterData2(_jsonObj);
+        }
+
+        private void ProcessUnitConverterData2(Cubico.UnitData.RootObject RootObject)
+        {
+            var data = RootObject.UnitConverterData;
+            //Load Modifier Data
+            _individualModifiers = new Dictionary<int, List<Modifier>>();
+            foreach (var itm in data.UnitModifiers.UnitModifier)
+            {
+                var mod = new Modifier();
+                mod.ID = Convert.ToInt32(itm.ID);
+                mod.Value = Convert.ToDecimal(itm.Value);
+                mod.Order = Convert.ToInt32(itm.Order);
+                mod.ModifierType = (ModifierType)Convert.ToInt32(itm.ModifierID);
+                mod.UnitSourceID = Convert.ToInt32(itm.UnitSourceID);
+                mod.UnitTargetID = Convert.ToInt32(itm.UnitTargetID);
+
+                if (string.IsNullOrWhiteSpace(itm.Precision))
+                {
+                    mod.Precision = null;
+                }
+                else
+                {
+                    mod.Precision = Convert.ToInt32(itm.Precision);
+                }
+                
+
+                if (_individualModifiers.ContainsKey(mod.UnitTargetID))
+                {
+                    var modList = _individualModifiers[mod.UnitTargetID];
+                    modList.Add(mod);
+                }
+                else
+                {
+                    var modList = new List<Modifier> { mod };
+                    _individualModifiers.Add(mod.UnitTargetID, modList);
+                }
+            }
+
+            //Load Symbol Data
+            _symbolLookUp = new Dictionary<int, List<Symbol>>();
+            foreach (var itm in data.Symbols.UnitSymbol)
+            {
+                var sym = new Symbol();
+                sym.Id = Convert.ToInt32(itm.ID);
+                sym.Value = itm.Symbol;
+                sym.UnitId = Convert.ToInt32(itm.UnitID);
+                int value = Convert.ToInt32(itm.IsDefault);
+                if (value == 1)
+                    sym.IsDefault = true;
+                else
+                    sym.IsDefault = false;
+
+                if (_symbolLookUp.ContainsKey(sym.UnitId))
+                {
+                    var symList = _symbolLookUp[sym.UnitId];
+                    symList.Add(sym);
+                }
+                else
+                {
+                    var symList = new List<Symbol> { sym };
+                    _symbolLookUp.Add(sym.UnitId, symList);
+                }
+            }
+
+            _units = new Dictionary<string, Unit>();
+            foreach (var itm in data.Units.Unit)
+            {
+                var unit = new Unit();
+                unit.ID = Convert.ToInt32(itm.ID);
+                unit.Name = itm.Name;
+                unit.UnitTypeID = Convert.ToInt32(itm.UnitTypeID);
+
+                if (_symbolLookUp.ContainsKey(unit.ID))
+                {
+                    unit.Symbols = _symbolLookUp[unit.ID];
+
+                    foreach (Symbol sym in unit.Symbols)
+                    {
+                        sym.Unit = unit;
+                    }
+                }
+                if (_individualModifiers.ContainsKey(unit.ID))
+                {
+                    unit.Modifiers = _individualModifiers[unit.ID];
+
+                    foreach (Modifier mod in unit.Modifiers)
+                    {
+                        mod.ParentUnit = unit;
+                    }
+                }
+                _units.Add(unit.Name, unit);
+            }
+
+            //Load Unit Types
+            _unitTypes = new Dictionary<string, UnitType>();
+            foreach (var itm in data.UnitTypes.UnitType)
+            {
+                var ut = new UnitType();
+                ut.ID = Convert.ToInt32(itm.ID);
+                ut.Name = itm.Name;
+                ut.Description = itm.Description;
+
+                // Make this a for loop for speed reasons or use a multikey dictionary.
+                var unitData = (from unit in _units.Values
+                                where unit.UnitTypeID == ut.ID
+                                select unit).ToList();
+                ut.Units = unitData;
+
+                foreach (Unit unitItem in ut.Units)
+                {
+                    unitItem.UnitType = ut;
+                }
+
+                _unitTypes.Add(ut.Name, ut);
+            }
+        }
+
+#if !PCL
 		void ProcessUnitConverterData ()
 		{
 			foreach (XmlNode node in this.DataFile.ChildNodes) {
@@ -277,12 +429,17 @@ namespace Cubico
 				}
 			}
 		}
+#endif
 		#endregion
 		#region "UnitTypes"
 		//TODO: Change to ReadOnlyDictionary when .Net 4.0 is available
-		void GetAllUnitTypes ()
-		{
-		}
+        internal void GetAllUnitTypes()
+        {
+            if(_unitTypes == null)
+            {
+                this.LoadJsonDataFile();
+            }
+        }
 		#endregion
 		#region "Units"
 		//TODO: Change to ReadOnlyDictionary when .Net 4.0 is available

@@ -43,6 +43,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Runtime.Serialization" />
@@ -59,6 +63,18 @@
     <Compile Include="Symbol.cs" />
     <Compile Include="Unit.cs" />
     <Compile Include="UnitConverter.cs" />
+    <Compile Include="UnitData\Modifier.cs" />
+    <Compile Include="UnitData\Modifiers.cs" />
+    <Compile Include="UnitData\RootObject.cs" />
+    <Compile Include="UnitData\Symbols.cs" />
+    <Compile Include="UnitData\Unit.cs" />
+    <Compile Include="UnitData\UnitConverterData.cs" />
+    <Compile Include="UnitData\UnitModifier.cs" />
+    <Compile Include="UnitData\UnitModifiers.cs" />
+    <Compile Include="UnitData\Units.cs" />
+    <Compile Include="UnitData\UnitSymbol.cs" />
+    <Compile Include="UnitData\UnitType.cs" />
+    <Compile Include="UnitData\UnitTypes.cs" />
     <Compile Include="UnitProvider.cs" />
     <Compile Include="UnitType.cs" />
   </ItemGroup>
@@ -76,6 +92,8 @@
     </EmbeddedResource>
     <None Include="Cubico.snk" />
     <Compile Include="Constants.cs" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="UnitData.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />
