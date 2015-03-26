@@ -19,6 +19,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7AC91292-987D-4E05-BA22-31BE9C812DAA}"
 	ProjectSection(SolutionItems) = preProject
 		Nuget\Cubico.nupkg = Nuget\Cubico.nupkg
+		Nuget\Readme.html = Nuget\Readme.html
 		README.md = README.md
 	EndProjectSection
 EndProject
