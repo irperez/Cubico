@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Cubico.Tests\UnitTypeTest.cs" Link="UnitTypeTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="dotnet-test-nunit" Version="3.4.0-beta-3" />
+    <PackageReference Include="NUnit" Version="3.6.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\Cubico.Core\Cubico.Core.csproj" />
+  </ItemGroup>
+</Project>

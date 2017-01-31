@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Cubico
 {
-#if !PCL
+#if (!PCL && !NETSTANDARD1_4)
     [Serializable]
 #endif
     [DataContract(IsReference = true)]

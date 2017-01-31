@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 namespace Cubico
 {
-#if !PCL
+#if (!PCL && !NETSTANDARD1_4)
     [Serializable]
 #endif
-	[DataContract(IsReference = true)]
+    [DataContract(IsReference = true)]
 	[KnownType(typeof(Unit))]
 	public partial class UnitType : IEquatable<UnitType>
 	{

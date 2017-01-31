@@ -3,9 +3,9 @@ using System.Runtime.Serialization;
 
 namespace Cubico
 {
-	// Represents a unit of measure's symbol, or alternate methods to identify a unit of measure.
-	// Inch = ", inches, in, in. etc.
-#if !PCL
+    // Represents a unit of measure's symbol, or alternate methods to identify a unit of measure.
+    // Inch = ", inches, in, in. etc.
+#if (!PCL && !NETSTANDARD1_4)
     [Serializable]
 #endif
     [DataContract(IsReference = true)]

@@ -1,0 +1,111 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/irperez/Cubico</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>Measurement, Unit, Conversion</PackageTags>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <Copyright>Copyright 2012-2015 Ivan R. Perez &amp; Taylor Shuler.</Copyright>
+    <PackageProjectUrl>https://github.com/irperez/Cubico</PackageProjectUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="**\*.cs" />
+    <EmbeddedResource Include="**\*.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="UnitData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Cubico\Constants.cs">
+      <Link>Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\ConversionResult.cs">
+      <Link>ConversionResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\Measurement.cs">
+      <Link>Measurement.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\MeasurementFlags.cs">
+      <Link>MeasurementFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\Modifier.cs">
+      <Link>Modifier.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\ModifierType.cs">
+      <Link>ModifierType.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\Result.cs">
+      <Link>Result.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\Symbol.cs">
+      <Link>Symbol.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\Unit.cs">
+      <Link>Unit.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitConverter.cs">
+      <Link>UnitConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\Modifier.cs">
+      <Link>UnitData\Modifier.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\Modifiers.cs">
+      <Link>UnitData\Modifiers.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\RootObject.cs">
+      <Link>UnitData\RootObject.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\Symbols.cs">
+      <Link>UnitData\Symbols.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\Unit.cs">
+      <Link>UnitData\Unit.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\UnitConverterData.cs">
+      <Link>UnitData\UnitConverterData.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\UnitModifier.cs">
+      <Link>UnitData\UnitModifier.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\UnitModifiers.cs">
+      <Link>UnitData\UnitModifiers.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\Units.cs">
+      <Link>UnitData\Units.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\UnitSymbol.cs">
+      <Link>UnitData\UnitSymbol.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\UnitType.cs">
+      <Link>UnitData\UnitType.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitData\UnitTypes.cs">
+      <Link>UnitData\UnitTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitProvider.cs">
+      <Link>UnitProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Cubico\UnitType.cs">
+      <Link>UnitType.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UnitData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NETStandard.Library" Version="1.6.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Xml.XDocument" Version="4.3.0" />
+    <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UnitData\" />
+  </ItemGroup>
+</Project>

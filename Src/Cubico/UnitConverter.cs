@@ -1,5 +1,7 @@
 ﻿using System;
+#if !NETSTANDARD1_4
 using System.Diagnostics.Contracts;
+#endif
 using System.Collections.Generic;
 using System.Linq;
 //using W3b.Sine;
@@ -25,7 +27,7 @@ namespace Cubico
 			_UnitTypeDictionary = unitPro.UnitTypes;
 
 		}
-		#region "Unit related methods"
+#region "Unit related methods"
 		// Given the full name of the unit, returns the unit entry.
 		public Unit GetUnitByName (string unitName)
 		{
@@ -62,15 +64,17 @@ namespace Cubico
 			throw new ArgumentException ("The unit/symbol '" + unitSymbol + "' was not found in the UnitConverter.  Add this unit to the database for compatability.");
 
 		}
-		#endregion
-		#region "Group related methods"
+#endregion
+#region "Group related methods"
 		// Gets a value that determines whether the given units are compatible or not.
 		public bool IsCompatible (string leftSymbol, string rightSymbol)
 		{
 			if (string.IsNullOrEmpty (leftSymbol) || string.IsNullOrEmpty (rightSymbol)) {
 				throw new ArgumentException ("The left and right symbol values cannot be empty or null.");
 			}
-			Contract.EndContractBlock ();
+#if !NETSTANDARD1_4
+            Contract.EndContractBlock ();
+#endif
 
 			Unit leftUnit = this.GetUnitBySymbol (leftSymbol);
 			Unit rightUnit = this.GetUnitBySymbol (rightSymbol);
@@ -119,7 +123,9 @@ namespace Cubico
 			if (string.IsNullOrEmpty (unitName)) {
 				throw new ArgumentException ("unitName must have a value");
 			}
-			Contract.EndContractBlock ();
+#if !NETSTANDARD1_4
+            Contract.EndContractBlock ();
+#endif
 
 			//Does the unit even exist?
 			if (this._UnitDictionary.ContainsKey (unitName) == false) {
@@ -135,8 +141,8 @@ namespace Cubico
 				return null;
 			}
 		}
-		#endregion
-		#region "Conversion methods"
+#endregion
+#region "Conversion methods"
 		// Performs a unit conversion between two units, given a value to convert.
 		public Measurement ConvertUnits (double value, string currentUnitName, string targetUnitName)
 		{
@@ -234,8 +240,8 @@ namespace Cubico
 
 			return new Measurement (output, targetUnit);
 		}
-		#endregion
-		#region "Parsing routines"
+#endregion
+#region "Parsing routines"
 		// Parses a number string with operators.
 		ConversionResult ParseNumberString (string input)
 		{
@@ -326,6 +332,6 @@ namespace Cubico
 
 			return new Measurement (value, symbol);
 		}
-		#endregion
+#endregion
 	}
 }

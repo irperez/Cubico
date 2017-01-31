@@ -1,5 +1,7 @@
 ﻿using System;
+#if !NETSTANDARD1_4
 using System.Diagnostics.Contracts;
+#endif
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.CompilerServices;
@@ -8,19 +10,19 @@ using System.Runtime.CompilerServices;
 
 namespace Cubico
 {
-	/// <summary>
+    /// <summary>
     /// A basic structure that defines a measurement with a numeric value and a unit of measure.
-	/// </summary>
+    /// </summary>
     /// <example>
     /// var length_in_ft = new Measurement(2, Units.Length.Feet);
     /// var length_in_in = new Measurement(12, Units.Length.Inches);
     /// var result = length_in_ft + length_in_in;
     /// Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
     /// </example>    
-#if !PCL
+#if (!PCL && !NETSTANDARD1_4)
     [Serializable]
 #endif
-	[DataContract]
+    [DataContract]
 	[KnownType(typeof(Unit))]
 	[KnownType(typeof(UnitType))]
 	[KnownType(typeof(Symbol))]
@@ -28,22 +30,22 @@ namespace Cubico
 	[KnownType(typeof(ConversionResult))]
 	public struct Measurement : IEquatable<Measurement>, IComparable<Measurement>
 	{
-		#region "Private Fields"
-		MeasurementFlags _flags;
-		UnitConverter _uc;
-		double _maxbound;
-		double _minbound;
+#region "Private Fields"
+		private MeasurementFlags _flags;
+		private UnitConverter _uc;
+		private double _maxbound;
+		private double _minbound;
         internal double _standardValue;
-		//Unit _standardUnit;
-		double _value;
-		Unit _unit;
-		string _symbol;
-		Result _conversionResult;
+		//private Unit _standardUnit;
+		private double _value;
+		private Unit _unit;
+		private string _symbol;
+		private Result _conversionResult;
 
         //public event EventHandler OnValueChanged;
         //public event EventHandler OnUnitChanged;
-		#endregion
-		#region "Constructors"
+#endregion
+#region "Constructors"
 		public Measurement (string unitSymbol)
 		{
 			// Reference the unit converter that created us.
@@ -98,8 +100,12 @@ namespace Cubico
 			_conversionResult = conversionResult;
 		}
 
-		public Measurement (double value, Unit unit, Result conversionResult = Result.NoError)
-		{
+//#if !NETSTANDARD1_4
+        public Measurement (double value, Unit unit, Result conversionResult = Result.NoError)
+//#else 
+//        public Measurement(double value, Unit unit, Result conversionResult = null)
+//#endif
+        {
 			// Reference the unit converter that created us.
 			_uc = new UnitConverter ();
 			_flags = MeasurementFlags.None;
@@ -116,8 +122,8 @@ namespace Cubico
             //OnValueChanged = null;
             //OnUnitChanged = null;
 		}
-		#endregion
-		#region "measurement flags and properties methods"
+#endregion
+#region "measurement flags and properties methods"
 		/// <summary>
         /// Gets a reference to the current unit of the measurement.
 		/// </summary>
@@ -200,8 +206,8 @@ namespace Cubico
 				}
 			}
 		}
-		#endregion
-		#region "Value getting and setting methods"
+#endregion
+#region "Value getting and setting methods"
         /// <summary>
         /// Gets the value of the measurement in the specified units.
         /// </summary>
@@ -223,8 +229,8 @@ namespace Cubico
 				return res.FullValue;
 			}
 		}
-		#endregion
-		#region "Validation methods"
+#endregion
+#region "Validation methods"
 		// Validates input to the measurement.
 		public Result ValidateEntry (string entry)
 		{
@@ -274,8 +280,8 @@ namespace Cubico
 
 			return Result.NoError;
 		}
-		#endregion
-		#region "Bounds setting methods"
+#endregion
+#region "Bounds setting methods"
 		// Sets the maximum bound of the measurement.
 		public Result SetMaxBound (double maxbound, string unitSymbol)
 		{
@@ -308,8 +314,8 @@ namespace Cubico
 			this._minbound = res.Value;
 			return Result.NoError;
 		}
-		#endregion
-		#region "Operator overloads"
+#endregion
+#region "Operator overloads"
 		// Gets a string representation of the measurement.
 		public override string ToString ()
 		{
@@ -421,8 +427,8 @@ namespace Cubico
 		{
 			return (left.CompareTo (right) >= 0);
 		}
-		#endregion
-		#region "IEquatable(Of Measurement)"
+#endregion
+#region "IEquatable(Of Measurement)"
 		public override int GetHashCode ()
 		{
 			Measurement MeRes = default(Measurement);
@@ -485,8 +491,8 @@ namespace Cubico
 				}
 			}
 		}
-		#endregion
-		#region "ICompareTo(Of Measurement)"
+#endregion
+#region "ICompareTo(Of Measurement)"
 		public int CompareTo (Measurement other)
 		{
 			if (other.ConversionResult != Result.NoError) {
@@ -514,6 +520,6 @@ namespace Cubico
 
 			return meRes.Value.CompareTo (otherRes.Value);
 		}
-		#endregion
+#endregion
 	}
 }

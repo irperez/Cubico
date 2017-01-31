@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿#if !NETSTANDARD1_4
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 // Information about this assembly is defined by the following attributes. 
@@ -18,3 +19,4 @@ using System.Runtime.CompilerServices;
 // and "{Major}.{Minor}.{Build}.*" will update just the revision.
 
 [assembly: AssemblyVersion("1.0.*")]
+#endif
