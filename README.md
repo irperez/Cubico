@@ -1,6 +1,9 @@
 # Cubico
 An extensive measurement, unit, & data conversion library for .NET.
 
+## Nuget Package
+[https://www.nuget.org/packages/Cubico/](https://www.nuget.org/packages/Cubico/)
+
 ## What can it be used for?
 Taking and storing measurements reliably, performing calculations between different units of measurement, and sending measurements over webservices, making it very easy to work with! Also, it can be used as an extensible unit converter, providing the ability to easily add units of measurement and their calculations between units very easily and precisely.
 
