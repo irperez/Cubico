@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26127.0
+VisualStudioVersion = 15.0.26127.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cubico", "Src\Cubico\Cubico.csproj", "{5C21F8E4-02C4-4614-97C7-1899F4E6E634}"
 EndProject
@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{56EE0F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7AC91292-987D-4E05-BA22-31BE9C812DAA}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		Nuget\Cubico.nupkg = Nuget\Cubico.nupkg
 		README.md = README.md
 	EndProjectSection
