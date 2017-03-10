@@ -1,5 +1,5 @@
 ﻿using System;
-#if !NETSTANDARD1_4
+#if !NETSTANDARD1_6
 using System.Diagnostics.Contracts;
 #endif
 using System.Linq;
@@ -19,7 +19,7 @@ namespace Cubico
     /// var result = length_in_ft + length_in_in;
     /// Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
     /// </example>    
-#if (!PCL && !NETSTANDARD1_4)
+#if (!PCL && !NETSTANDARD1_6)
     [Serializable]
 #endif
     [DataContract]

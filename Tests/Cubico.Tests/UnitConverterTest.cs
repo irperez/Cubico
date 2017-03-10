@@ -214,82 +214,74 @@ namespace Cubico.Tests
 
 		[Test]
 		[Category(UnitTestCategory.Unit)]
-		[ExpectedException(typeof(ArgumentException))]
 		public void UnitConverter_IsCompatibleNullTest ()
 		{
 			UnitConverter target = new UnitConverter ();
 			bool actual = false;
 			actual.GetType();
-			actual = target.IsCompatible (null, null);
-
+            Assert.Throws<ArgumentException>(() => target.IsCompatible(null, null));
 			Assert.Fail ();
 		}
 
 		[Test]
 		[Category(UnitTestCategory.Unit)]
-		[ExpectedException(typeof(ArgumentException))]
 		public void UnitConverter_IsCompatibleLeftNullTest ()
 		{
 			UnitConverter target = new UnitConverter ();
 			string rightSymbol = "in";
 			bool actual = false;
 			actual.GetType();
-			actual = target.IsCompatible (null, rightSymbol);
-
+            Assert.Throws<ArgumentException>(() => target.IsCompatible(null, rightSymbol));
 			Assert.Fail ();
 		}
 
 		[Test]
 		[Category(UnitTestCategory.Unit)]
-		[ExpectedException(typeof(ArgumentException))]
 		public void UnitConverter_IsCompatibleRightNullTest ()
 		{
 			UnitConverter target = new UnitConverter ();
 			string leftSymbol = "C";
 			bool actual = false;
 			actual.GetType();
-			actual = target.IsCompatible (leftSymbol, null);
-
+            Assert.Throws<ArgumentException>(() => target.IsCompatible(leftSymbol, null));            
 			Assert.Fail ();
 		}
 
 		[Test]
-		[Category(UnitTestCategory.Unit)]
-		[ExpectedException(typeof(ArgumentException))]
+		[Category(UnitTestCategory.Unit)]		
 		public void UnitConverter_IsCompatibleEmptyTest ()
 		{
 			UnitConverter target = new UnitConverter ();
 			bool actual = false;
 			actual.GetType();
-			actual = target.IsCompatible (string.Empty, string.Empty);
+            Assert.Throws<ArgumentException>(() => target.IsCompatible(string.Empty, string.Empty));
+            //actual = target.IsCompatible (string.Empty, string.Empty);
 
 			Assert.Fail ();
 		}
 
 		[Test]
 		[Category(UnitTestCategory.Unit)]
-		[ExpectedException(typeof(ArgumentException))]
 		public void UnitConverter_IsCompatibleLeftEmptyTest ()
 		{
 			UnitConverter target = new UnitConverter ();
 			string rightSymbol = "in";
 			bool actual = false;
 			actual.GetType();
-			actual = target.IsCompatible (string.Empty, rightSymbol);
-
+            Assert.Throws<ArgumentException>(() => target.IsCompatible(string.Empty, rightSymbol));            
 			Assert.Fail ();
 		}
 
 		[Test]
 		[Category(UnitTestCategory.Unit)]
-		[ExpectedException(typeof(ArgumentException))]
 		public void UnitConverter_IsCompatibleRightEmptyTest ()
 		{
 			UnitConverter target = new UnitConverter ();
 			string leftSymbol = "C";
 			bool actual = false;
 			actual.GetType();
-			actual = target.IsCompatible (leftSymbol, string.Empty);
+            Assert.Throws<ArgumentException>(() => target.IsCompatible(leftSymbol, string.Empty));
+            //actual = target.IsCompatible (leftSymbol, string.Empty);
 
 			Assert.Fail ();
 		}
@@ -309,37 +301,40 @@ namespace Cubico.Tests
 
 		[Test]
 		[Category(UnitTestCategory.ExceptionTest)]
-		[ExpectedException(typeof(ArgumentNullException))]
 		public void UnitConverter_GetUnitBySymbolNull_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
 			Unit actual = default(Unit);
-			actual = target.GetUnitBySymbol (null);
+
+            Assert.Throws<ArgumentException>(() => target.GetUnitBySymbol(null));
+            //actual = target.GetUnitBySymbol (null);
 
 			Assert.Fail ();
 		}
 
 		[Test]
 		[Category(UnitTestCategory.ExceptionTest)]
-		[ExpectedException(typeof(ArgumentNullException))]
 		public void UnitConverter_GetUnitBySymbolEmpty_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
 			Unit actual = default(Unit);
-			actual = target.GetUnitBySymbol (string.Empty);
+
+            Assert.Throws<ArgumentException>(() => target.GetUnitBySymbol(string.Empty));
+            //actual = target.GetUnitBySymbol (string.Empty);
 
 			Assert.Fail ();
 		}
 
 		[Test]
 		[Category(UnitTestCategory.ExceptionTest)]
-		[ExpectedException(typeof(ArgumentException))]
 		public void UnitConverter_GetUnitBySymbol_UnrecognizedSymbol_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
 			string unitName = "BogusUnitSymbol";
 			Unit actual = default(Unit);
-			actual = target.GetUnitByName (unitName);
+
+            Assert.Throws<ArgumentException>(() => target.GetUnitByName(unitName));
+            //actual = target.GetUnitByName (unitName);
 			Assert.Fail ();
 		}
 		#endregion
@@ -358,39 +353,42 @@ namespace Cubico.Tests
 
 		[Test]
 		[Category(UnitTestCategory.ExceptionTest)]
-		[ExpectedException(typeof(ArgumentException))]
 		public void UnitConverter_GetUnitByNameNull_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
 
 			Unit actual = default(Unit);
-			actual = target.GetUnitByName (null);
+
+            Assert.Throws<ArgumentException>(() => target.GetUnitByName(null));
+            //actual = target.GetUnitByName (null);
 
 			Assert.Fail ();
 		}
 
 		[Test]
 		[Category(UnitTestCategory.ExceptionTest)]
-		[ExpectedException(typeof(ArgumentException))]
 		public void UnitConverter_GetUnitByNameEmpty_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
 
 			Unit actual = default(Unit);
-			actual = target.GetUnitByName (string.Empty);
+
+            Assert.Throws<ArgumentException>(() => target.GetUnitByName(string.Empty));
+            //actual = target.GetUnitByName (string.Empty);
 
 			Assert.Fail ();
 		}
 
 		[Test]
 		[Category(UnitTestCategory.ExceptionTest)]
-		[ExpectedException(typeof(ArgumentException))]
 		public void UnitConverter_GetUnitByName_UnrecognizedName_Test ()
 		{
 			UnitConverter target = new UnitConverter ();
 			string unitName = "BogusUnitName";
-			Unit actual = default(Unit);			
-			actual = target.GetUnitByName (unitName);
+			Unit actual = default(Unit);
+
+            Assert.Throws<ArgumentException>(() => target.GetUnitByName(unitName));
+            //actual = target.GetUnitByName (unitName);
 			Assert.Fail ();
 		}
 		#endregion

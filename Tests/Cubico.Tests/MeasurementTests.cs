@@ -443,14 +443,14 @@ namespace Cubico.Tests
 //		}
 
 		[Test]
-		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetMinBoundEmptyTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
 			Result actual = default(Result);
 			actual.GetType();
-			actual = target.SetMinBound (1, string.Empty);
-			Assert.Fail ();
+            Assert.Throws<ArgumentNullException>(() => target.SetMinBound(1, string.Empty));
+			//actual = target.SetMinBound (1, string.Empty);
+			//Assert.Fail ();
 		}
 		#endregion
 		#region "Measurement.SetMaxBound"
@@ -479,25 +479,26 @@ namespace Cubico.Tests
 		}
 
 		[Test]
-		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetMaxBoundNullTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
 			Result actual = default(Result);
 			actual.GetType();
-			actual = target.SetMinBound (0, null);
-			Assert.Fail ();
+			Assert.Throws<ArgumentNullException>(() => target.SetMinBound (0, null));
+
+			//Assert.Fail ();
 		}
 
 		[Test]
-		[ExpectedException(typeof(ArgumentNullException))]
 		public void MeasurementSetMaxBoundEmptyTest ()
 		{
 			Measurement target = new Measurement (10, "ft");
 			Result actual = default(Result);
 			actual.GetType();
-			actual = target.SetMinBound (1, string.Empty);
-			Assert.Fail ();
+
+            Assert.Throws<ArgumentNullException>(() => target.SetMinBound(1, string.Empty));
+            //actual = target.SetMinBound (1, string.Empty);
+			//Assert.Fail ();
 		}
 		#endregion
 		#region "Measurement.Operator -"

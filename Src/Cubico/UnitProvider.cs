@@ -79,7 +79,7 @@ namespace Cubico
 		private void LoadDataFile ()
 		{
 			const string fileName = "Cubico.UnitData.xml";
-#if !NETSTANDARD1_4
+#if !NETSTANDARD1_6
             var assembly = Assembly.GetExecutingAssembly ();
 #else
             var assembly = typeof(Cubico.Measurement).GetTypeInfo().Assembly;
@@ -101,7 +101,7 @@ namespace Cubico
             private void LoadJsonDataFile()
         {
             const string fileName = "Cubico.UnitData.json";
-#if !NETSTANDARD1_4
+#if !NETSTANDARD1_6
             var assembly = Assembly.GetExecutingAssembly();
 #else
             var assembly = typeof(Cubico.Measurement).GetTypeInfo().Assembly;

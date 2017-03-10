@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace Cubico
 {
-#if (!PCL && !NETSTANDARD1_4)
+#if (!PCL && !NETSTANDARD1_6)
     [Serializable]
 #endif
     [DataContract(IsReference = true)]

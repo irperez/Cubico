@@ -1,5 +1,5 @@
 ﻿using System;
-#if !NETSTANDARD1_4
+#if !NETSTANDARD1_6
 using System.Diagnostics.Contracts;
 #endif
 using System.Collections.Generic;
@@ -72,7 +72,7 @@ namespace Cubico
 			if (string.IsNullOrEmpty (leftSymbol) || string.IsNullOrEmpty (rightSymbol)) {
 				throw new ArgumentException ("The left and right symbol values cannot be empty or null.");
 			}
-#if !NETSTANDARD1_4
+#if !NETSTANDARD1_6
             Contract.EndContractBlock ();
 #endif
 
@@ -123,7 +123,7 @@ namespace Cubico
 			if (string.IsNullOrEmpty (unitName)) {
 				throw new ArgumentException ("unitName must have a value");
 			}
-#if !NETSTANDARD1_4
+#if !NETSTANDARD1_6
             Contract.EndContractBlock ();
 #endif
 
