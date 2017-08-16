@@ -7,6 +7,7 @@ using Newtonsoft;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Globalization;
 #if !PCL
 using System.Xml;
 #endif
@@ -124,7 +125,7 @@ namespace Cubico
             {
                 var mod = new Modifier();
                 mod.ID = Convert.ToInt32(itm.ID);
-                mod.Value = Convert.ToDecimal(itm.Value);
+                mod.Value = decimal.Parse(itm.Value, CultureInfo.InvariantCulture);
                 mod.Order = Convert.ToInt32(itm.Order);
                 mod.ModifierType = (ModifierType)Convert.ToInt32(itm.ModifierID);
                 mod.UnitSourceID = Convert.ToInt32(itm.UnitSourceID);
@@ -275,7 +276,7 @@ namespace Cubico
 							mod.ID = Convert.ToInt32 (attrib.Value);
 							break;
 						case "Value":
-							mod.Value = Convert.ToDecimal (attrib.Value);
+							mod.Value = decimal.Parse(attrib.Value, CultureInfo.InvariantCulture);
 							break;
 						case "Order":
 							mod.Order = Convert.ToInt32 (attrib.Value);
