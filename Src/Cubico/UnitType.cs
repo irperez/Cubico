@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Cubico
 {
-#if (!PCL && !NETSTANDARD1_6)
+#if (!PCL)
     [Serializable]
 #endif
     [DataContract(IsReference = true)]

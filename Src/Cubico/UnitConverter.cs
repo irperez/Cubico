@@ -1,7 +1,5 @@
 ﻿using System;
-#if !NETSTANDARD1_6
 using System.Diagnostics.Contracts;
-#endif
 using System.Collections.Generic;
 using System.Linq;
 //using W3b.Sine;
@@ -72,9 +70,7 @@ namespace Cubico
 			if (string.IsNullOrEmpty (leftSymbol) || string.IsNullOrEmpty (rightSymbol)) {
 				throw new ArgumentException ("The left and right symbol values cannot be empty or null.");
 			}
-#if !NETSTANDARD1_6
             Contract.EndContractBlock ();
-#endif
 
 			Unit leftUnit = this.GetUnitBySymbol (leftSymbol);
 			Unit rightUnit = this.GetUnitBySymbol (rightSymbol);
@@ -123,9 +119,7 @@ namespace Cubico
 			if (string.IsNullOrEmpty (unitName)) {
 				throw new ArgumentException ("unitName must have a value");
 			}
-#if !NETSTANDARD1_6
             Contract.EndContractBlock ();
-#endif
 
 			//Does the unit even exist?
 			if (this._UnitDictionary.ContainsKey (unitName) == false) {

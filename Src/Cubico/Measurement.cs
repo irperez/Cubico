@@ -1,10 +1,8 @@
 ﻿using System;
-#if !NETSTANDARD1_6
-using System.Diagnostics.Contracts;
-#endif
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.CompilerServices;
+
 
 [assembly: InternalsVisibleTo("Cubico.Tests, PublicKey=0024000004800000940000000602000000240000525341310004000001000100a9a0195dc31c78d63e25c1b47a72bccca2d9f5be7c850437d6ecae03a9e2208dfb97c07969e6bdaf1530307c1c819c6948f99198622f966a08701eca0bfdebf745355dfadb9d37a89a230a3f604beb9b274338efd1fc822f72ca0787faa88efae7af7749a9e6e2f9870ffdd94895e0e352a9bffde2b917640042e4b05b527390")]
 
@@ -19,9 +17,9 @@ namespace Cubico
     /// var result = length_in_ft + length_in_in;
     /// Console.WriteLine(result.GetValueAs(Units.Length.Yards).ToString()); // = 1 yard
     /// </example>    
-#if (!PCL && !NETSTANDARD1_6)
+#if (!PCL)
     [Serializable]
-#endif
+#endif    
     [DataContract]
 	[KnownType(typeof(Unit))]
 	[KnownType(typeof(UnitType))]
